@@ -1,5 +1,5 @@
 import EXAH from 'express-async-handler'
-import Order from '../model/orderSchema.js'
+import Order from '../models/OrderModel.js'
 
 // @desc    get order list
 // @route   get api/orders

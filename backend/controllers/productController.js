@@ -1,4 +1,4 @@
-import Product from '../model/productSchema.js'
+import Product from '../models/ProductModel.js'
 import EXAH from 'express-async-handler'
 
 

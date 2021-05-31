@@ -1,4 +1,4 @@
-import User from '../model/userSchema.js'
+import User from '../models/UserModel.js'
 import generateToken from '../utils/generateToken.js'
 import EXAH from 'express-async-handler'
 

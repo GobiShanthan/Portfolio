@@ -75,7 +75,8 @@ const getUserProfile = asyncHandler(async(req,res)=>{
   if(user){
     res.json({
       _id:user._id,
-      name:user.name,
+      firstName:user.firstName,
+      lastName:user.lastName,
       email:user.email,
       isAdmin:user.isAdmin,
     })
@@ -93,7 +94,8 @@ const getUserProfile = asyncHandler(async(req,res)=>{
 const updateUserProfile = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.user.id)
   if(user){
-    user.name = req.body.name || user.name,
+    user.firstName = req.body.firstName || user.firstName,
+    user.lastName = req.body.lastName || user.lastName,
     user.email = req.body.email || user.email
     if(req.body.password){
       user.password = req.body.password
@@ -101,7 +103,8 @@ const updateUserProfile = asyncHandler(async(req,res)=>{
     const updatedUser = await user.save()
     res.json({
       _id:updatedUser._id,
-      name:updatedUser.name,
+      firstName:updatedUser.firstName,
+      lastName:updatedUser.lastName,
       email:updatedUser.email,
       isAdmin:updatedUser.isAdmin,
       token:generateToken(updatedUser._id)
@@ -162,7 +165,8 @@ const updateUser = asyncHandler(async(req,res)=>{
 
 
   if(user){
-    user.name = req.body.name || user.name,
+    user.firstName = req.body.firstName || user.firstName,
+    user.lastName = req.body.lastName || user.lastName,
     user.email = req.body.email || user.email
     user.isAdmin = req.body.isAdmin 
 
@@ -170,7 +174,8 @@ const updateUser = asyncHandler(async(req,res)=>{
     const updatedUser = await user.save()
     res.json({
       _id:updatedUser._id,
-      name:updatedUser.name,
+      firstName:updatedUser.firstName,
+      lastName:updatedUser.lastName,
       email:updatedUser.email,
       isAdmin:updatedUser.isAdmin,
     })

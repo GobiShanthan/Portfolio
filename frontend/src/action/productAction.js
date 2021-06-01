@@ -145,7 +145,7 @@ export const writeReviewAction =(review)=>async(dispatch,getState)=>{
 export const topRatedProductAction =()=>async(dispatch,getState)=>{
     try{
         dispatch({type:TOP_RATED_PRODUCTS_REQUEST})
-        const {data} = await axios.get(`/api/products/top/rated`)
+        const {data} = await axios.get(`/api/products/top`)
         dispatch({type:TOP_RATED_PRODUCTS_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message : error.message

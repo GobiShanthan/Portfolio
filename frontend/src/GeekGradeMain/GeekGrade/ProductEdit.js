@@ -65,7 +65,7 @@ const ProductEdit = ({match,history}) =>{
   const updateProductHandler =(e)=>{
     e.preventDefault()
     dispatch(updateProductAction({_id:productId,image,name,brand,description,category,countInStock,price}))
-    history.push('/')
+    history.push('/geekgrade')
   }
 
     return(

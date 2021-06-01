@@ -12,7 +12,7 @@ const PortfolioProjects =() =>{
                 <PortFolioCard Title='Gobi Search App' Content='React redux app with api calls to multiple sources' image={gsearch} link={`/searchpage`} projectInfo={searchProjectInfo}/>
                 <PortFolioCard Title='Marvel App' Content='React redux app with api calls to Marvel Api ' link={`/marvel`}/>
                 <PortFolioCard Title='Weather App' Content={'React redux weather api app'} link={`/weather`} image={WeatherMain}/>
-                {/*<PortFolioCard Title='Fun Animations page' Content={'Having fun with effects'} link={`/funpage`}/>   */}         
+                <PortFolioCard Title='GeekGrade Computers' Content={'Full Mern Stack ecommerce aplication'} link={`/geekgrade`}/> 
             </div>
         </div>
     )

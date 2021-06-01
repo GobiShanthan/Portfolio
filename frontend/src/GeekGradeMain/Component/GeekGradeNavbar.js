@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <Link to='/' style={{color:'white',textDecoration:'none'}}>
+          <Link to='/geekgrade' style={{color:'white',textDecoration:'none'}}>
           <img src={geekLogo} alt='geekgrade' style={{width:"100px"}}/>
           </Link>
           <Typography variant="h6" className={classes.title}>

@@ -1,9 +1,8 @@
-
 import path from 'path'
-import express from "express"
-import multer from "multer"
-
+import express from 'express'
 const router = express.Router()
+import multer from 'multer'
+
 
 const storage = multer.diskStorage({
     destination(req,file,cb){
@@ -13,6 +12,7 @@ const storage = multer.diskStorage({
         cb(null, `${file.filename}-${Date.now()}${path.extname(file.originalname)}`)
     }
 })
+
 
 function checkFileType(file,cb){
     const filetypes=/jpg|jpeg|png/
@@ -33,6 +33,7 @@ const upload = multer({
         checkFileType(file,cb)
     }
 })
+
 
 router.post("/",upload.single("image"),(req,res)=>{
     res.send(`/${req.file.path}`)

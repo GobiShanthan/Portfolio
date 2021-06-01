@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const connectedDB = async()=>{
+const connectDB = async()=>{
     try{
         const connected = await mongoose.connect(process.env.MONGO_URI,{
             useCreateIndex:true,
@@ -15,4 +15,4 @@ const connectedDB = async()=>{
     }
 }
 
-export default connectedDB
+export default connectDB

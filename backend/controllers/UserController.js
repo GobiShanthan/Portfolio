@@ -1,181 +1,189 @@
-import EXAH from 'express-async-handler'
+import asyncHandler from "express-async-handler";
 import generateToken from "../utils/generateToken.js"
+
 import User from "../models/UserModel.js";
 
 
 
-//@desc Authenticate user and get token
-//@route POST /api/users/login
+//@desc Auth user and get token
+//@route POST  /api/users/login
 //@access Public 
-
-const authUser = EXAH(async(req,res)=>{
+const authUsers = asyncHandler(async(req,res)=>{
   const {email,password} = req.body
-  const user = await User.findOne({email})
+  const user =  await User.findOne({email})
 
-  if(user && await user.matchPassword(password)){
-      res.json({
-          _id:user._id,
-          firstName:user.firstName,
-          lastName:user.lastName,
-          email:user.email,
-          isAdmin:user.isAdmin,
-          token:generateToken(user._id)
-      })
+  if(user&&(user.matchPassword(password))){
+    res.json({
+      _id:user._id,
+      name:user.name,
+      email:user.email,
+      isAdmin:user.isAdmin,
+      token:generateToken(user._id)
+    })
   }else{
-      throw new Error(`Invalid email or username`)
+    res.status(401)
+    throw new Error("Invalid email or password")
   }
 })
 
 
-//@desc Register User
-//@route POST /api/users/
+//@desc Register a new user
+//@route POST  /api/users/
 //@access Public 
+const registerUser = asyncHandler(async(req,res)=>{
+  const {name,email,isAdmin,password} = req.body
+  const existEmail = await User.findOne({email})
 
-const registerUser = EXAH(async(req,res)=>{
-  const {firstName,lastName,email,password} = req.body
-  const emailExist = await User.findOne({email})
-  if(emailExist){
-      res.status(400)
-      throw new Error(`Email address is already registered`)
+  if(existEmail){
+    res.status(400)
+    throw new Error("Email is already registered ")
   }
-  const newUser = await User.create({
-      firstName,
-      lastName,
-      email,
-      password
+
+  const user = await User.create({
+    name,
+    email,
+    isAdmin,
+    password
   })
-  if(newUser){
-      res.json({
-          _id:newUser._id,
-          firstName:newUser.firstName,
-          lastName:newUser.lastName,
-          email:newUser.email,
-          isAdmin:newUser.isAdmin,
-          token:generateToken(newUser._id),
-      })
+
+  if(user){
+    res.json({
+      _id:user._id,
+      name:user.name,
+      email:user.email,
+      isAdmin:user.isAdmin,
+      token:generateToken(user._id)
+    })
   }else{
-      throw new Error(`An error has occured trying to register user`)
+    res.status(401)
+    throw new Error("Invalid user data")
+  }
+
+})
+
+
+//@desc Get user profile
+//@route Get /api/users/profile
+//@access Private
+
+const getUserProfile = asyncHandler(async(req,res)=>{
+  const user = await User.findById(req.user._id)
+
+  if(user){
+    res.json({
+      _id:user._id,
+      name:user.name,
+      email:user.email,
+      isAdmin:user.isAdmin,
+    })
+  }else{
+    res.status(401)
+    throw new Error(" An error has occured, Could not fetch user profile")
+  }
+})
+
+
+//@desc Update user profile
+//@route PUT /api/users/profile
+//@access Private
+
+const updateUserProfile = asyncHandler(async(req,res)=>{
+  const user = await User.findById(req.user.id)
+  if(user){
+    user.name = req.body.name || user.name,
+    user.email = req.body.email || user.email
+    if(req.body.password){
+      user.password = req.body.password
+    }
+    const updatedUser = await user.save()
+    res.json({
+      _id:updatedUser._id,
+      name:updatedUser.name,
+      email:updatedUser.email,
+      isAdmin:updatedUser.isAdmin,
+      token:generateToken(updatedUser._id)
+    })
+  }else{
+    res.status(401)
+    throw new Error("Update unsuccessful")
   }
 })
 
 
 //@desc Get all users
-//@route get /api/users/
-//@access Private/admin
+//@route Get /api/users/
+//@access Private/Admin
 
-const getAllUsers = EXAH(async(req,res)=>{
-  const allUsers = await User.find()
-  res.json(allUsers)
+const getUsers = asyncHandler(async(req,res)=>{
+  const users = await User.find({})
+  res.json(users)
 })
 
 
-//@desc Get user by Id
-//@route get /api/users/:id
-//@access Private/admin
+//@desc Delete user
+//@route deleteOne /api/users/:id
+//@access Private/Admin
 
-const getUserByParamsId = EXAH(async(req,res)=>{
+const deleteUser = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.params.id)
+
   if(user){
-      res.json({
-          _id:user._id,
-          firstName:user.firstName,
-          lastName:user.lastName,
-          email:user.email,
-          isAdmin:user.isAdmin
-      })
+    await user.remove()
+    res.json({message:"User removed"})
   }else{
-      throw new Error(`Invalid user id`)
+    res.status(404)
+    throw new Error("User not found")
   }
 })
 
+//@desc Get user by ID
+//@route Get /api/users/id
+//@access Private/Admin
 
-//@desc Update user by Id
-//@route put /api/users/:id
-//@access Private/admin
+const getUserById = asyncHandler(async(req,res)=>{
+  const user = await User.findById(req.params.id).select("-password")
+  
+  if(user){
+    res.json(user)
+  }else{
+    res.status(404)
+    throw new Error("User not found")
+  }
+})
+//@desc Update user 
+//@route PUT /api/users/:id
+//@access Private/Admin
 
-const updateUserByParamsId = EXAH(async(req,res)=>{
-  const {firstName,lastName,email,password,isAdmin} = req.body
+const updateUser = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.params.id)
-  if(firstName){
-      user.firstName  = firstName || user.firstName
-  }
-  if(lastName){
-      user.lastName  = lastName || user.lastName
-  }
-  if(email){
-      user.email  = email || user.email
-  }
-  if(password){
-      user.password  = password || user.password
-  }
-  if(isAdmin){
-      user.isAdmin = isAdmin
-  }
-  const updatedUser = await user.save()
-  if(updatedUser){
-      res.json('Updated User Successfully')
-  }else{
-      throw new Error('An error has occured trying to update user')
-  }
-})
 
 
-//@desc get logged in user info
-//@route get /api/users/loggeduser
-//@access Private/
-
-const getUserProfile = EXAH(async(req,res)=>{
-  const user = await User.findById(req.user.id)
   if(user){
-      res.json({
-          _id:user._id,
-          firstName:user.firstName,
-          lastName:user.lastName,
-          email:user.email,
-          isAdmin:user.isAdmin,
-      })
+    user.name = req.body.name || user.name,
+    user.email = req.body.email || user.email
+    user.isAdmin = req.body.isAdmin 
+
+
+    const updatedUser = await user.save()
+    res.json({
+      _id:updatedUser._id,
+      name:updatedUser.name,
+      email:updatedUser.email,
+      isAdmin:updatedUser.isAdmin,
+    })
   }else{
-      throw new Error(`An error has occured trying to fetch user id, try again later`)
+    res.status(401)
+    throw new Error("Update unsuccessful")
   }
 })
 
-
-//@desc update logged in user info
-//@route put /api/users/loggeduser
-//@access Private/
-
-const updateUserProfile = EXAH(async(req,res)=>{
-  const {firstName,lastName,email,password,image} = req.body
-  const user = await User.findById(req.user.id)
-  if(user){
-      user.firstName = firstName || user.firstName
-      user.lastName = lastName || user.lastName
-      user.email = email || user.email
-      if(password){
-          user.password = password
-      }
-      const updatedUser = await user.save()
-      res.json('Updated User successfully')
-  }else{
-      res.status(401)
-      throw new Error(`An error has occured trying to update user`)
-  }
-})
-
-//@desc delete user 
-//@route delete /api/users/
-//@access Private/
-
-const deleteUserById = EXAH(async(req,res)=>{
-  const user = await User.findById(req.params.id)
-  if(user){
-      user.remove()
-      res.json({'message':"successfully deleted user"})
-  }else{
-      res.status(401)
-      throw new Error('Error has occured trying to delete user')
-  }
-})
-
-
-export {authUser,registerUser,getAllUsers,getUserProfile,updateUserProfile,getUserByParamsId,updateUserByParamsId,deleteUserById}
+export{
+    authUsers,
+    getUserProfile,
+    registerUser,
+    updateUserProfile,
+    getUsers,
+    deleteUser,
+    getUserById,
+    updateUser
+}

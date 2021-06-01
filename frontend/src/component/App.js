@@ -4,12 +4,13 @@ import NavBar from './Header'
 import Home from '../Screens/Home'
 import Footer from './Footer'
 import SearchScreen from '../SearchProject/screens/SearchScreen'
-import GeekGrade from '../GeekGrade/GeekGrade'
+import GeekGrade from '../GeekGradeMain/GeekGrade'
 import WeatherMain from '../WeatherProject/Screens/WeatherApp'
 import WeatherDay from '../WeatherProject/Screens/WeatherDay'
 import MarvelMain from '../MarvelApp/Screens/MarvelMain'
 import Comic from '../MarvelApp/Components/Comic'
 import '../index.css'
+
 
 
 const App =() =>{

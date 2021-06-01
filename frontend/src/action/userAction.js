@@ -100,7 +100,7 @@ import {
                     Authorization: `Bearer ${userLogin.token}`
                 }
             }
-            const {data} = await axios.get('/api/users/loggeduser',config)
+            const {data} = await axios.get('/api/users/profile',config)
             dispatch({type:GET_USER_PROFILE_SUCCESS,payload:data})
         }catch(error){
             const message = error.response && error.response.data.message?error.data.response.message:error.message
@@ -120,7 +120,7 @@ import {
                     Authorization: `Bearer ${userLogin.token}`
                 }
             }
-            const {data} = await axios.put(`/api/users/loggeduser`,user,config)
+            const {data} = await axios.put(`/api/users/profile`,user,config)
             dispatch({type:UPDATE_USER_PROFILE_SUCCESS,payload:data})
             dispatch(loginAction(user.email,user.password))
         }catch(error){

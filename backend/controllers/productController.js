@@ -7,17 +7,8 @@ import Product from "../models/ProductModel.js"
 //@access Public Fetch all products
 
 const getProducts = asyncHandler(async(req,res)=>{
-  const pageSize = 10
-  const page = Number(req.query.pageNumber) || 1
-    const keyword = req.query.keyword?{
-      name:{
-        $regex:req.query.keyword,
-        $options:"i"
-      }
-    }:{}
-    const count = await Product.countDocuments({...keyword})
-    const products = await Product.find({...keyword}).limit(pageSize).skip(pageSize*(page -1))
-    res.json({products,page, pages:Math.ceil(count/pageSize)})
+  const allProducts = await Product.find({})
+  res.json(allProducts)
 })
 
 //@desc Fetch single products
@@ -27,8 +18,21 @@ const getProducts = asyncHandler(async(req,res)=>{
 const getProductsById = asyncHandler(async (req, res) => {
 const product = await Product.findById(req.params.id);
 
-if (product) {
-  res.json(product);
+if(product){
+  res.json({
+      _id:product._id,
+      name:product.name,
+      description:product.description,
+      brand:product.brand,
+      category:product.category,
+      image:product.image,
+      countInStock:product.countInStock,
+      price:product.price,
+      reviews:product.reviews,
+      numOfReviews:product.numOfReviews,
+      rating:product.rating
+  })
+
 } else {
   res.status(404);
   throw new Error("Product not found");

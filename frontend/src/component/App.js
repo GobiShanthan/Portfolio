@@ -4,7 +4,6 @@ import NavBar from './Header'
 import Home from '../Screens/Home'
 import Footer from './Footer'
 import SearchScreen from '../SearchProject/screens/SearchScreen'
-import GeekGrade from '../GeekGradeMain/GeekGrade'
 import WeatherMain from '../WeatherProject/Screens/WeatherApp'
 import WeatherDay from '../WeatherProject/Screens/WeatherDay'
 import MarvelMain from '../MarvelApp/Screens/MarvelMain'
@@ -41,20 +40,19 @@ const App =() =>{
                     <Route path='/weatherday/:id' component={WeatherDay}/>
                     <Route path='/marvel' component={MarvelMain}/>
                     <Route path='/comic/:id' exact component={Comic}/>
-                    <div style={{backgroundColor:'#3A6EA5',minHeight:'100vh',paddingTop:'20px',paddingBottom:'20px'}}>
-            <Route path='/geekgrade' exact component={GeekGradeMain}/>
-            <Route path ='/geekgrade/authuser' component={LogRegScreen}/>
-            <Route path='/geekgrade/profile' component={ProfilePage}/>
-            <Route path='/geekgrade/userslist' component={UsersList}/>
-            <Route path='/geekgrade/user/:id' component={UpdateUser}/>
-            <Route path ='/geekgrade/productslist' component={ProductsList}/>
-            <Route path='/productedit/:id' component={ProductEdit}/>
-            <Route path='/cart/:id' component={Cart}/>
-            <Route path ='/product/:id' component={ProductPage}/>
-            <Route path='/geekgrade/placeorder/' component={OrderStepper}/>
-            <Route path='/order/:id' component={OrderScreen}/>
-            <Route path='/geekgrade/orderlist' component={OrderList}/>
-            </div>
+                    <Route path='/geekgrade' exact component={GeekGradeMain}/>
+                    <Route path ='/geekgrade/authuser' component={LogRegScreen}/>
+                    <Route path='/geekgrade/profile' component={ProfilePage}/>
+                    <Route path='/geekgrade/userslist' component={UsersList}/>
+                    <Route path='/geekgrade/user/:id' component={UpdateUser}/>
+                    <Route path ='/geekgrade/productslist' component={ProductsList}/>
+                    <Route path='/productedit/:id' component={ProductEdit}/>
+                    <Route path='/cart/:id' component={Cart}/>
+                    <Route path ='/product/:id' component={ProductPage}/>
+                    <Route path='/geekgrade/placeorder/' component={OrderStepper}/>
+                    <Route path='/order/:id' component={OrderScreen}/>
+                    <Route path='/geekgrade/orderlist' component={OrderList}/>
+
                 </div>
 
 

@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
           <Typography variant="h6" className={classes.title}>
           </Typography>
           {userLogin?<SimpleMenu userLogin={userLogin}/>:null}
-          <Button style={{color:'white',marginTop:'-45px'}}><PersonIcon style={{color:'black'}}/>{userLogin?<Link to='/' onClick={()=>dispatch(logoutAction())} style={{color:'black',fontWeight:'bold'}}>Logout</Link>:<Link to='/authuser' style={{color:'black',textDecoration:'none',fontSize:'15px',fontWeight:'bolder'}}>Login</Link>}</Button>
+          <Button style={{color:'white',marginTop:'-45px'}}><PersonIcon style={{color:'black'}}/>{userLogin?<Link to='/geekgrade' onClick={()=>dispatch(logoutAction())} style={{color:'black',fontWeight:'bold'}}>Logout</Link>:<Link to='/geekgrade/authuser' style={{color:'black',textDecoration:'none',fontSize:'15px',fontWeight:'bolder'}}>Login</Link>}</Button>
         </Toolbar>
       </AppBar>
     </div>

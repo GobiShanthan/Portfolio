@@ -41,7 +41,7 @@ const ProfilePage = ({history}) =>{
 
   useEffect(()=>{
     if(!userLogin){
-      history.push('/')
+      history.push('/geekgrade')
     }
     if(!userProfile){
       dispatch(getProfileAction())

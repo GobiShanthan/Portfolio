@@ -13,7 +13,7 @@ const LogRegScreen  = ({history}) =>{
 
     useEffect(()=>{
         if(userLogin){
-            history.push('/')
+            history.push('/geekgrade')
         }
         if(userRegis){
             history.push('/')
@@ -22,7 +22,6 @@ const LogRegScreen  = ({history}) =>{
 
     return(
         <div style={{height:'100vh',backgroundColor:'#3A6EA5',color:'#3A6EA5'}}>
-            <div>djksalds</div>
             <LogRegCard/>
         </div>
     )

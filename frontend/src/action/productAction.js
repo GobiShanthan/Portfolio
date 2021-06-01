@@ -41,7 +41,7 @@ import {
 export const getAllProductsAction = ()=>async(dispatch)=>{
     try{
         dispatch({type:GET_ALL_PRODUCTS_REQUEST})
-        const {data} = await axios.get('/products')
+        const {data} = await axios.get('/api/products')
         dispatch({type:GET_ALL_PRODUCTS_SUCCESS, payload:data})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message : error.message
@@ -54,7 +54,7 @@ export const getAllProductsAction = ()=>async(dispatch)=>{
 export const getProductAction = (id) =>async(dispatch)=>{
     try{
         dispatch({type:GET_PRODUCT_REQUEST})
-        const {data} = await axios.get(`/products/${id}`)
+        const {data} = await axios.get(`/api/products/${id}`)
         dispatch({type:GET_PRODUCT_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message:error.message
@@ -73,7 +73,7 @@ export const deleteProductAction =(id)=>async(dispatch,getState)=>{
                 Authorization: `Bearer ${userLogin.token}`
             }
         }
-        const {data} = await axios.delete(`/products/${id}`,config)
+        const {data} = await axios.delete(`/api/products/${id}`,config)
         dispatch({type:REMOVE_PRODUCT_SUCCESS, payload:data})
         }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message:error.message
@@ -93,7 +93,7 @@ export const updateProductAction =(product)=>async(dispatch,getState)=>{
                 Authorization: `Bearer ${userLogin.token}`
             }
         }
-        const {data} = await axios.put(`/products/${product._id}`,product,config)
+        const {data} = await axios.put(`/api/products/${product._id}`,product,config)
         dispatch({type:UPDATE_PRODUCT_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.config ? error.response.data.config: error.message
@@ -113,7 +113,7 @@ export const createProductAction =(data)=>async(dispatch,getState)=>{
                 Authorization: `Bearer ${userLogin.token}`
             }
         }
-        const {data} = await axios.post('/products',{},config)
+        const {data} = await axios.post('/api/products',{},config)
         dispatch({type:CREATE_PRODUCT_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message :error.message
@@ -133,7 +133,7 @@ export const writeReviewAction =(review)=>async(dispatch,getState)=>{
                 Authorization:`Bearer ${userLogin.token}`
             }
         }
-        const {data} = await axios.post(`/products/${review._id}/reviews/`,review,config)
+        const {data} = await axios.post(`/api/products/${review._id}/reviews/`,review,config)
         dispatch({type:CREATE_REVIEW_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message:error.message
@@ -145,7 +145,7 @@ export const writeReviewAction =(review)=>async(dispatch,getState)=>{
 export const topRatedProductAction =()=>async(dispatch,getState)=>{
     try{
         dispatch({type:TOP_RATED_PRODUCTS_REQUEST})
-        const {data} = await axios.get(`/products/top/rated`)
+        const {data} = await axios.get(`/api/products/top/rated`)
         dispatch({type:TOP_RATED_PRODUCTS_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message : error.message

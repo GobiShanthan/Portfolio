@@ -1,0 +1,71 @@
+.profilepage{
+    display:flex;
+    justify-content:center;
+    background-color:#3A6EA5;
+    min-height: 110vh;
+    height: 110%;
+}
+
+.profilepaper{
+    background-color:#EBEBEB;
+    min-width: 250px;
+    width: 85%;
+    max-width: 600px;
+    height: 65%;
+    max-height: 800px;
+    text-align: center;
+}
+
+.userslist{
+    display:flex;
+    justify-content:center;
+    background-color:#3A6EA5;
+    min-height: 110vh;
+    height: 110%;
+}
+.table{
+    width: 90%;
+    max-width: 750px;
+}
+
+
+.userUpdatePaper{
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.userupdateform{
+margin-left: 20%;
+margin-right: 20%;
+min-height: 300px;
+}
+
+
+.productImage{
+    height: 125px;
+}
+.productslist{
+    display:flex;
+    justify-content:center;
+    background-color:#3A6EA5;
+    min-height: 110vh;
+    height: 110%;
+}
+.ptable{
+    width: 90%;
+    max-width: 750px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}   
+
+.productpage{
+    display:flex;
+    justify-content:center;
+    background-color:#3A6EA5;
+
+}

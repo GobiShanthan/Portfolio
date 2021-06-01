@@ -1,0 +1,65 @@
+.login{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 500px;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 80%;
+    max-height: 550px;
+}
+
+.signup{
+    color:#0058B1;
+    cursor: pointer;
+    width: 10px;
+}
+.signup:hover{
+    font-size: 17px;
+    color: black;
+}
+.loginClick{
+    color:#0058B1;
+    cursor: pointer;
+}
+.loginClick:hover{
+    font-size: 17px;
+    color: black;
+}
+
+
+.updateIcon{
+color:green;
+}
+.updateIcon:hover{
+    font-size: 35px;
+}
+
+
+.closeIcon{
+color:red;
+}
+
+.closeIcon:hover{
+    font-size: 35px;
+}
+.projectCard{
+    display:grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit,275px);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #3A6EA5;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 import {Grid} from '@material-ui/core'
 import marvelLogo from '../MarvelApp/marvelPics/marvelLogo.jpeg'
 import {FaHome} from 'react-icons/fa'
-
+import GeekGradeNavbar from '../GeekGradeMain/Component/GeekGradeNavbar'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -46,8 +46,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Header=({location})=>{
   const classes = useStyles();
-
-
+if(location.pathname.slice(0,10) ==='/geekgrade'){
+  return(
+    <GeekGradeNavbar/>
+  )
+}else 
 if(location.pathname === '/weather'){
   return(
     <div className={classes.root} >

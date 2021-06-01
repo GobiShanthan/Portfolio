@@ -54,7 +54,7 @@ const CarouselItem = ()=>{
                 </Grid>
     
                 <Button variant='contained' color='secondary' className={classes.button}>
-                    <Link to={`/product/${item._id}`} style={{color:'white',textDecoration:'none'}}>
+                    <Link to={`/geekgrade/product/${item._id}`} style={{color:'white',textDecoration:'none'}}>
                     ADD TO CART
                     </Link>
                 </Button>

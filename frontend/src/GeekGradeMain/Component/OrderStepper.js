@@ -57,7 +57,7 @@ export default function HorizontalLabelPositionBelowStepper({history}) {
 
     switch (stepIndex) {
       case 0:
-        return userLogin?setActiveStep(1):history.push('/authuser');
+        return userLogin?setActiveStep(1):history.push('/geekgrade/authuser');
       case 1:
         return <ShippingPage stateChanger={setActiveStep} />;
       case 2:

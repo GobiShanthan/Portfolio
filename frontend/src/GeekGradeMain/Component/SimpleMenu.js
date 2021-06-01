@@ -34,7 +34,7 @@ const SimpleMenu =({userLogin}) =>{
         <Link to='/geekgrade/userslist' style={{color:'black',fontWeight:'bolder',textDecoration:'none'}}><MenuItem onClick={handleClose}>Users</MenuItem></Link>
         <Link to='/geekgrade/productslist' style={{color:'black',fontWeight:'bolder',textDecoration:'none'}}><MenuItem onClick={handleClose}>Products</MenuItem></Link>
         <Link to='/geekgrade/orderlist' style={{color:'black',fontWeight:'bolder',textDecoration:'none'}}><MenuItem onClick={handleClose}>Orders</MenuItem></Link>
-        <Link to={`/cart/${userLogin._id}`} style={{color:'black',fontWeight:'bolder',textDecoration:'none'}}><MenuItem onClick={handleClose}>Cart</MenuItem></Link>
+        <Link to={`/geekgrade/cart/${userLogin._id}`} style={{color:'black',fontWeight:'bolder',textDecoration:'none'}}><MenuItem onClick={handleClose}>Cart</MenuItem></Link>
          </div>:
          <div>
         <Link to='/geekgrade/profile'><MenuItem onClick={handleClose}>Profile</MenuItem></Link>

@@ -26,10 +26,10 @@ const {deleteInfo} = deleteUserReducer
 useEffect(()=>{
 
     if(!userLogin){
-        history.push('/authuser')
+        history.push('/geekgrade/authuser')
     }
     if(userLogin  && !userLogin.isAdmin){
-        history.push('/')
+        history.push('/geekgrade')
     }
     if(userLogin && userLogin.isAdmin && !usersListData){
         dispatch(getAllUsersAction())

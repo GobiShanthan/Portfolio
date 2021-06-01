@@ -103,7 +103,7 @@ export const eraseHistory =()=>{
 export const weatherGet=(city)=>async(dispatch)=>{
     try{
         dispatch({type:GET_WEATHER_REQUEST})
-        const {data} = await axios.get(`http://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=7507d40292714bf6a919dcf4bfeae9cb&`,{
+        const {data} = await axios.get(`https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=7507d40292714bf6a919dcf4bfeae9cb&`,{
             params:{
                 units:'M',
             }
@@ -129,9 +129,6 @@ export const weatherHourGet=(city)=>async(dispatch)=>{
         dispatch({type:GET_WEATHER_HOUR_FAIL,payload:error})
     }
 }
-
-
-
 
 //GET MARVEL PUBLIC COMICS API
 export const marvelGet =(search)=>async(dispatch,getState)=>{

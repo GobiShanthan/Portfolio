@@ -1,16 +1,16 @@
 import express from "express"
 const router = express.Router()
 
-import {authUsers,getUserProfile,registerUser,updateUserProfile,getUsers,deleteUser, getUserById, updateUser} from "../controllers/UserController.js"
+import {authUsers,registerUser,getAllUsers,getUserProfile,updateUserProfile,getUserByParamsId,updateUserByParamsId,deleteUserById} from "../controllers/UserController.js"
 import {protect,admin} from "../middleware/authMiddleWare.js"
 
-router.route("/").post(registerUser).get(protect,admin,getUsers)
+router.route("/").post(registerUser).get(protect,admin,getAllUsers)
 router.post("/login",authUsers)
 router.route("/profile").get(protect,getUserProfile).put(protect,updateUserProfile)
 
 router.route("/:id")
-.delete(protect,admin,deleteUser)
-.get(protect,admin,getUserById)
-.put(protect,admin,updateUser)
+.delete(protect,admin,deleteUserById)
+.get(protect,admin,getUserByParamsId)
+.put(protect,admin,updateUserByParamsId)
 
 export default router

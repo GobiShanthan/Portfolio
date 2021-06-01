@@ -82,7 +82,7 @@ const AddToCartBox =({product}) =>{
                 </ListItem>
 
             <hr/>
-            <Link to={`/cart/${product._id}?qty=${qty}`}>
+            <Link to={`/geekgrade/cart/${product._id}?qty=${qty}`}>
             <Button variant="contained" color='secondary'>ADD TO CART</Button>
             </Link>
 

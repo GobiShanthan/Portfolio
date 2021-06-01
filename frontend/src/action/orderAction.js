@@ -82,13 +82,16 @@ const getOrderAction =(id)=>async(dispatch,getState)=>{
         }
 
         const { data } = await axios.get(`/api/orders/${id}`,config)
-
+        console.log(data.paymentMethod)
         dispatch({type:GET_ORDER_SUCCESS,payload:data})
     }catch(error){
         const message = error.response && error.response.data.message? error.response.data.message:error.message
         dispatch({type:GET_ORDER_FAIL,payload:message})
     }
 }
+
+
+
 
 
 const payOrderAction =(orderId,paymentResult)=>async(dispatch,getState)=>{

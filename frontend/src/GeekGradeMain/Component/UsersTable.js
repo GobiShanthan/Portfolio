@@ -63,7 +63,7 @@ const usersRow = usersList.map((user)=>{
         </StyledTableCell>
         <StyledTableCell component="th" scope="row">
           <div style={{fontSize:'20', marginLeft:'20px'}}>
-            <Link to={`/user/${user._id}`}><CreateIcon className='updateIcon' /></Link>
+            <Link to={`/geekgrade/user/${user._id}`}><CreateIcon className='updateIcon' /></Link>
             <CloseIcon  className='closeIcon' onClick={()=>dispatch(deleteUserAction(user._id))}/>
           </div>
           

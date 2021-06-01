@@ -12,7 +12,7 @@ const getProducts = asyncHandler(async(req,res)=>{
 })
 
 //@desc Fetch single products
-//@route GET/api/product/:id
+//@route GET/api/products/:id
 //@access Public Fetch single products
 
 const getProductsById = asyncHandler(async (req, res) => {
@@ -41,7 +41,7 @@ if(product){
 
 
 //@desc Delete single products
-//@route Delete/api/product/:id
+//@route Delete/api/products/:id
 //@access Private/Admin
 
 const deleteProductById = asyncHandler(async (req, res) => {

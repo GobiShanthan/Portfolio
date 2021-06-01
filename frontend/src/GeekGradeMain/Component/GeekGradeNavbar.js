@@ -16,6 +16,7 @@ import SimpleMenu from './SimpleMenu'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor:'#3A6EA5'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -33,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+
+      <AppBar position="static" className={classes.root}>
         <Toolbar variant="dense">
           <Link to='/geekgrade' style={{color:'white',textDecoration:'none'}}>
           <img src={geekLogo} alt='geekgrade' style={{width:"100px"}}/>
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
           <Button style={{color:'white',marginTop:'-45px'}}><PersonIcon style={{color:'black'}}/>{userLogin?<Link to='/geekgrade' onClick={()=>dispatch(logoutAction())} style={{color:'black',fontWeight:'bold'}}>Logout</Link>:<Link to='/geekgrade/authuser' style={{color:'black',textDecoration:'none',fontSize:'15px',fontWeight:'bolder'}}>Login</Link>}</Button>
         </Toolbar>
       </AppBar>
-    </div>
+
   );
 }
 export default NavBar

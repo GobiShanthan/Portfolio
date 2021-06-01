@@ -24,7 +24,7 @@ from '../constant/cartConstant'
 
 //ADD TO CART 
 export const addToCartAction =(id,qty)=>async(dispatch,getState)=>{
-    const {data} = await axios.get(`/products/${id}`)
+    const {data} = await axios.get(`/api/products/${id}`)
     try{
         dispatch({
             type: ADD_TO_CART_SUCCESS,
@@ -37,7 +37,7 @@ export const addToCartAction =(id,qty)=>async(dispatch,getState)=>{
               qty,
             },
           })
-        
+
     localStorage.setItem('cartItems',JSON.stringify(getState().cartReducer.cartItems))
     }catch(error){
         const message = error.response && error.response.data.message?error.response.data.message:error.message

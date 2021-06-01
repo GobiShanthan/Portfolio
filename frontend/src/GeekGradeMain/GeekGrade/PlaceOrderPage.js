@@ -37,7 +37,7 @@ const PlaceOrderPage = ({history}) => {
 
     useEffect(()=>{
       if(order){
-        history.push(`/order/${order._id}`)
+        history.push(`/geekgrade/order/${order._id}`)
       }
     },[order,history])
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCard from '../Component/ProductCard'
 import CarouselItem from '../Component/Carousel'
-import {Grid} from '@material-ui/core'
+
 
 const GeekGradeMain = () =>{
 
@@ -10,11 +10,9 @@ const GeekGradeMain = () =>{
             <div style={{marginBottom:"40px"}}>
             <CarouselItem/>
             </div>
+            <div style={{paddingBottom:'10%'}}>
             <ProductCard/>
-            <Grid container direction='column' alignContent='center'>
-            </Grid>
-
-
+            </div>
 
         </div>
     )

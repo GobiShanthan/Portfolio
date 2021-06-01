@@ -69,7 +69,7 @@ const ProductEdit = ({match,history}) =>{
   }
 
     return(
-        <div className="productpage">
+        <div className="productpage" style={{paddingBottom:'10%'}}> 
             <Grid container justify='center' style={{textAlign:'center',marginTop:'1%'}}>
             <Paper  elevation={20} style={{width:'400px',marginBottom:'20px'}} align='center'>
               <form className='userupdateform' onSubmit={updateProductHandler} >

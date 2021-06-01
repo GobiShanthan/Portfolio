@@ -45,7 +45,7 @@ const UpdateUserPage = ({match,history}) =>{
   }
 
     return(
-        <div className='userList'>
+        <div className='userList' style={{backgroundColor:"#3A6EA5",height:"100vh"}}>
           <Grid container justify='center'>
             <Paper className="userUpdatePaper" elevation={22}>
               <Grid item xs={12}>

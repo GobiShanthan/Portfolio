@@ -70,7 +70,7 @@ const usersRow = List.map((order)=>{
         </StyledTableCell>
         <StyledTableCell component="th" scope="row">
           <div style={{fontSize:'20', marginLeft:'20px'}}>
-            <Link to={`/order/${order._id}`}><CreateIcon className='updateIcon' /></Link>
+            <Link to={`/geekgrade/order/${order._id}`}><CreateIcon className='updateIcon' /></Link>
             <CloseIcon  className='closeIcon' onClick={(e)=>dispatch(deleteOrderAction(order._id))} />
           </div>
           

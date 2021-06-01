@@ -29,7 +29,7 @@ const Order = ({match,history}) => {
     const dispatch = useDispatch()
     const [sdkReady, setSdkReady] = useState(false)
     const OrderId = match.params.id
-
+    const [newOrderInfo,setNewOrderInfo]= useState()
     const classes = useStyles()
 
     //GET ORDER STATE BY ID
@@ -60,7 +60,7 @@ const Order = ({match,history}) => {
 
     useEffect(()=>{
         if (!userLogin) {
-            history.push('/authuser')
+            history.push('/geekgrade/authuser')
           }
             const addPayPalScript = async () => {
             const { data: clientId } = await axios.get('/api/config/paypal')
@@ -77,6 +77,7 @@ const Order = ({match,history}) => {
             dispatch({type: UPDATE_DELIVERED_RESET})
             dispatch({type:PAY_ORDER_RESET})
             dispatch(getOrderAction(OrderId))
+            setNewOrderInfo(orderInfo)
         }else if(!orderInfo.isPaid){
             if(!window.paypal){
                 addPayPalScript()
@@ -92,21 +93,21 @@ const Order = ({match,history}) => {
 
 
 if(orderInfo){
+    console.log(orderInfo)
     const totalItemsPrice = orderInfo.orderItems.reduce((acc,item)=>acc+item.qty*item.price,0)
     return (
         <Paper className={classes.paper}>
             <Grid container direction='row' className={classes.content}>
                 <Grid item xs={12}> 
-                <h2>ORDER # {OrderId} </h2>
+                <h2>ORDER # </h2>
                 <Divider/>
                 </Grid>
 
                 <Grid item container direction='column' xs={12} md={8}>
                     <Grid>
                         <h3>Shipping</h3>
-                        <div>User Id: {orderInfo.user}</div>
-                        <div>Name:{userLogin.firstName} {userLogin.lastName}</div>
-                        <div>Email: {userLogin.email}</div>
+                        <div>User Id: {orderInfo.user._id}</div>
+                        <div>Email: {orderInfo.user.email}</div>
                         <div>Address:{orderInfo.shippingAddress.address}, {orderInfo.shippingAddress.city}, {orderInfo.shippingAddress.postalCode}, {orderInfo.shippingAddress.country}</div>
                         {orderInfo.isDelivered?
                         <Alert severity="success" className={classes.alert}><strong>Successfully Shipped on</strong> {orderInfo.deliveredAt.slice(0,10)} <strong>Time </strong> {orderInfo.deliveredAt.slice(11,19)} </Alert>

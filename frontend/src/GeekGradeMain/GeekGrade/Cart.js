@@ -86,7 +86,7 @@ const Cart = ({match,location,history}) =>{
                                         <Grid item container direction='column' alignContent='center'>
                                             <Grid item>
                                             <ListItem >
-                                            <Link to='/placeorder' style={{textDecoration:'none'}}> <Button variant='contained' color='secondary' size='small' >Checkout</Button></Link>
+                                            <Link to='/geekgrade/placeorder' style={{textDecoration:'none'}}> <Button variant='contained' color='secondary' size='small' >Checkout</Button></Link>
                                             </ListItem>
                                             </Grid>
                                     </Grid>

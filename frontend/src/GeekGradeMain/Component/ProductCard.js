@@ -81,7 +81,7 @@ if(products){
         </CardContent>
       </CardActionArea>
       {`$${addDecimals(product.price)}`}
-      <Link to={`/product/${product._id}`} style={{textDecoration:'none'}}>
+      <Link to={`/geekgrade/product/${product._id}`} style={{textDecoration:'none'}}>
         <Button type='button' variant='contained' color='secondary' size='large' style={{marginLeft:'20%',marginRight:'20%',marginBottom:'5%'}}>Add To Cart</Button>        
       </Link>
        </Card>

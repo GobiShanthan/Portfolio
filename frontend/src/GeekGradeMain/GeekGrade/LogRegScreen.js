@@ -16,12 +16,12 @@ const LogRegScreen  = ({history}) =>{
             history.push('/geekgrade')
         }
         if(userRegis){
-            history.push('/')
+            history.push('/geekgrade/authuser')
         }
     },[userLogin,userRegis,history])
 
     return(
-        <div style={{height:'100vh',backgroundColor:'#3A6EA5',color:'#3A6EA5'}}>
+        <div style={{height:'100vh',backgroundColor:'#3A6EA5',color:'#3A6EA5',paddingTop:'10px'}}>
             <LogRegCard/>
         </div>
     )

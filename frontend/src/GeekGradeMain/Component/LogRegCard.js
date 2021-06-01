@@ -55,6 +55,7 @@ const loginSubmit =(e)=>{
 const regisSubmit =(e)=>{
   e.preventDefault()
   dispatch(regisAction(regisFirst,regisLast,regisEmail,regisPassword))
+  setLogged('login')
 }
 
 if(logged === "register"){

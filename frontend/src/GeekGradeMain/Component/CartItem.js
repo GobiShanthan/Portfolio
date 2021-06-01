@@ -19,6 +19,7 @@ const CartItem =({match,location,history})=> {
   const productId= match.params.id
   const qty = Number(location.search.split('=')[1])
 
+
   const addDecimals =(num)=>{
     return((num*100)/100).toFixed(2)
   }
@@ -70,7 +71,7 @@ if( cartItems && cartItems.length > 0){
         </>
       ))}
         </List>
-        <Alert color='info' style={{margin:'10px'}}>Want to add more to cart?<Link to='/'> Go back</Link></Alert>
+        <Alert color='info' style={{margin:'10px'}}>Want to add more to cart?<Link to='/geekgrade'> Go back</Link></Alert>
 
       </Grid>
     </div>
@@ -79,7 +80,7 @@ if( cartItems && cartItems.length > 0){
   return(
     <div>
       <Alert color='info' style={{margin:'10px'}}>Cart is empty!
-      <Link to='/'> Go back</Link>
+      <Link to='/geekgrade'> Go back</Link>
       </Alert>
     </div>
   )

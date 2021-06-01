@@ -46,11 +46,11 @@ const App =() =>{
                     <Route path='/geekgrade/userslist' component={UsersList}/>
                     <Route path='/geekgrade/user/:id' component={UpdateUser}/>
                     <Route path ='/geekgrade/productslist' component={ProductsList}/>
-                    <Route path='/productedit/:id' component={ProductEdit}/>
-                    <Route path='/cart/:id' component={Cart}/>
-                    <Route path ='/product/:id' component={ProductPage}/>
+                    <Route path='/geekgrade/productedit/:id' component={ProductEdit}/>
+                    <Route path='/geekgrade/cart/:id' component={Cart}/>
+                    <Route path ='/geekgrade/product/:id' component={ProductPage}/>
                     <Route path='/geekgrade/placeorder/' component={OrderStepper}/>
-                    <Route path='/order/:id' component={OrderScreen}/>
+                    <Route path='/geekgrade/order/:id' component={OrderScreen}/>
                     <Route path='/geekgrade/orderlist' component={OrderList}/>
 
                 </div>

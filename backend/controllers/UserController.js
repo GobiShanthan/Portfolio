@@ -12,13 +12,14 @@ const authUsers = asyncHandler(async(req,res)=>{
   const {email,password} = req.body
   const user =  await User.findOne({email})
 
-  if(user&&(user.matchPassword(password))){
+  if(user && await user.matchPassword(password)){
     res.json({
-      _id:user._id,
-      name:user.name,
-      email:user.email,
-      isAdmin:user.isAdmin,
-      token:generateToken(user._id)
+        _id:user._id,
+        firstName:user.firstName,
+        lastName:user.lastName,
+        email:user.email,
+        isAdmin:user.isAdmin,
+        token:generateToken(user._id)
     })
   }else{
     res.status(401)
@@ -31,32 +32,29 @@ const authUsers = asyncHandler(async(req,res)=>{
 //@route POST  /api/users/
 //@access Public 
 const registerUser = asyncHandler(async(req,res)=>{
-  const {name,email,isAdmin,password} = req.body
-  const existEmail = await User.findOne({email})
-
-  if(existEmail){
-    res.status(400)
-    throw new Error("Email is already registered ")
+  const {firstName,lastName,email,password} = req.body
+  const emailExist = await User.findOne({email})
+  if(emailExist){
+      res.status(400)
+      throw new Error(`Email address is already registered`)
   }
-
-  const user = await User.create({
-    name,
-    email,
-    isAdmin,
-    password
+  const newUser = await User.create({
+      firstName,
+      lastName,
+      email,
+      password
   })
-
-  if(user){
-    res.json({
-      _id:user._id,
-      name:user.name,
-      email:user.email,
-      isAdmin:user.isAdmin,
-      token:generateToken(user._id)
-    })
+  if(newUser){
+      res.json({
+          _id:newUser._id,
+          firstName:newUser.firstName,
+          lastName:newUser.lastName,
+          email:newUser.email,
+          isAdmin:newUser.isAdmin,
+          token:generateToken(newUser._id),
+      })
   }else{
-    res.status(401)
-    throw new Error("Invalid user data")
+      throw new Error(`An error has occured trying to register user`)
   }
 
 })
@@ -68,13 +66,13 @@ const registerUser = asyncHandler(async(req,res)=>{
 
 const getUserProfile = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.user._id)
-
   if(user){
     res.json({
-      _id:user._id,
-      name:user.name,
-      email:user.email,
-      isAdmin:user.isAdmin,
+        _id:user._id,
+        firstName:user.firstName,
+        lastName:user.lastName,
+        email:user.email,
+        isAdmin:user.isAdmin,
     })
   }else{
     res.status(401)
@@ -89,20 +87,17 @@ const getUserProfile = asyncHandler(async(req,res)=>{
 
 const updateUserProfile = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.user.id)
+  const {firstName,lastName,email,password,image} = req.body
+  const user = await User.findById(req.user.id)
   if(user){
-    user.name = req.body.name || user.name,
-    user.email = req.body.email || user.email
-    if(req.body.password){
-      user.password = req.body.password
-    }
-    const updatedUser = await user.save()
-    res.json({
-      _id:updatedUser._id,
-      name:updatedUser.name,
-      email:updatedUser.email,
-      isAdmin:updatedUser.isAdmin,
-      token:generateToken(updatedUser._id)
-    })
+      user.firstName = firstName || user.firstName
+      user.lastName = lastName || user.lastName
+      user.email = email || user.email
+      if(password){
+          user.password = password
+      }
+      const updatedUser = await user.save()
+      res.json('Updated User successfully')
   }else{
     res.status(401)
     throw new Error("Update unsuccessful")
@@ -142,9 +137,14 @@ const deleteUser = asyncHandler(async(req,res)=>{
 
 const getUserById = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.params.id).select("-password")
-  
   if(user){
-    res.json(user)
+    res.json({
+        _id:user._id,
+        firstName:user.firstName,
+        lastName:user.lastName,
+        email:user.email,
+        isAdmin:user.isAdmin
+    })
   }else{
     res.status(404)
     throw new Error("User not found")
@@ -156,21 +156,24 @@ const getUserById = asyncHandler(async(req,res)=>{
 
 const updateUser = asyncHandler(async(req,res)=>{
   const user = await User.findById(req.params.id)
-
-
-  if(user){
-    user.name = req.body.name || user.name,
-    user.email = req.body.email || user.email
-    user.isAdmin = req.body.isAdmin 
-
-
-    const updatedUser = await user.save()
-    res.json({
-      _id:updatedUser._id,
-      name:updatedUser.name,
-      email:updatedUser.email,
-      isAdmin:updatedUser.isAdmin,
-    })
+  if(firstName){
+    user.firstName  = firstName || user.firstName
+}
+if(lastName){
+    user.lastName  = lastName || user.lastName
+}
+if(email){
+    user.email  = email || user.email
+}
+if(password){
+    user.password  = password || user.password
+}
+if(isAdmin){
+    user.isAdmin = isAdmin
+}
+const updatedUser = await user.save()
+if(updatedUser){
+    res.json('Updated User Successfully')
   }else{
     res.status(401)
     throw new Error("Update unsuccessful")

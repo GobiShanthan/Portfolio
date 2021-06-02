@@ -12,6 +12,7 @@ import './component.css'
 import {getAllProductsAction} from '../../action/productAction'
 import {UPDATE_PRODUCT_RESET} from '../../constant/productConstant'
 import './component.css'
+import { ClassRounded } from '@material-ui/icons';
 
 
 
@@ -31,6 +32,15 @@ const useStyles = makeStyles({
     height: '125px', 
     width: '80%', 
   },
+  Typography:{
+    fontSize:"16px",
+
+  },
+  typographyTitle:{
+    fontSize:'20px',
+    marginBottom:'-8px',
+    fontWeight:'bolder'
+  }
 });
 
 const  ProductCard=()=>{
@@ -72,15 +82,21 @@ if(products){
           alt={product.name}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+        <Typography gutterBottom  className={classes.typographyTitle}>
+            {product.brand}
+          </Typography>
+          <Typography gutterBottom variant="h6" component="h2" className={classes.Typography}>
             {product.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {product.description}
           </Typography>
         </CardContent>
-      </CardActionArea>
+      </CardActionArea >
+      <div style={{marginTop:'-20px'}}>
       {`$${addDecimals(product.price)}`}
+      </div>
+
       <Link to={`/geekgrade/product/${product._id}`} style={{textDecoration:'none'}}>
         <Button type='button' variant='contained' color='secondary' size='large' style={{marginLeft:'20%',marginRight:'20%',marginBottom:'5%'}}>Add To Cart</Button>        
       </Link>

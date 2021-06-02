@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {makeStyles} from '@material-ui/core'
 import HalfRating from '../Component/Rating'
 import { Button } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 import {writeReviewAction} from '../../action/productAction'
-
-
+import { useEffect } from 'react';
+import {getProductAction} from "../../action/productAction"
+import {CREATE_REVIEW_RESET} from "../../constant/productConstant"
 const useStyles = makeStyles({
     root:{
         marginBottom:'40px'
@@ -16,14 +17,27 @@ const useStyles = makeStyles({
 
 
 const Reviews = ({product}) =>{
+
     const [comment,setComment] = useState('')
     const [rating,setRating]= useState(0)
     const dispatch = useDispatch()
     const classes = useStyles()
     const productId = product._id
 
+    //review ProductReducer 
+    const reviewProductReducer = useSelector((state)=>state.reviewProductReducer)
+    const {reviewError,reviewInfo} = reviewProductReducer
 
-const reviewSubmit=(e)=>{
+    useEffect(()=>{
+        if(reviewInfo){
+            dispatch(getProductAction(product._id))
+            dispatch({type:CREATE_REVIEW_RESET})
+        }
+    },[dispatch,reviewInfo,product])
+
+    
+    //Review submit, write reivew 
+    const reviewSubmit=(e)=>{
     e.preventDefault()
     dispatch(writeReviewAction({_id:productId,rating,comment}))
 }
@@ -62,6 +76,8 @@ if(product){
                 <textarea id="w3review" name="w3review" rows="4"style={{width:'90%',minWidth:'150px'}} value={comment} onChange={(e)=>setComment(e.target.value)}placeholder="write comment here" required >
                 </textarea>
                 </div>
+                <div>{reviewError&& reviewError.slice(-22) ==="userLogin is undefined"?"Must login to write review":reviewError}</div>
+                <div>{reviewInfo?reviewInfo:null}</div>
                 <div>
                     <Button variant='contained' color='secondary' type='submit'>Submit</Button>
                 </div>

@@ -137,7 +137,7 @@ const createProductReview = asyncHandler(async (req, res) => {
     }
 
     const review = {
-      name: req.user.name,
+      name: req.user.firstName + " " +req.user.lastName,
       rating: Number(rating),
       comment,
       user: req.user._id,
@@ -152,12 +152,13 @@ const createProductReview = asyncHandler(async (req, res) => {
       product.reviews.length
 
     await product.save()
-    res.status(201).json({ message: 'Review added' })
+    res.status(201).json({message:'Successfully reviewed'})
   } else {
     res.status(404)
     throw new Error('Product not found')
   }
 })
+
 
 
 

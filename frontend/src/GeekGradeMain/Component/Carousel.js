@@ -8,18 +8,21 @@ import Rating from './Rating'
 
 const useStyles = makeStyles({
     root:{
+
         width:'90%',
         textAlign:'center',
-        minWidth:'275px'
+        minWidth:'275px',
+        borderRadius:'2%'
     },
     image:{
-        width:'90%',
+        width:'40%',
         maxWidth:'350px',
-        height:'250px'
+        height:'150px'
     },
     button:{
         marginBottom:'20px'
-    }
+    },
+
 })
 
 
@@ -41,15 +44,17 @@ const CarouselItem = ()=>{
         return(
                 <Carousel >
                 {topThree.map((item)=>(
+
                 <Grid container direction='column' alignContent='center'>
                 <Paper key={item._id} className={classes.root} style={{maxWidth:'800px'}}>
-                    <Grid item><h1>Top Rated Products</h1></Grid>
+                    <Grid item style={{paddingTop:"5px"}}><h1>Top Rated Products</h1></Grid>
                 <Grid container direction='column' alignContent='center'>
-                <img className={classes.image}  src={item.image} alt="item.name"/>
+                <img className={classes.image}  src={item.image} alt={item.name}/>
                 <div className={classes.subHeading}>
-                <h2>{item.name}</h2>
+                <h2>{item.brand +" "+item.name}</h2>
                 <Rating rating={item.rating}/>
                 <p>{item.description}</p>
+
                 </div>
                 </Grid>
     

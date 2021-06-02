@@ -5,6 +5,7 @@ import {getProductAction} from '../../action/productAction'
 import Reviews from '../Component/Reviews'
 import AddToCartBox from '../Component/AddToCartBox'
 import Rating from '../Component/Rating'
+import {CREATE_REVIEW_RESET} from '../../constant/productConstant'
 import './screens.css'
 
 const useStyles = makeStyles({
@@ -47,6 +48,7 @@ const ProductPage =({match,history})=>{
         if(productInfo && productInfo._id !== productId ){
             dispatch(getProductAction(productId)) 
         }
+
     },[productInfo,productId,dispatch])
 
 

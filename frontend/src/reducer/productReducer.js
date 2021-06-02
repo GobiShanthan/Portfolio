@@ -32,6 +32,7 @@ import {
     CREATE_REVIEW_SUCCESS,
     CREATE_REVIEW_REQUEST,
     CREATE_REVIEW_FAIL,
+    CREATE_REVIEW_RESET,
 
     TOP_RATED_PRODUCTS_REQUEST,
     TOP_RATED_PRODUCTS_SUCCESS,
@@ -137,6 +138,8 @@ export const reviewProductReducer = (state={},action)=>{
             return{loading:false,reviewInfo:action.payload}
         case CREATE_REVIEW_FAIL:
             return {loading:false,reviewError:action.payload}
+        case CREATE_REVIEW_RESET:
+            return state={}
         default:
             return state
     }

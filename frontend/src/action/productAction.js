@@ -134,7 +134,8 @@ export const writeReviewAction =(review)=>async(dispatch,getState)=>{
             }
         }
         const {data} = await axios.post(`/api/products/${review._id}/reviews/`,review,config)
-        dispatch({type:CREATE_REVIEW_SUCCESS,payload:data})
+        console.log(data.message)
+        dispatch({type:CREATE_REVIEW_SUCCESS,payload:data.message})
     }catch(error){
         const message = error.response && error.response.data.message ? error.response.data.message:error.message
         dispatch({type:CREATE_REVIEW_FAIL,payload:message})

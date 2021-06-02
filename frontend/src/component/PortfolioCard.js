@@ -19,12 +19,10 @@ const useStyles = makeStyles((theme) => ({
 
   },
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+  width:'100%',
+  paddingTop: '56.25%', // 16:9
     '&:hover': {
-     padding:'32%'
- // 16:9
-
+      height:"100px"
     }
   },
   expand: {
@@ -61,8 +59,6 @@ const ProjectCard =({Title,Content,image,link,projectInfo})=>{
         image={image}
         src={image}
         title="gsearch"
-        style={{margin:'10px',borderRadius:'0px'
-      }}
       />
         ):(<h3>loading...</h3>)}
       

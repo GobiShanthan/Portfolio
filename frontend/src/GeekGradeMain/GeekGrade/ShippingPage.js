@@ -43,17 +43,16 @@ const BackWard =e=>{
     return (
 <div style={{textAlign:'center'}}>
 <h1>Shipping</h1>
- <form Validate autoComplete="on" onSubmit={submitFormFoward}>
+ <form  autoComplete="on" onSubmit={submitFormFoward}>
      <Grid container direction='column'>
      <TextField required type='text' value={address} label='Address' onChange={(e)=>setAddress(e.target.value)}/>
      <TextField required type='text' value={city} label='City' onChange={(e)=>setCity(e.target.value)}/>
      <TextField required type='text' value={postalCode} label='Postal Code' onChange={(e)=>setPostalCode(e.target.value)}/>
-     <TextField required type='text'  value ={country} label='Country' onChange={(e)=>SetCountry(e.target.value)}/>
+     <TextField required type='text' value ={country} label='Country' onChange={(e)=>SetCountry(e.target.value)}/>
      </Grid>
      <Button onClick={BackWard} variant='contained' color='secondary' disabled>Back</Button>
      <Button type='submit' variant='contained' color='secondary'>Continue</Button>
  </form>
-
 </div>
         
     )

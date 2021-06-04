@@ -1,6 +1,5 @@
 import React from 'react'
 import DrStrange from '../marvelPics/DrStrange.png'
-import Intro from '../marvelPics/Intro.mp4'
 
 
 

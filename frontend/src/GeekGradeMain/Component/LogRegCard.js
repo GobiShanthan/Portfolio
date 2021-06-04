@@ -64,7 +64,7 @@ if(logged === "register"){
   <Paper elevation={20} style={{width:'300px',backgroundColor:"#EBEBEB"}} align='center' >
         <AccountCircleIcon style={{fontSize:80,marginTop:'40px'}} color="secondary" />
 
-    <form className={classes.root} Validate autoComplete="on" onSubmit={regisSubmit}>
+    <form className={classes.root}  autoComplete="on" onSubmit={regisSubmit}>
       <div>
       <TextField
           type='text'
@@ -98,7 +98,7 @@ if(logged === "register"){
           value={regisPassword}
           onChange={(e)=>setRegisPassword(e.target.value)}
         />
-    {regisError?<Alert severity="error" variant='outline' style={{width:'90%',color:'red'}}>{regisError}</Alert>:null }
+    {regisError?<Alert severity="error" variant="outlined" style={{width:'90%',color:'red'}}>{regisError}</Alert>:null }
       <h5 onClick={()=>setLogged('login')} className='loginClick' style={{fontWeight:'bold',width:'80px'}}>Back to Login</h5>             
       </div>
       <Button variant="contained" color="secondary" style={{marginTop:"5px"}} type='submit'>Register</Button>
@@ -112,7 +112,7 @@ if(logged === "register"){
     <Paper elevation={20} style={{width:'300px',backgroundColor:"#EBEBEB"}} align='center' >
     <AccountCircleIcon style={{fontSize:100,marginTop:'40px'}} color="secondary" />
 
-<form className={classes.root} autoComplete="on" Validate onSubmit={loginSubmit}>
+<form className={classes.root} autoComplete="on" onSubmit={loginSubmit}>
   <div>
     <TextField
       type='email'
@@ -131,7 +131,7 @@ if(logged === "register"){
       onChange={(e)=>setPassword(e.target.value)}
     
     />
-    {loginError?<Alert severity="error" variant='outline' style={{width:'70%',color:'red'}}>{loginError}</Alert>:null }   
+    {loginError?<Alert severity="error" variant='outlined' style={{width:'70%',color:'red'}}>{loginError}</Alert>:null }   
 
   </div>
   <div >

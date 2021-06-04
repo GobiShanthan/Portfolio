@@ -78,7 +78,7 @@ const ProfilePage = ({history}) =>{
               
 
               <AccountCircleIcon style={{fontSize:100,marginTop:'40px'}} />
-                <form className={classes.root} Validate autoComplete="on" onSubmit={updateProfileHandler} >
+                <form className={classes.root}  autoComplete="on" onSubmit={updateProfileHandler} >
                 <div style={{textAlign:'center'}}>
         
         <TextField

@@ -60,6 +60,7 @@ export default function HorizontalLabelPositionBelowStepper({history}) {
         return userLogin?setActiveStep(1):history.push('/geekgrade/authuser');
       case 1:
         return <ShippingPage stateChanger={setActiveStep} />;
+        
       case 2:
         return <PaymentMethod stateChanger={setActiveStep}/>;
         case 3:
@@ -93,7 +94,7 @@ export default function HorizontalLabelPositionBelowStepper({history}) {
           </div>
         ) : (
           <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            <div className={classes.instructions}>{getStepContent(activeStep)}</div>
 
           </div>
         )}

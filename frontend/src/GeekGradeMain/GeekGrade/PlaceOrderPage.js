@@ -83,7 +83,7 @@ const PlaceOrderPage = ({history}) => {
                       <h2>Order Items</h2>
                     <List dense>
         {cartItems.map((item)=>(
-          <>
+          <div key={item.product}>
         <ListItem>
           <div><img src={item.image} alt={item.name} style={{width:"50px", height:"30px"}}/></div>
 
@@ -98,7 +98,7 @@ const PlaceOrderPage = ({history}) => {
       <hr/>
 
 
-        </>
+        </div>
       ))}
         </List>
                     </Grid>

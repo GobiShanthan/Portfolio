@@ -42,7 +42,8 @@ if( cartItems && cartItems.length > 0){
       <Grid>
         <List dense>
         {cartItems.map((item)=>(
-          <>
+          <div key={item.product}>
+
         <ListItem>
           <div style={{marginRight:'10px'}}><img src={item.image} alt={item.name} style={{width:"50px", height:"30px"}}/></div>
 
@@ -68,7 +69,7 @@ if( cartItems && cartItems.length > 0){
       </ListItemSecondaryAction>
       </ListItem>
       <Divider/>
-        </>
+        </div>
       ))}
         </List>
         <Alert color='info' style={{margin:'10px'}}>Want to add more to cart?<Link to='/geekgrade'> Go back</Link></Alert>

@@ -5,7 +5,6 @@ import {getProductAction} from '../../action/productAction'
 import Reviews from '../Component/Reviews'
 import AddToCartBox from '../Component/AddToCartBox'
 import Rating from '../Component/Rating'
-import {CREATE_REVIEW_RESET} from '../../constant/productConstant'
 import './screens.css'
 
 const useStyles = makeStyles({

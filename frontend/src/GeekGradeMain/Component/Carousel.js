@@ -45,7 +45,7 @@ const CarouselItem = ()=>{
                 <Carousel >
                 {topThree.map((item)=>(
 
-                <Grid container direction='column' alignContent='center'>
+                <Grid container direction='column' alignContent='center' key={item._id}>
                 <Paper key={item._id} className={classes.root} style={{maxWidth:'800px'}}>
                     <Grid item style={{paddingTop:"5px"}}><h1>Top Rated Products</h1></Grid>
                 <Grid container direction='column' alignContent='center'>

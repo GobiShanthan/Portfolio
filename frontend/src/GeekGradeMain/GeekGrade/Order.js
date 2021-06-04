@@ -29,7 +29,6 @@ const Order = ({match,history}) => {
     const dispatch = useDispatch()
     const [sdkReady, setSdkReady] = useState(false)
     const OrderId = match.params.id
-    const [newOrderInfo,setNewOrderInfo]= useState()
     const classes = useStyles()
 
     //GET ORDER STATE BY ID
@@ -77,7 +76,6 @@ const Order = ({match,history}) => {
             dispatch({type: UPDATE_DELIVERED_RESET})
             dispatch({type:PAY_ORDER_RESET})
             dispatch(getOrderAction(OrderId))
-            setNewOrderInfo(orderInfo)
         }else if(!orderInfo.isPaid){
             if(!window.paypal){
                 addPayPalScript()
@@ -93,7 +91,6 @@ const Order = ({match,history}) => {
 
 
 if(orderInfo){
-    console.log(orderInfo)
     const totalItemsPrice = orderInfo.orderItems.reduce((acc,item)=>acc+item.qty*item.price,0)
     return (
         <Paper className={classes.paper}>
@@ -129,7 +126,7 @@ if(orderInfo){
                     <Grid>
                         <h3>Order Items</h3>
                         {orderInfo.orderItems.map((item)=>(
-                            <List dense>
+                            <List dense key={item.product}>
                             <ListItem key={item._id}>
                                 <div><img style={{width:'50px'}} src={item.image} alt={item.name}/></div>
                                     <ListItemText>{item.name}</ListItemText>

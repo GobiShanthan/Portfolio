@@ -36,7 +36,6 @@ if(data){
   const listData = data.map((list)=>(
 
       <List className={classes.root}  key={list.id.videoId?list.id.videoId:Math.floor((Math.random() * 1) + 1)} style={{backgroundColor:bgColor,color:bgColor === 'white'?'black':'white'}} >
-        {console.log(list.id.videoId)}
         <Grid container direction ='row'>
         <ListItem key={list.id.videoId} >
           <Grid item xs={2} style={{margin:'10px'}} onClick={(e)=>dispatch(youTubeChoice(list))}><img src={list.snippet.thumbnails.default.url} alt={list.snippet.title}  width='60px'/></Grid>

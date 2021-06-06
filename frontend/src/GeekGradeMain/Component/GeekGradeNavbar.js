@@ -10,6 +10,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import {logoutAction} from '../../action/userAction'
 import geekLogo from '../../Pics/geekgradeLogo.svg'
 import SimpleMenu from './SimpleMenu'
+import SortMenu from './SortMenu'
 
 
 
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
- const NavBar =()=>{
+ const NavBar =({location})=>{
   const dispatch = useDispatch()
   const loginReducer = useSelector((state)=>state.loginReducer)
   const {userLogin} = loginReducer
@@ -40,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
           <Link to='/geekgrade' style={{color:'white',textDecoration:'none'}}>
           <img src={geekLogo} alt='geekgrade' style={{width:"100px"}}/>
           </Link>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} style={{marginTop:'-35px'}}>
+          {location.pathname === '/geekgrade'?<SortMenu/>:null}
           </Typography>
           {userLogin?<SimpleMenu userLogin={userLogin}/>:null}
           <Button style={{color:'white',marginTop:'-45px'}}><PersonIcon style={{color:'black'}}/>{userLogin?<Link to='/geekgrade' onClick={()=>dispatch(logoutAction())} style={{color:'black',fontWeight:'bold'}}>Logout</Link>:<Link to='/geekgrade/authuser' style={{color:'black',textDecoration:'none',fontSize:'15px',fontWeight:'bolder'}}>Login</Link>}</Button>

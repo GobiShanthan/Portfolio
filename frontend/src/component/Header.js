@@ -48,7 +48,7 @@ const Header=({location})=>{
   const classes = useStyles();
 if(location.pathname.slice(0,10) ==='/geekgrade'){
   return(
-    <GeekGradeNavbar/>
+    <GeekGradeNavbar location={location}/>
   )
 }else 
 if(location.pathname === '/weather'){

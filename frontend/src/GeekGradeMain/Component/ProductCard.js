@@ -69,6 +69,7 @@ const  ProductCard=()=>{
 
 
 if(products){
+
  return(
    <div className='projectCard'>
      {products.map(product=>(

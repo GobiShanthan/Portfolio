@@ -11,7 +11,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import '../Screens/screenCss/home.css'
+import '../index.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {

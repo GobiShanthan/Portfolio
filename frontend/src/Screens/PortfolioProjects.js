@@ -1,10 +1,13 @@
-import './screenCss/home.css'
+import '../index.css'
 import PortFolioCard from '../component/PortfolioCard'
 import gsearch from '../SearchProject/searchPics/gSearch.png'
 import {searchProjectInfo} from '../projectInfo/searchProjectInfo'
 import WeatherMain from '../Pics/WeatherMain.png'
 import GeekgradePic from '../Pics/GeekGradePortfolioPic.png'
 import MarvelPic from "../Pics/MarvelPic.png"
+
+
+
 const PortfolioProjects =() =>{
     return(
         <div>

@@ -1,8 +1,7 @@
 import React from 'react'
 import PortfolioMain from './PortfolioMain'
 import PortfolioProjects from './PortfolioProjects'
-
-import './screenCss/home.css'
+import '../index.css'
 
 const Home =()=>{
     return(

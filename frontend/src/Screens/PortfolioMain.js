@@ -1,5 +1,5 @@
 import React,{useEffect,useRef,useState} from 'react'
-import '../Screens/screenCss/home.css'
+import '../index.css'
 import software from '../Pics/software.svg'
 import html from '../Pics/html.png'
 import css3 from '../Pics/css3.png'
@@ -20,11 +20,7 @@ const PortfolioMain =()=>{
 const [height,setHeight] = useState()
     const stageCanvasRef = useRef(null);
 
-    // useEffect will run on stageCanvasRef value assignment
     useEffect( () => {
-
-        // The 'current' property contains info of the reference:
-        // align, title, ... , width, height, etc.
         if(stageCanvasRef.current){
             setHeight(stageCanvasRef.current.parentElement.clientHeight)
         }
@@ -45,7 +41,8 @@ const [height,setHeight] = useState()
             <div className='animation' >
   
                 <div className='html'>
-                <img src={html} alt='html' />
+                {/* <img src="{{ url_for('static', filename='loginimg.png') }}" alt=""/> */}
+                <img src={html} alt='html'/>
                 </div>
 
                 <div className='css3'>

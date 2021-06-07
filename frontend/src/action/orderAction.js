@@ -91,9 +91,6 @@ const getOrderAction =(id)=>async(dispatch,getState)=>{
 }
 
 
-
-
-
 const payOrderAction =(orderId,paymentResult)=>async(dispatch,getState)=>{
 
     try{
@@ -129,7 +126,7 @@ const updateDeliveredAction =(id)=>async(dispatch,getState)=>{
                 Authorization: `Bearer ${userLogin.token}`
             }
         }
-        const {data} = await axios.put(`/api/orders/${id}`,{},config)
+        const {data} = await axios.put(`/api/orders/${id}/deliver`,{},config)
         dispatch({type:UPDATE_DELIVERED_SUCCESS, payload:data})
     }catch(error){
         const message = error.response&& error.response.data.message?error.response.data.message:error.message

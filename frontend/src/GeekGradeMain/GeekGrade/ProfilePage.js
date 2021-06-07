@@ -63,7 +63,7 @@ const ProfilePage = ({history}) =>{
 
 
     return(
-        <div className='profilepage'>
+        <div className='profilepage' >
             <Paper 
             elevation={20}
             style={{
@@ -72,7 +72,7 @@ const ProfilePage = ({history}) =>{
             backgroundColor:"#EBEBEB",
             marginBottom:'40px'
           }} 
-            align='center' container
+            align='center' 
             className="profilepaper" 
             square={false}>
               

@@ -4,7 +4,7 @@ import {useDispatch,useSelector} from 'react-redux'
 import {Paper} from '@material-ui/core'
 import {getProductAction,updateProductAction} from '../../action/productAction'
 import { TextField,Grid,Button,FormControl } from '@material-ui/core'
-
+import './screens.css'
 
 
 
@@ -67,11 +67,12 @@ const ProductEdit = ({match,history}) =>{
     dispatch(updateProductAction({_id:productId,image,name,brand,description,category,countInStock,price}))
     history.push('/geekgrade')
   }
-
+  
     return(
-        <div className="productpage" style={{paddingBottom:'10%'}}> 
+        <div className="productpage" style={{paddingBottom:'10%',paddingTop:'5%'}}> 
             <Grid container justify='center' style={{textAlign:'center',marginTop:'1%'}}>
-            <Paper  elevation={20} style={{width:'400px',marginBottom:'20px'}} align='center'>
+            <Paper  elevation={20} style={{width:'400px',marginBottom:'20px'}} >
+              
               <form className='userupdateform' onSubmit={updateProductHandler} >
                 <Grid item xs={12}><img src={image} alt={name} style={{width:"80%", margin:'20px'}}/></Grid>
                 <div>ID : {productId}</div>
@@ -114,10 +115,10 @@ const ProductEdit = ({match,history}) =>{
               />
               </Grid>
 
-                <FormControl type='text' component='html' placeholder='Enter image url'
+                <FormControl type='text'  placeholder='Enter image url'
                 value={image} onChange={(e)=>setImage(e.target.value)} >
                 </FormControl>
-                <TextField type='file' custom onChange={uploadFileHandler} label='Product Image'/>  
+                <TextField type='file'  onChange={uploadFileHandler} label='Product Image'/>  
               </Grid>
               <Grid item xs ={12}>
               <TextField

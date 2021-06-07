@@ -76,9 +76,6 @@ export const allProductsReducer = (state={},action)=>{
             return {loading:true}
         case GET_ALL_PRODUCTS_SUCCESS:
             return {loading:false,allProductsInfo:action.payload}
-
-
-
         case SET_BY_BRAND:
                 let newBrandList = action.payload
             return {loading:false,allProductsInfo:newBrandList.sort((a, b) => a.brand.localeCompare(b.brand))}

@@ -1,7 +1,7 @@
 {
-  "name": "proshop",
+  "name": "gshanthan",
   "version": "1.0.0",
-  "description": "MERN shopping cart app",
+  "description": "portfolio for gobi shanthan",
   "main": "server.js",
   "type": "module",
   "scripts": {

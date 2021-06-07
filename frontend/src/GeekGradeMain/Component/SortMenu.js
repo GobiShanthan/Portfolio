@@ -15,11 +15,11 @@ import {
   SET_BY_AVG_CUSTOMER_REIVEW,
   SET_BY_NEW_ARRIVAL} 
   from '../../constant/productConstant'
-import { LocalDining } from '@material-ui/icons';
+
 
 const SortMenu =() =>{
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [button,setButton] = React.useState('')
+
   const dispatch = useDispatch()
 
   const handleClick = (event) => {
@@ -38,10 +38,7 @@ const SortMenu =() =>{
     setAnchorEl(null);
     if(val){
       dispatch({type:val,payload:newProductsVal})
-    }else{
-      setButton('SortBy')
     }
-
   };
 
 

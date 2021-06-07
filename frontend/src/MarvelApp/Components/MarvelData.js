@@ -92,7 +92,7 @@ if(marvelCharInfo && marvelInfo){
 }else{
     return (
         <div className={classes.intro}>
-        <video width="50%" height="20%"  autoplay="autoplay">
+        <video width="50%" height="20%"  autoPlay="autoplay">
         <source src={Intro} type="video/mp4" />
            </video>
            </div>

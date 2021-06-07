@@ -4,7 +4,6 @@
 
 
 ## Features
-
 - Full featured shopping cart
 - Product reviews and ratings
 - Top products carousel
@@ -24,7 +23,7 @@
 ### Env Variables
 
 ```
-NODE_ENV = development
+NODE_ENV = development/production
 PORT = 3090
 MONGO_URI = your mongodb uri
 JWT_SECRET = 'abc123'

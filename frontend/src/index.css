@@ -58,11 +58,11 @@
   
   .intro{
   position: static;
-  margin: 10px;
-  font-size: 6vh;
+  margin: 4px;
+  font-size: 5vh;
   }
   .projectTitle{
-    font-size: 4vh;
+    font-size: 3vh;
   }
   .intro2{
     position: static;

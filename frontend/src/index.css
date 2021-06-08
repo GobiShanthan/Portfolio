@@ -84,6 +84,7 @@
   
     .html img{
         position: absolute;
+        opacity: 0%;
         width: 13vw;
         animation-fill-mode: forwards;
         animation-name: html;
@@ -94,7 +95,7 @@
   
       @keyframes html {
         0% {
-          opacity: 0%;
+          opacity: 0;
           -webkit-transform: translatex(0px) translatey(0px);
           -moz-transform: translatex(0px) translatey(0px);
           -o-transform: translatex(0px) translatey(0px);
@@ -103,13 +104,14 @@
 
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-40vw) translatey(-56vh);
       }
       }
   
       .css3 img{
         position: absolute;
+        opacity: 0%;
           width: 8vw;
           max-width: 50px;
           animation-fill-mode: forwards;
@@ -139,6 +141,7 @@
   
         .js img{
           position: absolute;
+          opacity: 0%;
             width: 12vw;
             max-width: 70px;
             animation-name: js;
@@ -150,9 +153,9 @@
           }
           
           @keyframes js {
-            50% {
+            0% {
       
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px);
               -webkit-transform: translatex(0px) translatey(0px);
               -moz-transform: translatex(0px) translatey(0px);
@@ -162,7 +165,7 @@
           }
           100% {
        
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-10vw) translatey(-56.4vh);
             -webkit-transform: translatex(-10vw) translatey(-56.4vh);
             -moz-transform: translatex(-10vw) translatey(-56.4vh);
@@ -174,7 +177,7 @@
   
         .react img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
             width: 11vw;
             max-width: 70px;
             animation-name: react;
@@ -186,9 +189,9 @@
           }
           
           @keyframes react {
-            75% {
+            0% {
       
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px);
               -webkit-transform: translatex(0px) translatey(0px);
               -moz-transform: translatex(0px) translatey(0px);
@@ -197,7 +200,7 @@
           }
           100% {
        
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(6vw) translatey(-56.5vh);
             -webkit-transform: translatex(6vw) translatey(-56.5vh);
             -moz-transform: translatex(6vw) translatey(-56.5vh);
@@ -208,7 +211,7 @@
   
         .redux img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
             width: 14vw;
             max-width: 85px;
             animation-fill-mode: forwards;
@@ -222,7 +225,7 @@
           @keyframes redux {
             0% {
       
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px);
               -webkit-transform: translatex(0px) translatey(0px);
               -moz-transform: translatex(0px) translatey(0px);
@@ -230,7 +233,7 @@
               -ms-transform: translatex(0px) translatey(0px);
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(19vw) translatey(-55vh);
             -webkit-transform: translatex(19vw) translatey(-55vh);
             -moz-transform: translatex(19vw) translatey(-55vh);
@@ -241,7 +244,6 @@
   
           .jwt img{
             position: absolute;
-            opacity: 0%;
               width: 14vw;
               max-width: 90px;
               animation-name: jwt;
@@ -255,7 +257,7 @@
             @keyframes jwt {
               0% {
         
-                opacity: 0%;
+                opacity: 0;
                 transform: translatex(0px) translatey(0px);
                 -webkit-transform: translatex(0px) translatey(0px);
                 -moz-transform: translatex(0px) translatey(0px); 
@@ -264,7 +266,7 @@
                 
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(-11vw) translatey(-37vh);
               -webkit-transform: translatex(-11vw) translatey(-37vh);
               -moz-transform:translatex(-11vw) translatey(-37vh); 
@@ -275,7 +277,6 @@
             
             .nodejs img{
               position: absolute;
-              opacity: 0%;
                 width: 14vw;
                 max-width: 90px;
                 animation-name: nodejs;
@@ -289,7 +290,7 @@
               @keyframes nodejs {
                 0% {
           
-                  opacity: 0%;
+                  opacity: 0;
                   transform: translatex(0px) translatey(0px);
                   -webkit-transform: translatex(0px) translatey(0px);
                   -moz-transform: translatex(0px) translatey(0px); 
@@ -297,7 +298,7 @@
                   -ms-transform: translatex(0px) translatey(0px);
               }
               100% {
-                opacity: 100%;
+                opacity: 1;
                 transform: translatex(-25vw) translatey(-35vh);
                 -webkit-transform: translatex(-25vw) translatey(-35vh);
                 -moz-transform: translatex(-25vw) translatey(-35vh); 
@@ -308,7 +309,7 @@
   
               .mongoDb img{
                 position: absolute;
-                opacity: 0%;
+                opacity: 0;
                   width: 10vw;
                   max-width: 80px;
                   animation-name: mongoDb;
@@ -322,7 +323,7 @@
                 @keyframes mongoDb {
                   0% {
             
-                    opacity: 0%;
+                    opacity: 0;
                     transform: translatex(0px) translatey(0px);
                     -webkit-transform: translatex(0px) translatey(0px); 
                     -moz-transform: translatex(0px) translatey(0px);
@@ -331,7 +332,7 @@
                 }
                 100% {
              
-                  opacity: 100%;
+                  opacity: 1;
                   transform: translatex(6vw) translatey(-35vh);
                   -webkit-transform: translatex(6vw) translatey(-35vh);
                   -moz-transform: translatex(6vw) translatey(-35vh);
@@ -342,7 +343,7 @@
   
                 .mongoose img{
                   position: absolute;
-                  opacity: 0%;
+                  opacity: 0;
                     width: 18%;
                     max-width: 130px;
                     animation-name: mongoose;
@@ -356,7 +357,7 @@
                   @keyframes mongoose {
                     0% {
               
-                      opacity: 0%;
+                      opacity: 0;
                       transform: translatex(0px) translatey(0px);
                       -webkit-transform: translatex(0px) translatey(0px);
                       -moz-transform: translatex(0px) translatey(0px);
@@ -365,7 +366,7 @@
                   }
                   100% {
                
-                    opacity: 100%;
+                    opacity: 1;
                     transform: translatex(-10vw) translatey(-25vh);
                     -webkit-transform: translatex(-10vw) translatey(-25vh);
                     -moz-transform: translatex(-10vw) translatey(-25vh);
@@ -377,7 +378,7 @@
   
                   .express img{
                     position: absolute;
-                    opacity: 0%;
+                    opacity: 0;
                       width: 28vw;
                       max-width: 1200px;
                       animation-name: express;
@@ -391,7 +392,7 @@
                     @keyframes express {
                       0% {
                 
-                        opacity: 0%;
+                        opacity: 0;
                         transform: translatex(0px) translatey(0px);
                         -webkit-transform: translatex(0px) translatey(0px);
                         -moz-transform: translatex(0px) translatey(0px);
@@ -400,7 +401,7 @@
                     }
                     100% {
                  
-                      opacity: 100%;
+                      opacity: 1;
                       transform: translatex(-17vw) translatey(-29vh);
                       -webkit-transform: translatex(-17vw) translatey(-29vh);
                       -moz-transform:translatex(-17vw) translatey(-29vh); 
@@ -411,7 +412,7 @@
                     }
                     .bootstrap img{
                       position: absolute;
-                      opacity: 0%;
+                      opacity: 0;
                       width: 15vw;
                       max-width: 470px;
                       animation-name: bootstrap;
@@ -423,7 +424,7 @@
                                                   
                       @keyframes bootstrap {
                         0% {                                    
-                          opacity: 0%;
+                          opacity: 0;
                           transform: translatex(-2px) translatey(0px);
                           -webkit-transform: translatex(-2px) translatey(0px);
                           -moz-transform: translatex(-2px) translatey(0px);
@@ -431,7 +432,7 @@
                           -ms-transform: translatex(-2px) translatey(0px);
                         }
                         100% {             
-                          opacity: 100%;
+                          opacity: 1;
                           transform: translatex(-36vw) translatey(-46vh);
                           -webkit-transform: translatex(-36vw) translatey(-46vh);
                           -moz-transform: translatex(-36vw) translatey(-46vh);
@@ -443,7 +444,7 @@
                       }
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 14vw;
     max-width: 460px;
     animation-name: axiosPic;
@@ -454,7 +455,7 @@
                                                   
     @keyframes axiosPic {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px);
         -webkit-transform: translatex(0px) translatey(0px);
         -moz-transform: translatex(0px) translatey(0px);
@@ -462,7 +463,7 @@
         -ms-transform:translatex(0px) translatey(0px);
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-20vw) translatey(-48vh);
         -webkit-transform: translatex(-20vw) translatey(-48vh);
         -moz-transform: translatex(-20vw) translatey(-48vh);
@@ -474,7 +475,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 10vw;
     max-width: 430px;
     animation-name: material;
@@ -486,7 +487,7 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px);
         -webkit-transform: translatex(0px) translatey(0px);
         -moz-transform: translatex(0px) translatey(0px);
@@ -495,7 +496,7 @@
 
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-2vw) translatey(-47vh);
         -webkit-transform: translatex(-2vw) translatey(-47vh);
         -moz-transform: translatex(-2vw) translatey(-47vh);
@@ -507,7 +508,7 @@
 
     .reactRouter img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 15vw;
       max-width: 480px;
       animation-name: reactRouter;
@@ -519,7 +520,7 @@
                               
       @keyframes reactRouter {
         0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px);
             -webkit-transform: translatex(0px) translatey(0px);
             -moz-transform: translatex(0px) translatey(0px);
@@ -527,7 +528,7 @@
             -ms-transform:translatex(0px) translatey(0px);
         }
         100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(12vw) translatey(-48vh);
             -webkit-transform: translatex(12vw) translatey(-48h);
             -moz-transform: translatex(12vw) translatey(-48h);

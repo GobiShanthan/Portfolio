@@ -3947,6 +3947,7 @@ background-color: #0f181b;
   
   .animation{
     grid-area: animation;
+    z-index: 0;
   }
   
   .software img{

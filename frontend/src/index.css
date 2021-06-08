@@ -124,7 +124,7 @@ background-color: #0f181b;
   
       @keyframes html {
         0% {
-          opacity: 0%;
+
           -webkit-transform: translatex(0px) translatey(0px);
           -moz-transform: translatex(0px) translatey(0px);
           -o-transform: translatex(0px) translatey(0px);
@@ -133,7 +133,7 @@ background-color: #0f181b;
 
       }
       100% {
-          opacity: 100%;
+
           transform: translatex(-40vw) translatey(-56vh);
       }
       }
@@ -154,12 +154,12 @@ background-color: #0f181b;
         @keyframes css3 {
           0% {
     
-            opacity: 0%;
+
             transform: translatex(0px) translatey(0px)
             
         }
         100% {
-          opacity: 100%;
+
           transform: translatex(-22vw) translatey(-56.5vh);
           -webkit-transform: translatex(-22vw) translatey(-56.5vh);
           -moz-transform: translatex(-22vw) translatey(-56.5vh);
@@ -170,7 +170,7 @@ background-color: #0f181b;
   
         .js img{
           position: absolute;
-          opacity: 0%;
+
             width: 12vw;
             max-width: 70px;
             animation-name: js;
@@ -184,7 +184,7 @@ background-color: #0f181b;
           @keyframes js {
             0% {
       
-              opacity: 0%;
+
               transform: translatex(0px) translatey(0px);
               -webkit-transform: translatex(0px) translatey(0px);
               -moz-transform: translatex(0px) translatey(0px);
@@ -194,7 +194,7 @@ background-color: #0f181b;
           }
           100% {
        
-            opacity: 100%;
+
             transform: translatex(-10vw) translatey(-56.4vh);
             -webkit-transform: translatex(-10vw) translatey(-56.4vh);
             -moz-transform: translatex(-10vw) translatey(-56.4vh);
@@ -206,7 +206,7 @@ background-color: #0f181b;
   
         .react img{
           position: absolute;
-          opacity: 0%;
+
             width: 11vw;
             max-width: 70px;
             animation-name: react;
@@ -220,7 +220,7 @@ background-color: #0f181b;
           @keyframes react {
             0% {
       
-              opacity: 0%;
+
               transform: translatex(0px) translatey(0px);
               -webkit-transform: translatex(0px) translatey(0px);
               -moz-transform: translatex(0px) translatey(0px);
@@ -229,7 +229,7 @@ background-color: #0f181b;
           }
           100% {
        
-            opacity: 100%;
+
             transform: translatex(6vw) translatey(-56.5vh);
             -webkit-transform: translatex(6vw) translatey(-56.5vh);
             -moz-transform: translatex(6vw) translatey(-56.5vh);
@@ -240,7 +240,7 @@ background-color: #0f181b;
   
         .redux img{
           position: absolute;
-          opacity: 0%;
+
             width: 14vw;
             max-width: 85px;
             animation-fill-mode: forwards;
@@ -254,7 +254,7 @@ background-color: #0f181b;
           @keyframes redux {
             0% {
       
-              opacity: 0%;
+
               transform: translatex(0px) translatey(0px);
               -webkit-transform: translatex(0px) translatey(0px);
               -moz-transform: translatex(0px) translatey(0px);
@@ -262,7 +262,7 @@ background-color: #0f181b;
               -ms-transform: translatex(0px) translatey(0px);
           }
           100% {
-            opacity: 100%;
+
             transform: translatex(19vw) translatey(-55vh);
             -webkit-transform: translatex(19vw) translatey(-55vh);
             -moz-transform: translatex(19vw) translatey(-55vh);
@@ -273,7 +273,7 @@ background-color: #0f181b;
   
           .jwt img{
             position: absolute;
-            opacity: 0%;
+
               width: 14vw;
               max-width: 90px;
               animation-name: jwt;
@@ -287,7 +287,7 @@ background-color: #0f181b;
             @keyframes jwt {
               0% {
         
-                opacity: 0%;
+
                 transform: translatex(0px) translatey(0px);
                 -webkit-transform: translatex(0px) translatey(0px);
                 -moz-transform: translatex(0px) translatey(0px); 
@@ -296,7 +296,7 @@ background-color: #0f181b;
                 
             }
             100% {
-              opacity: 100%;
+
               transform: translatex(-11vw) translatey(-37vh);
               -webkit-transform: translatex(-11vw) translatey(-37vh);
               -moz-transform:translatex(-11vw) translatey(-37vh); 
@@ -307,7 +307,7 @@ background-color: #0f181b;
             
             .nodejs img{
               position: absolute;
-              opacity: 0%;
+
                 width: 14vw;
                 max-width: 90px;
                 animation-name: nodejs;
@@ -321,7 +321,7 @@ background-color: #0f181b;
               @keyframes nodejs {
                 0% {
           
-                  opacity: 0%;
+
                   transform: translatex(0px) translatey(0px);
                   -webkit-transform: translatex(0px) translatey(0px);
                   -moz-transform: translatex(0px) translatey(0px); 
@@ -329,7 +329,7 @@ background-color: #0f181b;
                   -ms-transform: translatex(0px) translatey(0px);
               }
               100% {
-                opacity: 100%;
+
                 transform: translatex(-25vw) translatey(-35vh);
                 -webkit-transform: translatex(-25vw) translatey(-35vh);
                 -moz-transform: translatex(-25vw) translatey(-35vh); 
@@ -340,7 +340,7 @@ background-color: #0f181b;
   
               .mongoDb img{
                 position: absolute;
-                opacity: 0%;
+
                   width: 10vw;
                   max-width: 80px;
                   animation-name: mongoDb;
@@ -354,7 +354,7 @@ background-color: #0f181b;
                 @keyframes mongoDb {
                   0% {
             
-                    opacity: 0%;
+
                     transform: translatex(0px) translatey(0px);
                     -webkit-transform: translatex(0px) translatey(0px); 
                     -moz-transform: translatex(0px) translatey(0px);
@@ -363,7 +363,7 @@ background-color: #0f181b;
                 }
                 100% {
              
-                  opacity: 100%;
+
                   transform: translatex(6vw) translatey(-35vh);
                   -webkit-transform: translatex(6vw) translatey(-35vh);
                   -moz-transform: translatex(6vw) translatey(-35vh);
@@ -374,7 +374,7 @@ background-color: #0f181b;
   
                 .mongoose img{
                   position: absolute;
-                  opacity: 0%;
+
                     width: 18%;
                     max-width: 130px;
                     animation-name: mongoose;
@@ -388,7 +388,7 @@ background-color: #0f181b;
                   @keyframes mongoose {
                     0% {
               
-                      opacity: 0%;
+
                       transform: translatex(0px) translatey(0px);
                       -webkit-transform: translatex(0px) translatey(0px);
                       -moz-transform: translatex(0px) translatey(0px);
@@ -397,7 +397,7 @@ background-color: #0f181b;
                   }
                   100% {
                
-                    opacity: 100%;
+
                     transform: translatex(-10vw) translatey(-25vh);
                     -webkit-transform: translatex(-10vw) translatey(-25vh);
                     -moz-transform: translatex(-10vw) translatey(-25vh);
@@ -409,7 +409,7 @@ background-color: #0f181b;
   
                   .express img{
                     position: absolute;
-                    opacity: 0%;
+
                       width: 28vw;
                       max-width: 1200px;
                       animation-name: express;
@@ -423,7 +423,7 @@ background-color: #0f181b;
                     @keyframes express {
                       0% {
                 
-                        opacity: 0%;
+
                         transform: translatex(0px) translatey(0px);
                         -webkit-transform: translatex(0px) translatey(0px);
                         -moz-transform: translatex(0px) translatey(0px);
@@ -432,7 +432,7 @@ background-color: #0f181b;
                     }
                     100% {
                  
-                      opacity: 100%;
+
                       transform: translatex(-17vw) translatey(-29vh);
                       -webkit-transform: translatex(-17vw) translatey(-29vh);
                       -moz-transform:translatex(-17vw) translatey(-29vh); 
@@ -443,7 +443,7 @@ background-color: #0f181b;
                     }
                     .bootstrap img{
                       position: absolute;
-                      opacity: 0%;
+
                       width: 15vw;
                       max-width: 470px;
                       animation-name: bootstrap;
@@ -455,7 +455,7 @@ background-color: #0f181b;
                                                   
                       @keyframes bootstrap {
                         0% {                                    
-                          opacity: 0%;
+
                           transform: translatex(-2px) translatey(0px);
                           -webkit-transform: translatex(-2px) translatey(0px);
                           -moz-transform: translatex(-2px) translatey(0px);
@@ -463,7 +463,7 @@ background-color: #0f181b;
                           -ms-transform: translatex(-2px) translatey(0px);
                         }
                         100% {             
-                          opacity: 100%;
+
                           transform: translatex(-36vw) translatey(-46vh);
                           -webkit-transform: translatex(-36vw) translatey(-46vh);
                           -moz-transform: translatex(-36vw) translatey(-46vh);

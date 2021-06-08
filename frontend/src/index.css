@@ -58,8 +58,8 @@
   
   .intro{
   position: static;
-  margin: 4px;
-  font-size: 5vh;
+  margin: 2px;
+  font-size: 4vh;
   }
   .projectTitle{
     font-size: 3vh;
@@ -67,7 +67,7 @@
   .intro2{
     position: static;
     margin-top: 10px;
-    font-size:3.2vh;
+    font-size:2vh;
   }
   
   .animation{
@@ -105,7 +105,11 @@
       }
       100% {
           opacity: 1;
-          transform: translatex(-40vw) translatey(-56vh);
+          transform: translatex(-36vw) translatey(-56vh);
+          -webkit-transform: translatex(-36vw) translatey(-56vh);
+          -moz-transform: translatex(-36vw) translatey(-56vh);
+          -o-transform: translatex(-36vw) translatey(-56vh);
+          -ms-transform: translatex(-36vw) translatey(-56vh);
       }
       }
   
@@ -131,11 +135,11 @@
         }
         100% {
           opacity: 1;
-          transform: translatex(-22vw) translatey(-56.5vh);
-          -webkit-transform: translatex(-22vw) translatey(-56.5vh);
-          -moz-transform: translatex(-22vw) translatey(-56.5vh);
-          -o-transform: translatex(-22vw) translatey(-56.5vh);
-          -ms-transform: translatex(-22vw) translatey(-56.5vh);
+          transform: translatex(-19vw) translatey(-56.5vh);
+          -webkit-transform: translatex(-19vw) translatey(-56.5vh);
+          -moz-transform: translatex(-19vw) translatey(-56.5vh);
+          -o-transform: translatex(-19vw) translatey(-56.5vh);
+          -ms-transform: translatex(-19vw) translatey(-56.5vh);
         }
         }
   
@@ -166,11 +170,11 @@
           100% {
        
             opacity: 1;
-            transform: translatex(-10vw) translatey(-56.4vh);
-            -webkit-transform: translatex(-10vw) translatey(-56.4vh);
-            -moz-transform: translatex(-10vw) translatey(-56.4vh);
-            -o-transform: translatex(-10vw) translatey(-56.4vh);
-            -ms-transform: translatex(-10vw) translatey(-56.4vh);
+            transform: translatex(-5vw) translatey(-56.4vh);
+            -webkit-transform: translatex(-5vw) translatey(-56.4vh);
+            -moz-transform: translatex(-5vw) translatey(-56.4vh);
+            -o-transform: translatex(-5vw) translatey(-56.4vh);
+            -ms-transform: translatex(-5vw) translatey(-56.4vh);
           }
           }
       
@@ -201,11 +205,11 @@
           100% {
        
             opacity: 1;
-            transform: translatex(6vw) translatey(-56.5vh);
-            -webkit-transform: translatex(6vw) translatey(-56.5vh);
-            -moz-transform: translatex(6vw) translatey(-56.5vh);
-            -o-transform: translatex(6vw) translatey(-56.5vh);
-            -ms-transform: translatex(6vw) translatey(-56.5vh);
+            transform: translatex(10vw) translatey(-56.5vh);
+            -webkit-transform: translatex(10vw) translatey(-56.5vh);
+            -moz-transform: translatex(10vw) translatey(-56.5vh);
+            -o-transform: translatex(10vw) translatey(-56.5vh);
+            -ms-transform: translatex(10vw) translatey(-56.5vh);
           }
           }
   
@@ -234,18 +238,18 @@
           }
           100% {
             opacity: 1;
-            transform: translatex(19vw) translatey(-55vh);
-            -webkit-transform: translatex(19vw) translatey(-55vh);
-            -moz-transform: translatex(19vw) translatey(-55vh);
-            -o-transform: translatex(19vw) translatey(-55vh);
-            -ms-transform: translatex(19vw) translatey(-55vh);
+            transform: translatex(23vw) translatey(-55.3vh);
+            -webkit-transform: translatex(23vw) translatey(-55.3vh);
+            -moz-transform: translatex(23vw) translatey(-55.3vh);
+            -o-transform: translatex(23vw) translatey(-55.3vh);
+            -ms-transform: translatex(23vw) translatey(-55.3vh);
           }
           }
   
           .jwt img{
             position: absolute;
             opacity: 0;
-              width: 14vw;
+              width: 16vw;
               max-width: 90px;
               animation-name: jwt;
               animation-fill-mode: forwards;
@@ -268,11 +272,11 @@
             }
             100% {
               opacity: 1;
-              transform: translatex(-11vw) translatey(-37vh);
-              -webkit-transform: translatex(-11vw) translatey(-37vh);
-              -moz-transform:translatex(-11vw) translatey(-37vh); 
-              -o-transform: translatex(-11vw) translatey(-37vh);
-              -ms-transform: translatex(-11vw) translatey(-37vh);
+              transform: translatex(-8vw) translatey(-37vh);
+              -webkit-transform: translatex(-8vw) translatey(-37vh);
+              -moz-transform:translatex(-8vw) translatey(-37vh); 
+              -o-transform: translatex(-8vw) translatey(-37vh);
+              -ms-transform: translatex(-8vw) translatey(-37vh);
             }
             }
             
@@ -301,11 +305,11 @@
               }
               100% {
                 opacity: 1;
-                transform: translatex(-25vw) translatey(-35vh);
-                -webkit-transform: translatex(-25vw) translatey(-35vh);
-                -moz-transform: translatex(-25vw) translatey(-35vh); 
-                -o-transform: translatex(-25vw) translatey(-35vh); 
-                -ms-transform: translatex(-25vw) translatey(-35vh); 
+                transform: translatex(-25vw) translatey(-36vh);
+                -webkit-transform: translatex(-25vw) translatey(-36vh);
+                -moz-transform: translatex(-25vw) translatey(-36vh); 
+                -o-transform: translatex(-25vw) translatey(-36vh); 
+                -ms-transform: translatex(-25vw) translatey(-36vh); 
               }
               }
   
@@ -335,18 +339,18 @@
                 100% {
              
                   opacity: 1;
-                  transform: translatex(6vw) translatey(-35vh);
-                  -webkit-transform: translatex(6vw) translatey(-35vh);
-                  -moz-transform: translatex(6vw) translatey(-35vh);
-                  -o-transform: translatex(6vw) translatey(-35vh);
-                  -ms-transform: translatex(6vw) translatey(-35vh);
+                  transform: translatex(12vw) translatey(-36vh);
+                  -webkit-transform: translatex(12vw) translatey(-36vh);
+                  -moz-transform: translatex(12vw) translatey(-36vh);
+                  -o-transform: translatex(12vw) translatey(-36vh);
+                  -ms-transform: translatex(12vw) translatey(-36vh);
                 }
                 }
   
                 .mongoose img{
                   position: absolute;
                   opacity: 0;
-                    width: 18%;
+                    width: 22vw;
                     max-width: 130px;
                     animation-name: mongoose;
                     animation-fill-mode: forwards;
@@ -404,11 +408,11 @@
                     100% {
                  
                       opacity: 1;
-                      transform: translatex(-17vw) translatey(-29vh);
-                      -webkit-transform: translatex(-17vw) translatey(-29vh);
-                      -moz-transform:translatex(-17vw) translatey(-29vh); 
-                      -o-transform: translatex(-17vw) translatey(-29vh);
-                      -ms-transform:translatex(-17vw) translatey(-29vh);
+                      transform: translatex(-14vw) translatey(-29vh);
+                      -webkit-transform: translatex(-14vw) translatey(-29vh);
+                      -moz-transform:translatex(-14vw) translatey(-29vh); 
+                      -o-transform: translatex(-14vw) translatey(-29vh);
+                      -ms-transform:translatex(-14vw) translatey(-29vh);
                       
                     }
                     }
@@ -435,11 +439,11 @@
                         }
                         100% {             
                           opacity: 1;
-                          transform: translatex(-36vw) translatey(-46vh);
-                          -webkit-transform: translatex(-36vw) translatey(-46vh);
-                          -moz-transform: translatex(-36vw) translatey(-46vh);
-                          -o-transform: translatex(-36vw) translatey(-46vh);
-                          -ms-transform: translatex(-36vw) translatey(-46vh);
+                          transform: translatex(-33vw) translatey(-46vh);
+                          -webkit-transform: translatex(-33vw) translatey(-46vh);
+                          -moz-transform: translatex(-33vw) translatey(-46vh);
+                          -o-transform: translatex(-33vw) translatey(-46vh);
+                          -ms-transform: translatex(-33vw) translatey(-46vh);
                           
                           
                         }
@@ -466,11 +470,11 @@
       }
       100% {
         opacity: 1;
-        transform: translatex(-20vw) translatey(-48vh);
-        -webkit-transform: translatex(-20vw) translatey(-48vh);
-        -moz-transform: translatex(-20vw) translatey(-48vh);
-        -o-transform: translatex(-20vw) translatey(-48vh);
-        -ms-transform: translatex(-20vw) translatey(-48vh);
+        transform: translatex(-16vw) translatey(-48vh);
+        -webkit-transform: translatex(-16vw) translatey(-48vh);
+        -moz-transform: translatex(-16vw) translatey(-48vh);
+        -o-transform: translatex(-16vw) translatey(-48vh);
+        -ms-transform: translatex(-16vw) translatey(-48vh);
       }
     }
 
@@ -499,11 +503,11 @@
       }
       100% {
         opacity: 1;
-        transform: translatex(-2vw) translatey(-47vh);
-        -webkit-transform: translatex(-2vw) translatey(-47vh);
-        -moz-transform: translatex(-2vw) translatey(-47vh);
-        -o-transform: translatex(-2vw) translatey(-47vh);
-        -ms-transform:translatex(-2vw) translatey(-47vh);
+        transform: translatex(2vw) translatey(-47vh);
+        -webkit-transform: translatex(2vw) translatey(-47vh);
+        -moz-transform: translatex(2vw) translatey(-47vh);
+        -o-transform: translatex(2vw) translatey(-47vh);
+        -ms-transform:translatex(2vw) translatey(-47vh);
 
       }
     }
@@ -531,11 +535,11 @@
         }
         100% {
             opacity: 1;
-            transform: translatex(12vw) translatey(-48vh);
-            -webkit-transform: translatex(12vw) translatey(-48h);
-            -moz-transform: translatex(12vw) translatey(-48h);
-            -o-transform: translatex(12vw) translatey(-48h);
-            -ms-transform:translatex(12vw) translatey(-48h);
+            transform: translatex(16vw) translatey(-48vh);
+            -webkit-transform: translatex(16vw) translatey(-48h);
+            -moz-transform: translatex(16vw) translatey(-48h);
+            -o-transform: translatex(16vw) translatey(-48h);
+            -ms-transform:translatex(16vw) translatey(-48h);
         }
       }     
 

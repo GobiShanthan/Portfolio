@@ -97,7 +97,7 @@ const [height,setHeight] = useState()
 
 
                 <div className='software'>
-                <img src={software} alt='software' style={{marginTop:height?height-height*1.6:'50vh'}}/>
+                <img src={software} alt='software' style={{marginTop:height?height-height*1.9:'50vh'}}/>
                 </div>
 
         </div>

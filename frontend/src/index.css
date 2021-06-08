@@ -42,7 +42,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 75vh ;
+    grid-template-rows: -1vh 75vh ;
     grid-template-areas: 
       "title"
       "animation"
@@ -584,7 +584,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 15vh 80vh ;
+    grid-template-rows: -1vh 75vh  ;
     grid-template-areas: 
       "title"
       "animation"
@@ -999,7 +999,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 87vh ;
+    grid-template-rows: -1vh 75vh  ;
     grid-template-areas: 
       "title"
       "animation"
@@ -1412,7 +1412,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 67vh ;
+    grid-template-rows: -1vh 75vh  ;
     grid-template-areas: 
       "title"
       "animation"
@@ -1823,7 +1823,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 78vh ;
+    grid-template-rows: -1vh 75vh  ;
     grid-template-areas: 
       "title"
       "animation"
@@ -3063,7 +3063,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 75vh ;
+    grid-template-rows: -1vh 75vh  ;
     grid-template-areas: 
       "title"
       "animation"
@@ -3474,7 +3474,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 75vh ;
+    grid-template-rows: -1vh 75vh  ;
     grid-template-areas: 
       "title"
       "animation"

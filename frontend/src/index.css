@@ -3947,7 +3947,6 @@ background-color: #0f181b;
   
   .animation{
     grid-area: animation;
-    z-index: -1;
   }
   
   .software img{
@@ -3965,7 +3964,6 @@ background-color: #0f181b;
       animation-name: html;
       animation-duration: 3s;
       bottom:0vh;
-      z-index: -1;
     }
   
     @keyframes html {

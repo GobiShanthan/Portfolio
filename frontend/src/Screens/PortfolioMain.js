@@ -41,7 +41,6 @@ const [height,setHeight] = useState()
             <div className='animation' >
   
                 <div className='html'>
-                {/* <img src="{{ url_for('static', filename='loginimg.png') }}" alt=""/> */}
                 <img src={html} alt='html'/>
                 </div>
 

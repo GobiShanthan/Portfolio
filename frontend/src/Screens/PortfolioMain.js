@@ -38,7 +38,7 @@ const [height,setHeight] = useState()
                 I am a Web Developer
             </div>
             </div>
-            <div className='animation' >
+
   
                 <div className='html'>
                 <img src={html} alt='html'/>
@@ -94,7 +94,7 @@ const [height,setHeight] = useState()
                 <div className='bootstrap'>
                 <img src={bootstrap} alt='bootstrap'/>
                 </div>
-            </div>
+
 
                 <div className='software'>
                 <img src={software} alt='software' style={{marginTop:height?height-height*1.6:'50vh'}}/>

@@ -84,7 +84,7 @@
   
     .html img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 13vw;
         animation-fill-mode: forwards;
         animation-name: html;
@@ -111,7 +111,7 @@
   
       .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
           width: 8vw;
           max-width: 50px;
           animation-fill-mode: forwards;
@@ -125,12 +125,12 @@
         @keyframes css3 {
           0% {
     
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
             
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-22vw) translatey(-56.5vh);
           -webkit-transform: translatex(-22vw) translatey(-56.5vh);
           -moz-transform: translatex(-22vw) translatey(-56.5vh);
@@ -141,7 +141,7 @@
   
         .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
             width: 12vw;
             max-width: 70px;
             animation-name: js;
@@ -244,6 +244,7 @@
   
           .jwt img{
             position: absolute;
+            opacity: 0;
               width: 14vw;
               max-width: 90px;
               animation-name: jwt;
@@ -277,6 +278,7 @@
             
             .nodejs img{
               position: absolute;
+              opacity: 0;
                 width: 14vw;
                 max-width: 90px;
                 animation-name: nodejs;
@@ -624,7 +626,7 @@
   }
   .html img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5.5vh;
     max-width: 248px;
     animation-fill-mode: forwards;
@@ -636,18 +638,18 @@
 
   @keyframes html {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-42vw) translatey(-62vh);
     }
   }
 
 .css3 img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 3.3vh;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -659,18 +661,18 @@
       
   @keyframes css3 {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-32vw) translatey(-62.5vh);
       }
   }
 
 .js img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4.5vh;
         max-width: 210px;
         animation-name: js;
@@ -683,11 +685,11 @@
         
   @keyframes js {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-24vw) translatey(-62.5vh);
         }
   }
@@ -695,7 +697,7 @@
 
 .react img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 4vh;
       max-width: 200px;
       animation-name: react;
@@ -708,18 +710,18 @@
         
   @keyframes react {
           0% {
-          opacity: 0%;
+          opacity: 0;
           ransform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-15vw) translatey(-62.5vh);
         }
   }
 
 .redux img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 5vh;
   max-width: 270px;
   animation-fill-mode: forwards;
@@ -732,18 +734,18 @@
         
   @keyframes redux {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-7vw) translatey(-62vh);
         }
   }
 
 .jwt img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 290px;
   animation-name: jwt;
@@ -756,11 +758,11 @@
           
   @keyframes jwt {
             0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(20vw) translatey(-56vh);
 
           }
@@ -768,7 +770,7 @@
           
 .nodejs img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 280px;
   animation-name: nodejs;
@@ -781,18 +783,18 @@
             
   @keyframes nodejs {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-28vw) translatey(-55.5vh);
     }
   }
 
 .mongoDb img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 4vh;
   max-width: 180px;
   animation-name: mongoDb;
@@ -804,18 +806,18 @@
               
   @keyframes mongoDb {
      0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-2vw) translatey(-56vh);
     }
   }
 
 .mongoose img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 7vh;
   max-width: 340px;
   animation-name: mongoose;
@@ -828,18 +830,18 @@
                 
   @keyframes mongoose {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(6vw) translatey(-56vh);
     }
   }
 
 .express img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 10vh;
   max-width: 470px;
   animation-name: express;
@@ -851,11 +853,11 @@
                   
   @keyframes express {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-20vw) translatey(-56vh);
     }
   }
@@ -863,7 +865,7 @@
 
 .material img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 4vh;
   max-width: 230px;
   animation-name: material;
@@ -875,18 +877,18 @@
                         
   @keyframes material{
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(15vw) translatey(-62.3vh);
     }
   }
 
 .reactRouter img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6.9vh;
   max-width: 380px;
   animation-name: reactRouter;
@@ -898,11 +900,11 @@
                           
   @keyframes reactRouter {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-62.5vh);
     }
   }     
@@ -910,7 +912,7 @@
                           
 .axiosPic img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 360px;
   animation-name: axiosPic;
@@ -921,18 +923,18 @@
                             
   @keyframes axiosPic {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(32vw) translatey(-63vh);
     }
   }
 
 .bootstrap img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 5vh;
   max-width: 270px;
   animation-name: bootstrap;
@@ -944,11 +946,11 @@
                               
   @keyframes bootstrap {
     0% {                                    
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(-2px) translatey(0px)
     }
     100% {             
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(23vw) translatey(-62vh);
     }
   }
@@ -1037,7 +1039,7 @@
   }
   .html img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6.5vh;
     max-width: 248px;
     animation-fill-mode: forwards;
@@ -1049,18 +1051,18 @@
 
   @keyframes html {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-44vw) translatey(-66vh);
     }
   }
 
 .css3 img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 4vh;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -1072,18 +1074,18 @@
       
   @keyframes css3 {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-34vw) translatey(-66.4vh);
       }
   }
 
 .js img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 5.5vh;
         max-width: 210px;
         animation-name: js;
@@ -1096,11 +1098,11 @@
         
   @keyframes js {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-26vw) translatey(-66.5vh);
         }
   }
@@ -1108,7 +1110,7 @@
 
 .react img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 5vh;
       max-width: 200px;
       animation-name: react;
@@ -1121,18 +1123,18 @@
         
   @keyframes react {
           0% {
-          opacity: 0%;
+          opacity: 0;
           ransform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-17vw) translatey(-66.5vh);
         }
   }
 
 .redux img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 270px;
   animation-fill-mode: forwards;
@@ -1145,18 +1147,18 @@
         
   @keyframes redux {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-9vw) translatey(-65.5vh);
         }
   }
 
 .jwt img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 290px;
   animation-name: jwt;
@@ -1169,11 +1171,11 @@
           
   @keyframes jwt {
             0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(20vw) translatey(-53vh);
 
           }
@@ -1181,7 +1183,7 @@
           
 .nodejs img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 280px;
   animation-name: nodejs;
@@ -1194,18 +1196,18 @@
             
   @keyframes nodejs {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-29vw) translatey(-52vh);
     }
   }
 
 .mongoDb img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 5vh;
   max-width: 180px;
   animation-name: mongoDb;
@@ -1217,18 +1219,18 @@
               
   @keyframes mongoDb {
      0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-4vw) translatey(-53vh);
     }
   }
 
 .mongoose img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 9vh;
   max-width: 340px;
   animation-name: mongoose;
@@ -1241,18 +1243,18 @@
                 
   @keyframes mongoose {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(5vw) translatey(-53vh);
     }
   }
 
 .express img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 12vh;
   max-width: 470px;
   animation-name: express;
@@ -1264,11 +1266,11 @@
                   
   @keyframes express {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-20vw) translatey(-53vh);
     }
   }
@@ -1276,7 +1278,7 @@
 
 .material img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 5.5vh;
   max-width: 230px;
   animation-name: material;
@@ -1288,18 +1290,18 @@
                         
   @keyframes material{
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(13vw) translatey(-66vh);
     }
   }
 
 .reactRouter img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 9vh;
   max-width: 380px;
   animation-name: reactRouter;
@@ -1311,11 +1313,11 @@
                           
   @keyframes reactRouter {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(0vw) translatey(-66.2vh);
     }
   }     
@@ -1323,7 +1325,7 @@
                           
 .axiosPic img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 360px;
   animation-name: axiosPic;
@@ -1334,17 +1336,17 @@
                             
   @keyframes axiosPic {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(32vw) translatey(-67vh);
     }
   }
 .bootstrap img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 270px;
   animation-name: bootstrap;
@@ -1356,11 +1358,11 @@
                               
   @keyframes bootstrap {
     0% {                                    
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(-2px) translatey(0px)
     }
     100% {             
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(22vw) translatey(-65.5vh);
     }
   }
@@ -1450,7 +1452,7 @@
   }
   .html img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 8.5vh;
     max-width: 248px;
     animation-fill-mode: forwards;
@@ -1462,18 +1464,18 @@
 
   @keyframes html {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-42vw) translatey(-56vh);
     }
   }
 
 .css3 img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 6vh;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -1485,11 +1487,11 @@
       
   @keyframes css3 {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-32vw) translatey(-56.5vh);
       }
   }
@@ -1509,11 +1511,11 @@
         
   @keyframes js {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-24vw) translatey(-56.5vh);
         }
   }
@@ -1521,7 +1523,7 @@
 
 .react img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 7vh;
       max-width: 200px;
       animation-name: react;
@@ -1534,18 +1536,18 @@
         
   @keyframes react {
           0% {
-          opacity: 0%;
+          opacity: 0;
           ransform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-15vw) translatey(-56.5vh);
         }
   }
 
 .redux img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 270px;
   animation-fill-mode: forwards;
@@ -1558,18 +1560,18 @@
         
   @keyframes redux {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-7vw) translatey(-55.5vh);
         }
   }
 
 .jwt img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 290px;
   animation-name: jwt;
@@ -1582,11 +1584,11 @@
           
   @keyframes jwt {
             0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(6vw) translatey(-44vh);
 
           }
@@ -1594,7 +1596,7 @@
           
 .nodejs img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 280px;
   animation-name: nodejs;
@@ -1607,18 +1609,18 @@
             
   @keyframes nodejs {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-16vw) translatey(-42vh);
     }
   }
 
 .mongoDb img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 180px;
   animation-name: mongoDb;
@@ -1630,18 +1632,18 @@
               
   @keyframes mongoDb {
      0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-5vw) translatey(-43vh);
     }
   }
 
 .mongoose img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 9vh;
   max-width: 340px;
   animation-name: mongoose;
@@ -1654,18 +1656,18 @@
                 
   @keyframes mongoose {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-0vw) translatey(-43vh);
     }
   }
 
 .express img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 12vh;
   max-width: 470px;
   animation-name: express;
@@ -1677,11 +1679,11 @@
                   
   @keyframes express {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-12vw) translatey(-43vh);
     }
   }
@@ -1689,7 +1691,7 @@
 
 .material img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 7vh;
   max-width: 230px;
   animation-name: material;
@@ -1701,18 +1703,18 @@
                         
   @keyframes material{
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(13vw) translatey(-56vh);
     }
   }
 
 .reactRouter img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 9vh;
   max-width: 380px;
   animation-name: reactRouter;
@@ -1724,11 +1726,11 @@
                           
   @keyframes reactRouter {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-56.5vh);
     }
   }     
@@ -1736,7 +1738,7 @@
                           
 .axiosPic img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 11vh;
   max-width: 360px;
   animation-name: axiosPic;
@@ -1747,17 +1749,17 @@
                             
   @keyframes axiosPic {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(30vw) translatey(-57vh);
     }
   }
 .bootstrap img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 270px;
   animation-name: bootstrap;
@@ -1769,11 +1771,11 @@
                               
   @keyframes bootstrap {
     0% {                                    
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(-2px) translatey(0px)
     }
     100% {             
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(21vw) translatey(-55vh);
     }
   }
@@ -1864,7 +1866,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 6.5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -1876,18 +1878,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 100;
         transform: translatex(-42vw) translatey(-60vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -1899,18 +1901,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 100;
           transform: translatex(-32vw) translatey(-60.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 5.5vw;
           max-width: 210px;
           animation-name: js;
@@ -1923,11 +1925,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-60.5vh);
           }
     }
@@ -1935,7 +1937,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 5vw;
         max-width: 200px;
         animation-name: react;
@@ -1948,18 +1950,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-60.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -1972,18 +1974,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-59.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 290px;
     animation-name: jwt;
@@ -1996,11 +1998,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(13vw) translatey(-48vh);
   
             }
@@ -2008,7 +2010,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -2021,18 +2023,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-26vw) translatey(-47vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -2044,18 +2046,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-47vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -2068,18 +2070,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-47vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 10vw;
     max-width: 470px;
     animation-name: express;
@@ -2091,11 +2093,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-18vw) translatey(-47vh);
       }
     }
@@ -2103,7 +2105,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 230px;
     animation-name: material;
@@ -2115,18 +2117,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-60vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width:8vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -2138,11 +2140,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-60.5vh);
       }
     }     
@@ -2150,7 +2152,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -2161,17 +2163,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-61vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -2183,11 +2185,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(21vw) translatey(-60vh);
       }
     }
@@ -2276,7 +2278,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 6.5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -2288,18 +2290,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-48vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -2311,18 +2313,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-48.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 5.5vw;
           max-width: 210px;
           animation-name: js;
@@ -2335,11 +2337,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-48.5vh);
           }
     }
@@ -2347,7 +2349,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 5vw;
         max-width: 200px;
         animation-name: react;
@@ -2360,18 +2362,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-48.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -2384,18 +2386,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-48.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 290px;
     animation-name: jwt;
@@ -2408,11 +2410,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(13vw) translatey(-36vh);
   
             }
@@ -2420,7 +2422,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -2433,18 +2435,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-26vw) translatey(-35vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -2456,18 +2458,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-35vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -2480,18 +2482,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-35vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 10vw;
     max-width: 470px;
     animation-name: express;
@@ -2503,11 +2505,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-18vw) translatey(-35vh);
       }
     }
@@ -2515,7 +2517,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 230px;
     animation-name: material;
@@ -2527,18 +2529,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-48vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width:8vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -2550,11 +2552,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-48.5vh);
       }
     }     
@@ -2562,7 +2564,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -2573,17 +2575,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-49vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -2595,11 +2597,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(21vw) translatey(-48vh);
       }
     }
@@ -2688,7 +2690,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 6.5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -2700,18 +2702,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-52vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -2723,18 +2725,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-52.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 5.5vw;
           max-width: 210px;
           animation-name: js;
@@ -2747,11 +2749,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-52.5vh);
           }
     }
@@ -2759,7 +2761,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 5vw;
         max-width: 200px;
         animation-name: react;
@@ -2772,18 +2774,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-52.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -2796,18 +2798,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-52.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 290px;
     animation-name: jwt;
@@ -2820,11 +2822,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(13vw) translatey(-40vh);
   
             }
@@ -2832,7 +2834,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -2845,18 +2847,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-26vw) translatey(-39vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -2868,18 +2870,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-39vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -2892,18 +2894,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-39vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 10vw;
     max-width: 470px;
     animation-name: express;
@@ -2915,11 +2917,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-18vw) translatey(-39vh);
       }
     }
@@ -2927,7 +2929,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 230px;
     animation-name: material;
@@ -2939,18 +2941,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-52vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width:8vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -2962,11 +2964,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-52.5vh);
       }
     }     
@@ -2974,7 +2976,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -2985,17 +2987,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-53vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -3007,11 +3009,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(21vw) translatey(-52vh);
       }
     }
@@ -3101,7 +3103,7 @@
   }
   .html img{
     position: absolute;
-    opacity: 0%;
+    opacity:0;
     width: 8.5vh;
     max-width: 248px;
     animation-fill-mode: forwards;
@@ -3113,18 +3115,18 @@
 
   @keyframes html {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-42vw) translatey(-66vh);
     }
   }
 
 .css3 img{
       position: absolute;
-      opacity: 0%;
+      opacity:0;
       width: 5vh;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -3136,18 +3138,18 @@
       
   @keyframes css3 {
       0% {
-        opacity: 0%;
+        opacity:0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-32vw) translatey(-66.5vh);
       }
   }
 
 .js img{
         position: absolute;
-        opacity: 0%;
+        opacity:0;
         width: 7.5vh;
         max-width: 210px;
         animation-name: js;
@@ -3160,11 +3162,11 @@
         
   @keyframes js {
         0% {
-          opacity: 0%;
+          opacity:0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-24vw) translatey(-66vh);
         }
   }
@@ -3172,7 +3174,7 @@
 
 .react img{
       position: absolute;
-      opacity: 0%;
+      opacity:0;
       width: 7vh;
       max-width: 200px;
       animation-name: react;
@@ -3185,18 +3187,18 @@
         
   @keyframes react {
           0% {
-          opacity: 0%;
+          opacity:0;
           ransform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-15vw) translatey(-66.5vh);
         }
   }
 
 .redux img{
   position: absolute;
-  opacity: 0%;
+  opacity:0;
   width: 8vh;
   max-width: 270px;
   animation-fill-mode: forwards;
@@ -3209,18 +3211,18 @@
         
   @keyframes redux {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-7vw) translatey(-65.5vh);
         }
   }
 
 .jwt img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 290px;
   animation-name: jwt;
@@ -3233,11 +3235,11 @@
           
   @keyframes jwt {
             0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(6vw) translatey(-54vh);
 
           }
@@ -3245,7 +3247,7 @@
           
 .nodejs img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 280px;
   animation-name: nodejs;
@@ -3258,18 +3260,18 @@
             
   @keyframes nodejs {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-16vw) translatey(-52vh);
     }
   }
 
 .mongoDb img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 6vh;
   max-width: 180px;
   animation-name: mongoDb;
@@ -3281,18 +3283,18 @@
               
   @keyframes mongoDb {
      0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-5vw) translatey(-53vh);
     }
   }
 
 .mongoose img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 9vh;
   max-width: 340px;
   animation-name: mongoose;
@@ -3305,18 +3307,18 @@
                 
   @keyframes mongoose {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-0vw) translatey(-43vh);
     }
   }
 
 .express img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 12vh;
   max-width: 470px;
   animation-name: express;
@@ -3328,11 +3330,11 @@
                   
   @keyframes express {
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(-12vw) translatey(-43vh);
     }
   }
@@ -3340,7 +3342,7 @@
 
 .material img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 7vh;
   max-width: 230px;
   animation-name: material;
@@ -3352,18 +3354,18 @@
                         
   @keyframes material{
     0% {
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(0px) translatey(0px)
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(16vw) translatey(-66vh);
     }
   }
 
 .reactRouter img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 12vh;
   max-width: 380px;
   animation-name: reactRouter;
@@ -3375,11 +3377,11 @@
                           
   @keyframes reactRouter {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-66.5vh);
     }
   }     
@@ -3387,7 +3389,7 @@
                           
 .axiosPic img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 11vh;
   max-width: 360px;
   animation-name: axiosPic;
@@ -3398,17 +3400,17 @@
                             
   @keyframes axiosPic {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(32vw) translatey(-67vh);
     }
   }
 .bootstrap img{
   position: absolute;
-  opacity: 0%;
+  opacity: 0;
   width: 8vh;
   max-width: 270px;
   animation-name: bootstrap;
@@ -3420,11 +3422,11 @@
                               
   @keyframes bootstrap {
     0% {                                    
-      opacity: 0%;
+      opacity: 0;
       transform: translatex(-2px) translatey(0px)
     }
     100% {             
-      opacity: 100%;
+      opacity: 1;
       transform: translatex(24vw) translatey(-65vh);
     }
   }
@@ -3512,7 +3514,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 6.5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -3524,18 +3526,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-60vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -3547,18 +3549,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-60.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 5.5vw;
           max-width: 210px;
           animation-name: js;
@@ -3571,11 +3573,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-60.5vh);
           }
     }
@@ -3583,7 +3585,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 5vw;
         max-width: 200px;
         animation-name: react;
@@ -3596,18 +3598,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-60.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -3620,18 +3622,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-59.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 290px;
     animation-name: jwt;
@@ -3644,11 +3646,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(13vw) translatey(-48vh);
   
             }
@@ -3656,7 +3658,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -3669,18 +3671,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-26vw) translatey(-46vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -3692,18 +3694,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-47vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -3716,18 +3718,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-47vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 10vw;
     max-width: 470px;
     animation-name: express;
@@ -3739,11 +3741,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-18vw) translatey(-47vh);
       }
     }
@@ -3751,7 +3753,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 230px;
     animation-name: material;
@@ -3763,18 +3765,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-60vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -3786,11 +3788,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-60.5vh);
       }
     }     
@@ -3798,7 +3800,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -3809,17 +3811,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-61vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -3831,11 +3833,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(21vw) translatey(-59vh);
       }
     }
@@ -3923,7 +3925,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 6.5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -3935,18 +3937,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-64vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -3958,18 +3960,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-64.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 5.5vw;
           max-width: 210px;
           animation-name: js;
@@ -3982,11 +3984,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-64.5vh);
           }
     }
@@ -3994,7 +3996,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 5vw;
         max-width: 200px;
         animation-name: react;
@@ -4007,18 +4009,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-64.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -4031,18 +4033,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-63.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 8vw;
     max-width: 290px;
     animation-name: jwt;
@@ -4055,11 +4057,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(13vw) translatey(-51vh);
   
             }
@@ -4067,7 +4069,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -4080,18 +4082,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-26vw) translatey(-50vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -4103,18 +4105,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-51vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 8vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -4127,18 +4129,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(2vw) translatey(-51vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 11vw;
     max-width: 470px;
     animation-name: express;
@@ -4150,11 +4152,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-18vw) translatey(-51vh);
       }
     }
@@ -4162,7 +4164,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 230px;
     animation-name: material;
@@ -4174,18 +4176,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-64vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -4197,11 +4199,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-64.5vh);
       }
     }     
@@ -4209,7 +4211,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -4220,17 +4222,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-65vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 7vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -4242,11 +4244,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(21vw) translatey(-63vh);
       }
     }
@@ -4335,7 +4337,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 4.5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -4347,18 +4349,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-64vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 2.7vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -4370,18 +4372,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-64.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 4vw;
           max-width: 210px;
           animation-name: js;
@@ -4394,11 +4396,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-64.5vh);
           }
     }
@@ -4406,7 +4408,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 200px;
         animation-name: react;
@@ -4419,18 +4421,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-64.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -4443,18 +4445,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-62.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 290px;
     animation-name: jwt;
@@ -4467,11 +4469,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(10vw) translatey(-47vh);
   
             }
@@ -4479,7 +4481,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -4492,18 +4494,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-22vw) translatey(-45vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 3vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -4515,18 +4517,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-46vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -4539,18 +4541,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(1vw) translatey(-47vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 9vw;
     max-width: 470px;
     animation-name: express;
@@ -4562,11 +4564,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-16vw) translatey(-46vh);
       }
     }
@@ -4574,7 +4576,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 230px;
     animation-name: material;
@@ -4586,18 +4588,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-64vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 8vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -4609,11 +4611,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-64vh);
       }
     }     
@@ -4621,7 +4623,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -4632,17 +4634,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-66vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -4654,11 +4656,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(22vw) translatey(-63vh);
       }
     }
@@ -4749,7 +4751,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -4761,18 +4763,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-64vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 3vw;
         max-width: 248px;
         animation-fill-mode: forwards;
@@ -4784,18 +4786,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-64.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 4vw;
           max-width: 210px;
           animation-name: js;
@@ -4808,11 +4810,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-64.5vh);
           }
     }
@@ -4820,7 +4822,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 4vw;
         max-width: 200px;
         animation-name: react;
@@ -4833,18 +4835,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-64.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -4857,18 +4859,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-62.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 290px;
     animation-name: jwt;
@@ -4881,11 +4883,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(10vw) translatey(-47vh);
   
             }
@@ -4893,7 +4895,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 280px;
     animation-name: nodejs;
@@ -4906,18 +4908,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-24vw) translatey(-45vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 3vw;
     max-width: 180px;
     animation-name: mongoDb;
@@ -4929,18 +4931,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-46vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 340px;
     animation-name: mongoose;
@@ -4953,18 +4955,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(1vw) translatey(-47vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 10vw;
     max-width: 470px;
     animation-name: express;
@@ -4976,11 +4978,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-18vw) translatey(-46vh);
       }
     }
@@ -4988,7 +4990,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 4vw;
     max-width: 230px;
     animation-name: material;
@@ -5000,18 +5002,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-64vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 8vw;
     max-width: 380px;
     animation-name: reactRouter;
@@ -5023,11 +5025,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-64vh);
       }
     }     
@@ -5035,7 +5037,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 6vw;
     max-width: 360px;
     animation-name: axiosPic;
@@ -5046,17 +5048,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-66vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 5vw;
     max-width: 270px;
     animation-name: bootstrap;
@@ -5068,11 +5070,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(22vw) translatey(-63vh);
       }
     }
@@ -5160,7 +5162,7 @@
   
   .html img{
       position: absolute;
-      opacity: 0%;
+      opacity: 0;
       width: 10.5%;
       max-width: 248px;
       animation-fill-mode: forwards;
@@ -5172,18 +5174,18 @@
   
     @keyframes html {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-42vw) translatey(-64vh);
       }
     }
   
   .css3 img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 10.5%;
         max-width: 152px;
         animation-fill-mode: forwards;
@@ -5195,18 +5197,18 @@
         
     @keyframes css3 {
         0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
         }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-32vw) translatey(-64.5vh);
         }
     }
   
   .js img{
           position: absolute;
-          opacity: 0%;
+          opacity: 0;
           width: 15%;
           max-width: 210px;
           animation-name: js;
@@ -5219,11 +5221,11 @@
           
     @keyframes js {
           0% {
-            opacity: 0%;
+            opacity: 0;
             transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-24vw) translatey(-64.5vh);
           }
     }
@@ -5231,7 +5233,7 @@
   
   .react img{
         position: absolute;
-        opacity: 0%;
+        opacity: 0;
         width: 14%;
         max-width: 200px;
         animation-name: react;
@@ -5244,18 +5246,18 @@
           
     @keyframes react {
             0% {
-            opacity: 0%;
+            opacity: 0;
             ransform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-15vw) translatey(-64.5vh);
           }
     }
   
   .redux img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 22%;
     max-width: 270px;
     animation-fill-mode: forwards;
@@ -5268,18 +5270,18 @@
           
     @keyframes redux {
             0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
           }
           100% {
-            opacity: 100%;
+            opacity: 1;
             transform: translatex(-7vw) translatey(-62.5vh);
           }
     }
   
   .jwt img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 290px;
     animation-name: jwt;
@@ -5292,11 +5294,11 @@
             
     @keyframes jwt {
               0% {
-              opacity: 0%;
+              opacity: 0;
               transform: translatex(0px) translatey(0px)
             }
             100% {
-              opacity: 100%;
+              opacity: 1;
               transform: translatex(10vw) translatey(-46vh);
   
             }
@@ -5304,7 +5306,7 @@
             
   .nodejs img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 20%;
     max-width: 280px;
     animation-name: nodejs;
@@ -5317,18 +5319,18 @@
               
     @keyframes nodejs {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-21vw) translatey(-45vh);
       }
     }
   
   .mongoDb img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 11%;
     max-width: 180px;
     animation-name: mongoDb;
@@ -5340,18 +5342,18 @@
                 
     @keyframes mongoDb {
        0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
         100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(-5vw) translatey(-46vh);
       }
     }
   
   .mongoose img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 340px;
     animation-name: mongoose;
@@ -5364,18 +5366,18 @@
                   
     @keyframes mongoose {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(1vw) translatey(-47vh);
       }
     }
   
   .express img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 470px;
     animation-name: express;
@@ -5387,11 +5389,11 @@
                     
     @keyframes express {
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(-14vw) translatey(-46vh);
       }
     }
@@ -5399,7 +5401,7 @@
 
   .material img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 230px;
     animation-name: material;
@@ -5411,18 +5413,18 @@
                           
     @keyframes material{
       0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(0px) translatey(0px)
       }
       100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(13vw) translatey(-64vh);
       }
     }
 
   .reactRouter img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 380px;
     animation-name: reactRouter;
@@ -5434,11 +5436,11 @@
                             
     @keyframes reactRouter {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(2vw) translatey(-64vh);
       }
     }     
@@ -5446,7 +5448,7 @@
                             
   .axiosPic img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 360px;
     animation-name: axiosPic;
@@ -5457,17 +5459,17 @@
                               
     @keyframes axiosPic {
       0% {
-          opacity: 0%;
+          opacity: 0;
           transform: translatex(0px) translatey(0px)
       }
       100% {
-          opacity: 100%;
+          opacity: 1;
           transform: translatex(30vw) translatey(-66vh);
       }
     }
   .bootstrap img{
     position: absolute;
-    opacity: 0%;
+    opacity: 0;
     width: 100%;
     max-width: 270px;
     animation-name: bootstrap;
@@ -5479,11 +5481,11 @@
                                 
     @keyframes bootstrap {
       0% {                                    
-        opacity: 0%;
+        opacity: 0;
         transform: translatex(-2px) translatey(0px)
       }
       100% {             
-        opacity: 100%;
+        opacity: 1;
         transform: translatex(22vw) translatey(-63vh);
       }
     }

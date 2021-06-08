@@ -44,19 +44,16 @@ const App =() =>{
                     <Route path ='/geekgrade/authuser' component={LogRegScreen}/>
                     <Route path='/geekgrade/profile' component={ProfilePage}/>
                     <Route path='/geekgrade/userslist' component={UsersList}/>
-                    <Route path='/geekgrade/user/:id' component={UpdateUser}/>
+                    <Route path='/geekgrade/user/:id' exact component={UpdateUser}/>
                     <Route path ='/geekgrade/productslist' component={ProductsList}/>
-                    <Route path='/geekgrade/productedit/:id' component={ProductEdit}/>
-                    <Route path='/geekgrade/cart/:id' component={Cart}/>
-                    <Route path ='/geekgrade/product/:id' component={ProductPage}/>
+                    <Route path='/geekgrade/productedit/:id' exact component={ProductEdit}/>
+                    <Route path='/geekgrade/cart/:id' exact component={Cart}/>
+                    <Route path ='/geekgrade/product/:id' exact component={ProductPage}/>
                     <Route path='/geekgrade/placeorder/' component={OrderStepper}/>
-                    <Route path='/geekgrade/order/:id' component={OrderScreen}/>
+                    <Route path='/geekgrade/order/:id' exact component={OrderScreen}/>
                     <Route path='/geekgrade/orderlist' component={OrderList}/>
-
                 </div>
-
-
-                <div className='footer'><Route component={Footer}/></div>
+                <Route component={Footer}/>
             </div>
         </BrowserRouter>
     )

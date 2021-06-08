@@ -40,6 +40,20 @@ const useStyles = makeStyles((theme) => ({
       color:'#264653',
     }
   },
+  HomeIcon2:{
+    color:'white',
+    fontSize:'25px',
+    marginTop:'10px',
+    marginLeft:'8px',
+    marginBottom:'-10px',
+    cursor:'pointer',
+    textDecoration:'none',
+    '&:hover': {
+      fontSize: "30px",
+      color:'#FFFFFF',
+    }
+  },
+
   
 
 }));
@@ -59,7 +73,7 @@ if(location.pathname === '/weather'){
           <Grid container direction='row'>
             <Grid item xs={4} style={{marginTop:'6px'}}><Link to='/' className={classes.HomeIcon}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
               <Grid container direction='column' alignContent='center'>
-              <Grid item xs={12}><h3 style={{color:'white'}}>WeatherMetrics</h3></Grid>
+              <Grid item xs={12}><h3 style={{color:'white', marginTop:'-30px',fontSize:'6vw'}}>WeatherMetrics</h3></Grid>
             </Grid>
           </Grid>
         </Toolbar>
@@ -97,7 +111,7 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
       <AppBar position="static" >
         <Toolbar variant='dense'>
           <Link to='/'>
-            <h3 style={{color:'white'}}>Gobi Shanthan</h3>
+            <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
           </Link>
           <Typography variant="h6" className={classes.title}>
            

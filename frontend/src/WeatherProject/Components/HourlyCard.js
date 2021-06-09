@@ -65,7 +65,7 @@ const {hours} = weatherHourReducer
         <GridList className={classes.gridList} cols={2.5}>
           
           {hours.data.map((h) => (
-            <div>
+            <div key={h.datetime}>
             { 
             <GridListTile key={h.datetime} className={classes.listBar}cols={0.22}rows={0.6} >         
               <Card className={classes.card} key={h.datetime}>

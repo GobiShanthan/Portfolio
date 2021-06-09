@@ -16,9 +16,6 @@ import theme from './theme'
 
 
 
-
-
-
 ReactDom.render(
 
 <ThemeProvider theme={theme}>

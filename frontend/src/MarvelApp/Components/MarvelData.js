@@ -10,6 +10,8 @@ import Intro from '../marvelPics/Intro.mp4'
 
 const MarvelData = () => {
 
+
+
 const useStyles = makeStyles({
     root:{
         color:'white',
@@ -38,7 +40,8 @@ const useStyles = makeStyles({
     intro:{
         display:'flex',
         justifyContent:'center',
-        marginTop:'10px'
+        marginTop:'10px',
+        minWidth:'320px'
     }   
 })
 
@@ -92,10 +95,12 @@ if(marvelCharInfo && marvelInfo){
 }else{
     return (
         <div className={classes.intro}>
-        <video width="50%" height="20%"  autoPlay="autoplay">
+
+        <video  width="90%" height="20%"  autoPlay controls muted >
         <source src={Intro} type="video/mp4" />
-           </video>
-           </div>
+        </video>
+
+    </div>
     )
 }
     

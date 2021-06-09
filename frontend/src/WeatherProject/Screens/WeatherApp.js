@@ -88,7 +88,10 @@ const WeatherMain = () => {
         const date =  newDate.toLocaleDateString()
         const hours = new Date().getHours()
         
-
+    const changeWeatherLocation =()=>{
+        dispatch(weatherGet(city))
+        dispatch(weatherHourGet(city))
+    }
 
         if(weather){
             const address = weather.city_name
@@ -110,26 +113,27 @@ const WeatherMain = () => {
                         </div>
                         </Grid>
                     </Grid>
-                    <Grid item className={classes.searchbox}>
-                    <Grid item xs={12}>
+                    <Grid item className={classes.searchbox}xs={12}>
+        
+                    <form onSubmit={changeWeatherLocation}>
                     <TextField
                         className={classes.search}
-                        inputStyle={{ textAlign: 'center' }}
-                        hintStyle={{ textAlign: 'center', width: '100%' }}
-                        floatingLabelStyle={{ textAlign: 'center', width: '100%', transformOrigin: 'center top 0px' }}
                         InputProps={{disableUnderline: true,min: 0, style: {color:'white',paddingLeft:'30%',paddingRight:'30%'}}} 
                         onChange={(e)=>setCity(e.target.value)} 
                     />
-                    </Grid>
+                    <div>
                     <Button  variant="contained"  style={{width:'135px',backgroundColor:"rgba(255, 255, 255, 0.3)",color:'white'}}  className='button' type='submit' onClick={(e)=>dispatch(weatherGet(city))}>Change City</Button>
+                    </div>
+                    
+                    </form>
                 </Grid>
                     <Grid item style={{fontSize:'20px',marginBottom:'-70px',marginTop:'40px'}}>Hourly forecast</Grid>
                     <Grid item xs={12}>
                     <HourlyCard/>
                     </Grid>
-                    <div item xs={12} md={6} style={{textAlign:'center',marginTop:'40px'}} ></div>
+
                     <Grid container direction='row'>
-                    <Grid item xs={12} md={6} style={{marginBottom:'40px'}}>
+                    <Grid item xs={12} md={6} style={{marginBottom:'40px',textAlign:'center',marginTop:'40px'}}  >
                     <ExtraCurrent weatherInfo={weather}/>
                     </Grid>
                     <Grid item xs={12} md={6}>

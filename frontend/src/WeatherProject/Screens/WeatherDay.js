@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import dayTime from '../WeatherPics/daytime.jpeg'
 import nightTime from '../WeatherPics/nighttime.jpg'
@@ -33,7 +32,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -53,7 +52,7 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     width:'100vw',
@@ -70,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
   iconWeather:{
     marginTop:'-30px',
-    fontSize:'min(max(16px, 100vw), 150px);',
+    fontSize:'min(max(16px, 100vw), 140px);',
   },
   text:{
     textAlign:'left',
@@ -84,10 +83,11 @@ const useStyles = makeStyles((theme) => ({
     margin:'15px'
   },
   temp:{
-    fontSize:'40px'
+    fontSize:'40px',
+    marginTop:"10px"
   },
   description:{
-    marginTop:'-80px',
+    marginTop:'-58px',
     paddingBottm:'50px'
   },
   list:{
@@ -117,7 +117,6 @@ const idDate = match.params.id
       <Grid container direction='row' className={classes.list} >
       <Grid item xs={2} >{icon}</Grid>
       <Grid item xs={5} className={classes.text}>{text}</Grid>
-
       <Grid item xs={5} className={classes.dataText}> {data}<sup>{symbol}</sup>{deg}</Grid>
       </Grid>
         )
@@ -136,36 +135,32 @@ const idDate = match.params.id
         <div className={classes.root} >
            <AppBar position="fixed" style={{color:'white',backgroundColor: 'rgba(355, 255,255, 0.1)'}}>
             <Tabs
-              value={value}
+            value={1}
               onChange={handleChange}
               indicatorColor="primary"
-              textColor="white"
+              textColor="inherit"
               variant="scrollable"
               scrollButtons="auto"
               aria-label="scrollable auto tabs example"
             >     
             {weatherInfo.data.map((w)=>(
-
-<Tab
-    label={w.datetime}
-    {...a11yProps(w.datetime)}
-    key={w.datetime}
-    ariaControls={w.datetime}
-    onClick={(e)=>setValue(w.datetime)}
-  />
-        
-                 ))}
+          <Tab
+            label={w.datetime}
+            {...a11yProps(w.datetime)}
+            key={w.datetime}
+            aria-controls={w.datetime}
+            onClick={(e)=>setValue(w.datetime)}/>))}
                  </Tabs>
-                 </AppBar>
+            </AppBar>
                  
         {weatherInfo.data.map((w)=>(
-            <TabPanel key={w} value={value} index={w.datetime}style={{backgroundImage:`url(${hours > 6 && hours < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
+            <TabPanel key={w.datetime} value={value} index={w.datetime}style={{backgroundImage:`url(${hours > 6 && hours < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
                 <Link to='/weather'>
                   <h4 style={{color:'white',marginTop:'40px'}}><FaArrowLeft style={{marginRight:'20px'}}/>Weather Page</h4>
                 </Link>
                 <Grid style={{color:'white'}} container direction='column' alignContent='center'>
                 <Card className={classes.card}  >
-                <Grid container direction='column' alignContent='center'>
+                <Grid container direction='column' alignContent='center' style={{marginTop:'20px'}}>
                 {w.datetime}
                 <Grid item className={classes.temp}>{w.temp}&#8451;</Grid>
                 <Grid item className={classes.iconWeather}>{IconsDisplay(w.weather.description)}</Grid>

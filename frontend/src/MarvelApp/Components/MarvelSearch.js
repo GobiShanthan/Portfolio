@@ -22,6 +22,7 @@ const marvelSubmitHandler=(e)=>{
             searchBox:{
                 display:'block',
                 margin:'-5% auto 5% auto',
+                minWidth:'200px',
                 width:'20vw',
                 background:'white',
                 borderRadius:'25px',
@@ -42,7 +43,7 @@ const marvelSubmitHandler=(e)=>{
                 marginRight:'auto',
                 color:'red',
                 padding:'20px',
-                fontSize:'50px',
+                fontSize: 'min(max(40px, 4vw), 22px)',
                 maxWidth:'550px',
                 textAlign:'center',
                 fontFamily:'Comic Sans MS'

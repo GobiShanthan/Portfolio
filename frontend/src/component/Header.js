@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   marvelImg:{
-    width:'100px',
+    width:'110px',
     height:'40px',
-    marginTop:'-30px'
+    marginTop:'-40px'
   },
   HomeIcon:{
     color:'white',
@@ -64,27 +64,27 @@ if(location.pathname.slice(0,10) ==='/geekgrade'){
   return(
     <GeekGradeNavbar location={location}/>
   )
-}else 
+}
 if(location.pathname === '/weather'){
   return(
     <div className={classes.root} >
       <AppBar position="fixed" style={{backgroundColor: 'rgba(355, 255,255, 0.1)'}}>
         <Toolbar variant='dense'>
           <Grid container direction='row'>
-            <Grid item xs={4} style={{marginTop:'6px'}}><Link to='/' className={classes.HomeIcon}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
+            <Grid item xs={4} ><Link to='/' className={classes.HomeIcon}><FaHome  style={{marginTop:'15px',marginBottom:"-20px"}}/><div style={{fontSize:'15px',marginTop:'10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
               <Grid container direction='column' alignContent='center'>
-              <Grid item xs={12}><h3 style={{color:'white', marginTop:'-30px',fontSize:'6vw'}}>WeatherMetrics</h3></Grid>
+              <Grid item xs={12}><h3 style={{color:'white', marginTop:'-20px',fontSize: 'min(max(18px, 4vw), 26px)'}}>WeatherMetrics</h3></Grid>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
     </div>
   )
-}else 
+}
 
 if(location.pathname.slice(0,11) ==='/weatherday'){
   return null
-}else 
+}
 
 if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel'){
   return(
@@ -92,7 +92,7 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
       <AppBar position="static"  style={{backgroundColor:'#F0131E'}}>
         <Toolbar variant='dense'>
           <Grid container direction='row' >
-          <Grid item xs={4} style={{marginTop:'6px'}}><Link to='/' className={classes.HomeIcon}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
+          <Grid item xs={4} style={{marginBottom:'-9px',marginTop:"4px"}}><Link to='/' className={classes.HomeIcon}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
               <Grid item container direction='column' alignContent='center' >
               <Grid item xs={12}>
                 <Link to='/marvel'><img src={marvelLogo} alt='marvelLogo' className={classes.marvelImg}/></Link>
@@ -110,9 +110,8 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
     <div className={classes.root}>
       <AppBar position="static" >
         <Toolbar variant='dense'>
-          <Link to='/'>
-            <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
-          </Link>
+
+            <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'15px',marginTop:'-5px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
           <Typography variant="h6" className={classes.title}>
            
           </Typography>

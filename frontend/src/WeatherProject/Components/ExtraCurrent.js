@@ -38,7 +38,7 @@ const ExtraCurrent = (weather) => {
     if(currentData){
         return (
             <div>
-                <Grid direction='column' container alignContent='center'>
+                <Grid  direction='column' container alignContent='center'>
                 <Paper className={classes.paper}>
                     <h2>Current Weather</h2>
                     <div className={classes.icon}>

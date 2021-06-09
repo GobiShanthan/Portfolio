@@ -38,7 +38,7 @@ const ForecastCard = ({weatherInfo}) => {
 
         <List style={{textAlignLast:'left'}} dense >
         {weatherInfo.data.map((w)=>(
-                <div>
+                <div key={w.datetime}>
                 <Link to={`/weatherday/${w.datetime}`} style={{textDecoration:'none',color:'white'}}>
                 <Grid container direction='row'>
                 <ListItem key={w.datetime} className={classes.listItem} >
@@ -55,7 +55,6 @@ const ForecastCard = ({weatherInfo}) => {
                 </Link>
                 <hr/>
                 </div>
-
         ))}
         </List>
         </Card>

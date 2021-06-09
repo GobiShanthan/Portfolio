@@ -4,9 +4,9 @@ import {makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles({
     gobiSearchOustide:{
-        height:'20px',
         backgroundColor:"#264653",
-        height:"100%"
+        height:'100%',
+
     },
     gobiSearchInside:{
         fontSize:'14px',
@@ -15,8 +15,8 @@ const useStyles = makeStyles({
         color:'white'
     },
     gobiShanthanOustide:{
-        height:'20px',
-        height:"100%"
+        height:'100%',
+
     },
     gobiShanthanInside:{
         fontSize:'14px',
@@ -25,8 +25,8 @@ const useStyles = makeStyles({
         color:'black'
     },
     marvelApiOustide:{
-        height:'20px',
-        height:"100%",
+        height:'100%',
+
         backgroundColor:'black'
     },
     marvelApiInside:{
@@ -36,25 +36,24 @@ const useStyles = makeStyles({
         color:'white'
     },
     weatherOustide:{
-        height:'20px',
-        height:"100%",
+        height:'100%',
       backgroundColor: 'rgba(355, 255,255, 0.1)'
     },
     weatherInside:{
         fontSize:'14px',
         textAlign:'center',
-        height:"10px",
+        height:'100%',
         color:'black'
     },
     geekGradeOustide:{
         height:'20px',
-        height:"100%",
+
         backgroundColor:'#3A6EA5'
     },
     geekGradeInside:{
         fontSize:'14px',
         textAlign:'center',
-        height:"10px",
+        height:'100%',
         color:'white'
     },
 })
@@ -62,8 +61,11 @@ const useStyles = makeStyles({
 
 
 const Footer = ({history}) =>{
+
     const urlLocation =history.location.pathname
     const classes = useStyles()
+
+
 
     if(urlLocation ==='/searchpage'){
         return(

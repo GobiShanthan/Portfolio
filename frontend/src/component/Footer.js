@@ -35,16 +35,6 @@ const useStyles = makeStyles({
         height:"10px",
         color:'white'
     },
-    weatherOustide:{
-        height:'100%',
-      backgroundColor: 'rgba(355, 255,255, 0.1)'
-    },
-    weatherInside:{
-        fontSize:'14px',
-        textAlign:'center',
-        height:'100%',
-        color:'black'
-    },
     geekGradeOustide:{
         height:'20px',
 
@@ -80,11 +70,7 @@ const Footer = ({history}) =>{
         </div>
         )
     }else if(urlLocation === '/weather'){
-        return(
-            <div className={classes.weatherOustide} style={{backgroundColor: 'rgba(355, 255,255, 0.1)'}}>
-                <h6 className={classes.weatherInside}>Copyright &copy; Weather Metrics</h6>
-            </div>
-        )
+        return null
     }else if(urlLocation.slice(0,6) === '/comic' || urlLocation === '/marvel'){
         return(
             <div className={classes.marvelApiOustide}>

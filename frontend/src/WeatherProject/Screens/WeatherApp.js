@@ -9,7 +9,7 @@ import {HiArrowNarrowDown, HiArrowNarrowUp} from 'react-icons/hi'
 import ForecastCard from '../Components/ForecastCard'
 import ExtraCurrent from '../Components/ExtraCurrent'
 import WeatherLoader from '../Components/WeatherLoader'
-
+import WeatherFooter from '../Components/WeatherFooter'
 
 const useStyles = makeStyles({
     paper:{
@@ -140,7 +140,9 @@ const WeatherMain = () => {
                     <ForecastCard weatherInfo={weather}/>
                     </Grid>
                     </Grid>
+                    <WeatherFooter/>
                 </Paper>
+
                 </Grid>
                 
             )

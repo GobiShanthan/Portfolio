@@ -29,7 +29,7 @@ const [height,setHeight] = useState()
 
 
     return(
-        <div className='Main' ref = {stageCanvasRef}>
+        <div className='Main' ref = {stageCanvasRef} id='topmain'>
             <div className='title'>
             <div className='intro'>
                 Hello, My name is Gobi 

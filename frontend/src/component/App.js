@@ -1,8 +1,15 @@
 import React from 'react'
 import { BrowserRouter,Route } from 'react-router-dom'
+
+//Main
 import NavBar from './Header'
 import Home from '../Screens/Home'
 import Footer from './Footer'
+import AboutMe from '../Screens/AboutMe'
+import ContactMe from '../Screens/ContactMe'
+
+
+//Projects
 import SearchScreen from '../SearchProject/screens/SearchScreen'
 import WeatherMain from '../WeatherProject/Screens/WeatherApp'
 import WeatherDay from '../WeatherProject/Screens/WeatherDay'
@@ -23,6 +30,7 @@ import OrderStepper from '../GeekGradeMain/Component/OrderStepper'
 import OrderScreen from '../GeekGradeMain/GeekGrade/Order'
 import OrderList from '../GeekGradeMain/GeekGrade/OrderList'
 import '../index.css'
+import ScrollToTop from './ScrollToTop'
 
 
 
@@ -30,6 +38,7 @@ const App =() =>{
     return(
         <BrowserRouter>
             <div className='fullApp'>
+                <ScrollToTop/>
                 <div className='header'>
                     <Route component={NavBar}/>
                 </div>

@@ -10,7 +10,7 @@ import MarvelPic from "../Pics/MarvelPic.png"
 
 const PortfolioProjects =() =>{
     return(
-        <div>
+        <div id='portfolio'>
             <div className='projectTitle'><h1>Projects</h1></div>
             <div className='pCards'>
                 <PortFolioCard Title='Gobi Search App' Content='React redux app with api calls to multiple sources' image={gsearch} link={`/searchpage`} projectInfo={searchProjectInfo}/>

@@ -1,14 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import {Link} from 'react-router-dom'
+import {Link as ScrollLink} from 'react-scroll'
 import {Grid} from '@material-ui/core'
 import marvelLogo from '../MarvelApp/marvelPics/marvelLogo.jpeg'
 import {FaHome} from 'react-icons/fa'
 import GeekGradeNavbar from '../GeekGradeMain/Component/GeekGradeNavbar'
-
+import {CgMenuGridR} from 'react-icons/cg'
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,7 +60,11 @@ WeatherFont:{
   marginBottom:'-10px',
   cursor:'pointer',
   textDecoration:'none',
-}
+},
+headerSpace:{
+  marginLeft:"20px"
+},
+
   
 
 }));
@@ -120,11 +126,22 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
     <div className={classes.root}>
       <AppBar position="static" >
         <Toolbar variant='dense'>
+          <div style={{display:'flex',flexGrow:'1'}}>
+          <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'10px',marginTop:'-8px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
+            <Typography variant ='h6'>
+            <div className={classes.headerSpace}><ScrollLink to='portfolio' smooth={true} duration={2000}><h3>Portfolio</h3></ScrollLink></div>
+            </Typography>
+            <Typography variant ='h6'>
+            <div className={classes.headerSpace}><ScrollLink to='about' smooth={true} duration={2000}><h3>About me</h3></ScrollLink></div>
+            </Typography>
+            <Typography variant ='h6'>
+            <div className={classes.headerSpace}><ScrollLink to='contact' smooth={true} duration={2000}><h3>Contact me</h3></ScrollLink></div>
+            </Typography>
+            </div>
+            <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
+            <CgMenuGridR/>
+    </IconButton>
 
-            <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'10px',marginTop:'-8px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
-          <Typography variant="h6" className={classes.title}>
-           
-          </Typography>
         </Toolbar>
       </AppBar>
     </div>

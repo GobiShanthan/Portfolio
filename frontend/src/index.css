@@ -5527,3 +5527,16 @@ grid-area: footer;
 text-align:center;
 background-color: red;
 }
+
+.contactMe{
+height: 100Vh;
+text-align:'center';
+background-color: green;
+}
+
+.aboutMe{
+margin-top: 100px;
+height:100vh;
+text-align: center;
+background-color: blue;
+}

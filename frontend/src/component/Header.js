@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import AppBar from '@material-ui/core/AppBar';
@@ -9,8 +9,8 @@ import {Grid} from '@material-ui/core'
 import marvelLogo from '../MarvelApp/marvelPics/marvelLogo.jpeg'
 import {FaHome} from 'react-icons/fa'
 import GeekGradeNavbar from '../GeekGradeMain/Component/GeekGradeNavbar'
-import {CgMenuGridR} from 'react-icons/cg'
-import { Typography } from '@material-ui/core';
+
+import IconMenu from '../component/IconMenu'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,13 +64,40 @@ WeatherFont:{
 headerSpace:{
   marginLeft:"20px"
 },
+links:{
+  display:'flex',
+  justifyContent:'center',
+  marginTop:"8px",
+  marginLeft:"30px"
+},
+link:{
+  marginLeft:"20px"
+}
 
   
 
 }));
 
 const Header=({location})=>{
+  const stageCanvasRef = useRef(null);
   const classes = useStyles();
+  const [width,setWidth] = useState('')
+
+
+ //find width of screen
+
+
+ useEffect( () => {
+     if(stageCanvasRef.current && width !== stageCanvasRef.current.clientWidth){
+         setWidth(stageCanvasRef.current.clientWidth)
+     }
+ }, [stageCanvasRef,width]);
+
+
+
+
+
+
 if(location.pathname.slice(0,10) ==='/geekgrade'){
   return(
     <GeekGradeNavbar location={location}/>
@@ -78,7 +105,7 @@ if(location.pathname.slice(0,10) ==='/geekgrade'){
 }
 if(location.pathname === '/weather'){
   return(
-    <div className={classes.root} >
+    <div className={classes.root}  >
       <AppBar position="fixed" style={{backgroundColor: 'rgba(355, 255,255, 0.1)',height:"55px"}}>
         <Toolbar variant='dense'>
           <Grid container direction='row'>
@@ -123,24 +150,23 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
   )
 }else{
   return (
-    <div className={classes.root}>
-      <AppBar position="static" >
+    <div className={classes.root}  id='mainnav'>
+      <AppBar position="static" ref = {stageCanvasRef}  >
         <Toolbar variant='dense'>
           <div style={{display:'flex',flexGrow:'1'}}>
           <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'10px',marginTop:'-8px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
-            <Typography variant ='h6'>
-            <div className={classes.headerSpace}><ScrollLink to='portfolio' smooth={true} duration={2000}><h3>Portfolio</h3></ScrollLink></div>
-            </Typography>
-            <Typography variant ='h6'>
-            <div className={classes.headerSpace}><ScrollLink to='about' smooth={true} duration={2000}><h3>About me</h3></ScrollLink></div>
-            </Typography>
-            <Typography variant ='h6'>
-            <div className={classes.headerSpace}><ScrollLink to='contact' smooth={true} duration={2000}><h3>Contact me</h3></ScrollLink></div>
-            </Typography>
+          {width<650?null:
+          <div className={classes.links}>
+            <div className={classes.link}> <ScrollLink to='portfolio' smooth={true} duration={2000}><h3>Portfolio</h3></ScrollLink></div>
+            <div className={classes.link}> <ScrollLink to='about' smooth={true} duration={2000}><h3>About me</h3></ScrollLink></div>
+            <div className={classes.link}> <ScrollLink to='contact' smooth={true} duration={2000}><h3>Contact me</h3></ScrollLink></div>
+          </div>
+            }
+           
             </div>
             <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-            <CgMenuGridR/>
-    </IconButton>
+              <IconMenu/>
+            </IconButton>
 
         </Toolbar>
       </AppBar>

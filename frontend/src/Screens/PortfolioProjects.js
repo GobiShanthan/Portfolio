@@ -1,7 +1,7 @@
 import '../index.css'
 import PortFolioCard from '../component/PortfolioCard'
 import gsearch from '../SearchProject/searchPics/gSearch.png'
-import {searchProjectInfo} from '../projectInfo/searchProjectInfo'
+import {searchProjectInfo} from '../projectInfo/portfolioCardDescriptions'
 import WeatherMain from '../Pics/WeatherMain.png'
 import GeekgradePic from '../Pics/GeekGradePortfolioPic.png'
 import MarvelPic from "../Pics/MarvelPic.png"

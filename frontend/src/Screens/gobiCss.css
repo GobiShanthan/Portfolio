@@ -1,0 +1,102 @@
+    .contactMe{
+    height: 100Vh;
+    text-align:'center';
+    
+    }
+    
+    .aboutMe{
+    height:100%;
+    min-height: 100vh;
+    background-color: black;
+    }
+    .aboutMeMain{
+      text-align: center;
+    }
+
+    .aboutTitle{
+      font-size: 50px;
+      color: white;
+    }
+    
+    .aboutMeDescription{
+      font-size: 10px;
+      color: white;
+      margin-top:5%;
+      margin: 10px;
+      text-align: center;
+    }
+    .gobiPic{
+      margin-top:5%;
+      margin-bottom: 5%;
+      margin:10%;
+    }
+    
+    .contactMain{
+        text-align: center;
+    }
+
+    .contactPic img{
+        width:100%;
+        max-width:750px;
+    }
+    
+    .contactFull{
+        text-align: center;
+        min-height: 100vh;
+    }
+    .contactTitle{
+        font-size: 40px;
+    }
+    .contactForm{
+        margin:10px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    input[type=text], select, textarea {
+        width: 100%;
+        max-width: 750px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type=email], select, textarea {
+        width: 100%;
+        max-width: 750px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      input[type=number], select, textarea {
+        width: 100%;
+        max-width: 750px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      

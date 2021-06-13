@@ -1,9 +1,25 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import GobiPic from '../Pics/GobiPic.jpg'
+import './gobiCss.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import {aboutMeDescription} from '../projectInfo/portfolioCardDescriptions'
+
 
 const AboutMe = () => {
+    useEffect(()=>{
+        Aos.init({duration:800})
+    },[])
+
     return (
-        <div id='about'>
-            About Me
+        <div id='about' className='aboutMeMain'>
+            <div  className="aboutTitle">About Me</div>
+            <div  className='aboutMeDescription'>
+                {aboutMeDescription}
+            </div>
+            <div className='gobiPic'>
+                <img src={GobiPic} alt="Gobi" className='aboutMePic' style={{ width:"100%",maxWidth:"400px"}} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-out" data-aos-duration="16000"/>
+            </div>
         </div>
     )
 }

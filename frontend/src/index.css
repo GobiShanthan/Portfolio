@@ -30,6 +30,7 @@
       display:grid;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 50px;
       text-align: center;
       grid-template-columns: repeat(auto-fit,300px);
       gap: 3rem;
@@ -5496,9 +5497,6 @@
 }
 
 
-
-
-
 .body{
   margin:0
 }
@@ -5528,15 +5526,3 @@ text-align:center;
 background-color: red;
 }
 
-.contactMe{
-height: 100Vh;
-text-align:'center';
-background-color: green;
-}
-
-.aboutMe{
-margin-top: 100px;
-height:100vh;
-text-align: center;
-background-color: blue;
-}

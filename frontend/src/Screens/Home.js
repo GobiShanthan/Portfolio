@@ -15,6 +15,7 @@ const Home =()=>{
             <div className='pProjects'><PortfolioProjects/></div>
             <div className='aboutMe'><AboutMe/></div>
             <div className='contactMe'><ContactMe/></div>
+
         </div>
     )
 }

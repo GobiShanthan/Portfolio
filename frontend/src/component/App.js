@@ -5,8 +5,6 @@ import { BrowserRouter,Route } from 'react-router-dom'
 import NavBar from './Header'
 import Home from '../Screens/Home'
 import Footer from './Footer'
-import AboutMe from '../Screens/AboutMe'
-import ContactMe from '../Screens/ContactMe'
 
 
 //Projects

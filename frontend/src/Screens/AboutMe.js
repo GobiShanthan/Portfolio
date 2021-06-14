@@ -14,12 +14,15 @@ const AboutMe = () => {
     return (
         <div id='about' className='aboutMeMain'>
             <div  className="aboutTitle">About Me</div>
+            <div className='aboutMeSec'>
             <div  className='aboutMeDescription'>
                 {aboutMeDescription}
             </div>
             <div className='gobiPic'>
                 <img src={GobiPic} alt="Gobi" className='aboutMePic' style={{ width:"100%",maxWidth:"400px"}} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-out" data-aos-duration="16000"/>
             </div>
+            </div>
+            
         </div>
     )
 }

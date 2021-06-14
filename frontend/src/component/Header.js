@@ -9,7 +9,7 @@ import {Grid} from '@material-ui/core'
 import marvelLogo from '../MarvelApp/marvelPics/marvelLogo.jpeg'
 import {FaHome} from 'react-icons/fa'
 import GeekGradeNavbar from '../GeekGradeMain/Component/GeekGradeNavbar'
-
+import './Header.css'
 import IconMenu from '../component/IconMenu'
 
 const useStyles = makeStyles((theme) => ({
@@ -63,12 +63,6 @@ WeatherFont:{
 },
 headerSpace:{
   marginLeft:"20px"
-},
-links:{
-  display:'flex',
-  justifyContent:'center',
-  marginTop:"8px",
-  marginLeft:"30px"
 },
 link:{
   marginLeft:"20px"
@@ -151,23 +145,25 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
 }else{
   return (
     <div className={classes.root}  id='mainnav'>
-      <AppBar position="static" ref = {stageCanvasRef}  >
+      <AppBar position="static" ref = {stageCanvasRef} className='portfolioHeader' >
         <Toolbar variant='dense'>
           <div style={{display:'flex',flexGrow:'1'}}>
           <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'10px',marginTop:'-8px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
           {width<650?null:
-          <div className={classes.links}>
+          <div className='links'>
             <div className={classes.link}> <ScrollLink to='portfolio' smooth={true} duration={2000}><h3>Portfolio</h3></ScrollLink></div>
             <div className={classes.link}> <ScrollLink to='about' smooth={true} duration={2000}><h3>About me</h3></ScrollLink></div>
             <div className={classes.link}> <ScrollLink to='contact' smooth={true} duration={2000}><h3>Contact me</h3></ScrollLink></div>
           </div>
             }
-           
             </div>
+            <div className='iconMenu'>
             <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-              <IconMenu/>
+              <IconMenu />
             </IconButton>
 
+            </div>
+            
         </Toolbar>
       </AppBar>
     </div>

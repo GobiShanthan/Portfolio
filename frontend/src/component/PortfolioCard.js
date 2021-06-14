@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   width:'100%',
   paddingTop: '56.25%', // 16:9
     '&:hover': {
-      height:"100px"
+      transform: 'scale(1.2)'
     }
   },
   expand: {

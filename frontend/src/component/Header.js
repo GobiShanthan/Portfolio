@@ -1,6 +1,5 @@
 import React,{useState,useEffect,useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import {Link} from 'react-router-dom'
@@ -105,7 +104,7 @@ if(location.pathname === '/weather'){
           <Grid container direction='row'>
             <Grid item xs={4} >
             <Link to='/' >
-              <FaHome className={classes.HomeIcon}/>
+              <FaHome className={classes.HomeIcon} />
             <div className={classes.WeatherFont}>G-HOME</div>
             </Link>
             </Grid>
@@ -158,10 +157,7 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
             }
             </div>
             <div className='iconMenu'>
-            <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-              <IconMenu />
-            </IconButton>
-
+              <IconMenu edge="end" className={classes.menuButton} color="inherit" aria-label="menu"/>
             </div>
             
         </Toolbar>

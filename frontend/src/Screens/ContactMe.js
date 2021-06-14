@@ -3,8 +3,6 @@ import contactPic from '../Pics/contactPic.svg'
 import  './gobiCss.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import githubIcon from '../Pics/github.png'
-import emailIcon from '../Pics/email.png'
 import {FaGithubSquare} from 'react-icons/fa'
 import {AiOutlineMail} from 'react-icons/ai'
 

@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux'
 import {Grid,makeStyles} from '@material-ui/core'
 import MarvelComics from '../Components/MarvelComics'
 import MarvelLoader from '../Components/MarvelLoader'
-import Intro from '../marvelPics/Intro.mp4'
+
 
 
 
@@ -90,16 +90,12 @@ if(marvelCharInfo && marvelInfo){
    
 }else if(loading === true){
     return(
-        <div style={{color:'white'}}>loading......</div>
+        <div className={classes.root}><MarvelLoader/></div>
     )
 }else{
     return (
-        <div className={classes.intro}>
-
-        <video  width="90%" height="20%"  autoPlay controls muted >
-        <source src={Intro} type="video/mp4" />
-        </video>
-
+    <div className={classes.intro}>
+        
     </div>
     )
 }

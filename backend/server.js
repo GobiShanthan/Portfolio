@@ -7,6 +7,7 @@ import connectDB from './config/db.js'
 
 
 //routes
+import portfolioRoute from './routes/portfolioRoutes.js'
 import productRoute from "./routes/productRoutes.js"
 import userRoutes from "./routes/userRoutes.js"
 import orderRoutes from './routes/orderRoutes.js'
@@ -22,6 +23,7 @@ app.use(morgan("dev"))
 
 
 //run routes
+app.use("/api/portfolio",portfolioRoute)
 app.use("/api/products",productRoute)
 app.use("/api/users",userRoutes)
 app.use("/api/orders",orderRoutes)

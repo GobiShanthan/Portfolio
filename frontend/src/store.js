@@ -18,6 +18,9 @@ import {
 
 } from './reducer/searchReducer'
 
+//CONTACT ME REDUCER
+import {postContactReducer} from './reducer/portfolioReducer'
+
 //USER REDUCERS
 import {loginReducer,regisReducer,getProfileReducer,updateProfileReducer,getAllUsersReducer,deleteUserReducer,getUserByIdReducer,updateUserByIdReducer} from './reducer/userReducer'
 
@@ -108,7 +111,10 @@ getOrderReducer,
 payOrderReducer,
 getOrderListReducer,
 updateOrderDeliveredReducer,
-deleteOrderReducer
+deleteOrderReducer,
+
+//Contact Me Reducer,
+postContactReducer
 })
 
 const middleware = [thunk]

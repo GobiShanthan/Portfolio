@@ -19,7 +19,7 @@ const AboutMe = () => {
                 {aboutMeDescription}
             </div>
             <div className='gobiPic'>
-                <img src={GobiPic} alt="Gobi" className='aboutMePic' style={{ width:"100%",maxWidth:"400px"}} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-out" data-aos-duration="16000"/>
+                <img src={GobiPic} alt="Gobi" className='aboutMePic' data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-out" data-aos-duration="16000"/>
             </div>
             </div>
             

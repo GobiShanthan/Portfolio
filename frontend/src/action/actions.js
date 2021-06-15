@@ -63,6 +63,15 @@ import {
     SPAN_EDIT_ERROR
 } from '../constant/StylingConstant'
 
+import {
+    //POST INFO FROM CONTACT ME
+    POST_PORT_CONTACT_REQUEST,
+    POST_PORT_CONTACT_SUCCESS,
+    POST_PORT_CONTACT_FAIL
+} from  '../constant/portfolioContant'
+
+
+
 import unsplash from '../api/unsplash'
 import wikiSearch from '../api/wikiSearch'
 import youtube from '../api/youtube'
@@ -70,7 +79,17 @@ import axios from 'axios'
 import md5 from 'js-md5'
 
 //POST REQUEST TO MONGODB SERVER CONTACT MAIL
+export const postPortfolioContactInfo =(userInfo)=>async(dispatch)=>{
 
+    dispatch({type:POST_PORT_CONTACT_REQUEST})
+    try{
+        const {data} = await axios.post('api/portfolio/comment',userInfo)
+        dispatch({type:POST_PORT_CONTACT_SUCCESS,payload:data})
+    }catch(error){
+        const message = error.response && error.response.data.message?error.response.data.message:error.message
+        dispatch({type:POST_PORT_CONTACT_FAIL,payload:message})
+    }
+}
 
 //GET SEARCH REQUEST VALUE
 export const getSearch =(search)=>{

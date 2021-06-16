@@ -3,10 +3,17 @@ import {useSelector} from 'react-redux'
 import {Grid,makeStyles} from '@material-ui/core'
 import MarvelComics from '../Components/MarvelComics'
 import MarvelLoader from '../Components/MarvelLoader'
-
-
-
-
+import './marvelCss.css'
+import deadpool from '../marvelPics/deadpool.png'
+import hulk from '../marvelPics/hulk.png'
+import spiderman from '../marvelPics/spiderman.png'
+import sue from '../marvelPics/sue.png'
+import scarlet from '../marvelPics/scarlet.png'
+import marvelVerticle from '../marvelPics/marvelVerticle.jpg'
+import unlabeledMarvel from '../marvelPics/unlabeledMarvel.jpg'
+import ironman from '../marvelPics/ironman.png'
+import storm from '../marvelPics/storm.png'
+import wolverine from '../marvelPics/wolverine.png'
 
 const MarvelData = () => {
 
@@ -35,14 +42,7 @@ const useStyles = makeStyles({
     description:{
         margin:'5%'
     },
-    marvelComic:{
-    },
-    intro:{
-        display:'flex',
-        justifyContent:'center',
-        marginTop:'10px',
-        minWidth:'320px'
-    }   
+
 })
 
 //MARVEL CHARACTER STATE
@@ -94,8 +94,36 @@ if(marvelCharInfo && marvelInfo){
     )
 }else{
     return (
-    <div className={classes.intro}>
-        
+    <div className='characters'>
+        <div className='charText' style={{textAlign:'center',fontFamily:'Comic Sans MS'}}>
+        <div className='spidermantext'>Spider-man</div>
+        <div  className='deadpoolText'>Deadpool</div>
+        <div className='sueText'>Sue Storm</div>
+        <div  className='hulkText'>Hulk</div>
+        <div style={{color:'white'}} className='scarletText'>Scarlet Witch</div>
+        <div style={{color:'white'}} className='ironmanText'>Iron man</div>
+        <div style={{color:'white'}} className='stormText'>Storm</div>
+        <div style={{color:'white'}} className='wolverineText'>Wolverine</div>
+        <div className='ending'>Search from over 1000 marvel characters</div>
+        <div className='ending2'>Exact names only</div>
+        </div>
+
+
+        <div className='charImage' style={{display:'flex',justifyContent:'center',marginTop:"30px",marginRight:'350px'}}>
+        <div className="spider-man"><img src={spiderman} alt='spidermanpic'/></div>
+        <div className='deadpool'><img src={deadpool} alt='deadpool'/></div>
+        <div className='sue'><img src={sue} alt='sueStorm'/></div>
+        <div className='hulk'><img src={hulk} alt='hulk'/></div>
+        <div className='scarlet'><img src={scarlet} alt='scarlet'/></div>
+        <div className='ironman'><img src={ironman} alt='ironman'/></div>
+        <div className='storm'><img src={storm} alt='storm'/></div>
+        <div className='wolverine'><img src={wolverine} alt='wolverine'/></div>
+        </div>
+
+
+
+        <div className='marvelVerticle'><img src={marvelVerticle} alt='marvelVerticle'/></div>
+        <div className='unlabeledMarvel'><img src={unlabeledMarvel} alt='unlabeledMarvel'/></div>
     </div>
     )
 }

@@ -81,7 +81,7 @@ if(marvelCharInfo && marvelInfo){
     }else{
         return(
             <div className={classes.root}>
-            <h3>Invalid search name. Search Name must be exact </h3>
+            <h3>Invalid search name. Search name must be exact </h3>
             <MarvelLoader/>
             </div>
 

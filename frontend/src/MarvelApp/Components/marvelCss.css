@@ -715,7 +715,7 @@ font-size: 30px;
       .hulkText{
         color:white;
         position: relative;
-        margin-top: -48px;
+        margin-top: -40px;
         opacity: 0;
         animation-name: charanimation;
         animation-fill-mode: forwards;
@@ -757,8 +757,7 @@ font-size: 30px;
       animation-name: charanimation;
       animation-fill-mode: forwards;
       width: 90%;
-      max-width: 500px;
-      max-height: 450px;
+      max-width: 150px;
       animation-duration: 3s;
       animation-delay: 10s;
     }
@@ -790,7 +789,7 @@ font-size: 30px;
 .stormText{
     color:white;
     position: relative;
-    margin-top: -44px;
+    margin-top: -40px;
     opacity: 0;
     animation-name: charanimation;
     animation-fill-mode: forwards;
@@ -806,8 +805,8 @@ font-size: 30px;
   animation-name: charanimation;
   animation-fill-mode: forwards;
   width: 90%;
-  max-width: 500px;
-  max-height: 450px;
+  max-width: 300px;
+
   animation-duration: 3s;
   animation-delay: 14s;
 }

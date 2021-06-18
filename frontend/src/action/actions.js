@@ -123,11 +123,7 @@ export const eraseHistory =()=>{
 export const weatherGet=(city)=>async(dispatch)=>{
     try{
         dispatch({type:GET_WEATHER_REQUEST})
-        const {data} = await axios.get(`https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=7507d40292714bf6a919dcf4bfeae9cb&`,{
-            params:{
-                units:'M',
-            }
-        })
+        const {data} = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ab4fbe0e0db015a4f2de3acffd96daa2`)
 
         dispatch({type:GET_WEATHER_SUCCESS,payload:data})
     }catch(error){

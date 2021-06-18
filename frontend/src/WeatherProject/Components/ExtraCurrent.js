@@ -32,7 +32,7 @@ const ExtraCurrent = (weather) => {
     })
     const classes = useStyle()
 
-    let currentData = weather.weatherInfo.data[0]
+    let currentData = weather.weatherInfo
 
 
     if(currentData){
@@ -42,49 +42,51 @@ const ExtraCurrent = (weather) => {
                 <Paper className={classes.paper}>
                     <h2>Current Weather</h2>
                     <div className={classes.icon}>
-                   <IconsDisplay icons={currentData.weather.description}/> 
-
+                   <IconsDisplay icons={currentData.weather[0].description}/> 
+                   <Divider className={classes.divider}/>
                     </div>
                     <Grid container direction="row">
                         <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Feels Like(Min) </div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.app_min_temp}&#8451;</Grid>
+                        <Grid item xs={3} className={classes.data}>{currentData.main.temp_min.toString().slice(0,2)}&#8451;</Grid>
                     </Grid>
+
                     <Divider className={classes.divider}/>
+
                     <Grid container direction="row">
                     <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Feels Like (Max)</div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.app_max_temp}&#8451;</Grid>
+                        <Grid item xs={3} className={classes.data}>{currentData.main.temp_max.toString().slice(0,2)}&#8451;</Grid>
                     </Grid>
+
                     <Divider className={classes.divider}/>
+
                     <Grid container direction="row">
                     <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Wind Gust Speed</div></Grid>
-                        <Grid item xs={3} className={classes.data}>{Number(currentData.wind_gust_spd.toString().slice(0,1))*3.6}km/h {currentData.wind_cdir}</Grid>
+                        <Grid item xs={3} className={classes.data}>{Number(currentData.wind.gust)*3.6}km/h {currentData.wind.deg}&deg;</Grid>
                     </Grid>
+
                     <Divider className={classes.divider}/>
+
                     <Grid container direction="row">
                     <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Relative Humidity </div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.rh}</Grid>
+                        <Grid item xs={3} className={classes.data}>{currentData.main.humidity}%</Grid>
                     </Grid>
+
                     <Divider className={classes.divider}/>
+
                     <Grid container direction="row">
                         <Grid item xs={2}></Grid>
-                        <Grid item xs={5}><div className={classes.text}>Probabilty Of Percipatation</div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.pop}%</Grid>
-                    </Grid>
-                    <Divider className={classes.divider}/>
-                    <Grid container direction="row">
-                    <Grid item xs={2}></Grid>
-                        <Grid item xs={5}><div className={classes.text}>Uv Index </div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.uv}</Grid>
-                    </Grid>
-                    <Divider className={classes.divider}/>
-                    <Grid container direction="row">
-                    <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Clouds</div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.clouds}</Grid>
+                        <Grid item xs={3} className={classes.data}>{currentData.clouds.all}%</Grid>
+                    </Grid>
+
+                    <Grid container direction="row">
+                    <Grid item xs={2}></Grid>
+                        {/* <Grid item xs={5}><div className={classes.text}>Clouds</div></Grid>
+                        <Grid item xs={3} className={classes.data}>{currentData.clouds}</Grid> */}
                     </Grid>
                     <Divider className={classes.divider}/>
                 </Paper>

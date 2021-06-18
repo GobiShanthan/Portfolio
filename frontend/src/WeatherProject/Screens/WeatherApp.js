@@ -94,21 +94,20 @@ const WeatherMain = () => {
     }
 
         if(weather){
-            const address = weather.city_name
-            const currentWeather = weather.data[0]
+            const address = weather.name
             return (
                 <Grid container direction='column' alignContent='center'>
                     <Paper className={classes.paper} style={{backgroundImage:`url(${hours > 6 && hours < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
                     <Grid item xs={12} style={{marginTop:'80px'}}>
                         <div>{date}</div>
                         <h2>{address}</h2>
-                        <p>{currentWeather.weather.description}</p>
-                        <p>{currentWeather.conditions}</p>
-                        <div className={classes.temp}>{currentWeather.temp}&#8451;</div>
+                        <p>{weather.main.description}</p>
+                        <p>{weather.name}</p>
+                        <div className={classes.temp}>{weather.main.temp.toString().slice(0,2)}&#8451;</div>
                         <Grid container direction='column' alignContent='center'>
                         <div className={classes.arrow}>
-                        <HiArrowNarrowDown className={classes.dirDown}/>{currentWeather.app_min_temp}
-                            <HiArrowNarrowUp className={classes.dirUp}/>{currentWeather.app_max_temp}
+                        <HiArrowNarrowDown className={classes.dirDown}/>{weather.main.temp_min.toString().slice(0,2)}&#8451;
+                            <HiArrowNarrowUp className={classes.dirUp}/>{weather.main.temp_max.toString().slice(0,2)}&#8451;
 
                         </div>
                         </Grid>
@@ -134,7 +133,7 @@ const WeatherMain = () => {
 
                     <Grid container direction='row'>
                     <Grid item xs={12} md={6} style={{marginBottom:'40px',textAlign:'center',marginTop:'40px'}}  >
-                    <ExtraCurrent weatherInfo={weather}/>
+                    <ExtraCurrent weatherInfo={weather}/> 
                     </Grid>
                     <Grid item xs={12} md={6}>
                     <ForecastCard weatherInfo={weather}/>

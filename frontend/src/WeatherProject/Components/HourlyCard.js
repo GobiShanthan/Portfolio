@@ -44,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize:'25px'
   },
   date:{
-    marginTop:'2px'
+    marginTop:'2px',
+    fontSize:'15px'
   }
 
 }));
@@ -60,18 +61,19 @@ const {hours} = weatherHourReducer
 
   const classes = useStyles();
   if(hours){
+
     return (
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={2.5}>
           
-          {hours.data.map((h) => (
-            <div key={h.datetime}>
+          {hours.hourly.map((h) => (
+            <div key={h.dt}>
             { 
-            <GridListTile key={h.datetime} className={classes.listBar}cols={0.22}rows={0.6} >         
-              <Card className={classes.card} key={h.datetime}>
-                    <div className={classes.date} >{h.timestamp_utc.slice(11,16)}</div>
-                    <div className={classes.icon}>{IconsDisplay(h.weather.description)}</div>
-                    <div className={classes.temp}>{h.temp}&#8451;</div>
+            <GridListTile key={h.dt} className={classes.listBar}cols={0.22}rows={0.6} >         
+              <Card className={classes.card} key={h.dt}>
+                    <div className={classes.date} >{new Date(h.dt*1000).toLocaleTimeString("en-US").slice(0,4)+new Date(h.dt*1000).toLocaleTimeString("en-US").slice(7,11)}</div>
+                    <div className={classes.icon}><IconsDisplay icons={h.weather[0].description}/> </div>
+                    <div className={classes.temp}>{h.temp.toString().slice(0,2)}&#8451;</div>
                 </Card>
             </GridListTile>}
             

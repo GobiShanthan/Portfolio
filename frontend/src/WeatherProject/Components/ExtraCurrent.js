@@ -42,7 +42,8 @@ const ExtraCurrent = (weather) => {
                 <Paper className={classes.paper}>
                     <h2>Current Weather</h2>
                     <div className={classes.icon}>
-                    <IconsDisplay icons={currentData.weather.description}/>
+                   <IconsDisplay icons={currentData.weather.description}/> 
+
                     </div>
                     <Grid container direction="row">
                         <Grid item xs={2}></Grid>

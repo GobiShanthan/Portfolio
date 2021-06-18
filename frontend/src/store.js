@@ -12,6 +12,7 @@ import {
   spanReducer,
   weatherReducer,
   weatherHourReducer,
+  weatherForcastReducer,
   marvelReducer,
   marvelCharReducer,
   marvelComicReducer
@@ -77,6 +78,7 @@ spanReducer,
 //WeatherBit Reducers
 weatherReducer,
 weatherHourReducer,
+weatherForcastReducer,
 
 //Marvel Reducers
 marvelReducer,

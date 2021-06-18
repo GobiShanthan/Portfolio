@@ -68,7 +68,7 @@ const useStyles = makeStyles(() => ({
     textAlign:'center',
   },
   iconWeather:{
-    marginTop:'-30px',
+    marginTop:'-10px',
     fontSize:'min(max(16px, 100vw), 140px);',
   },
   text:{
@@ -87,7 +87,7 @@ const useStyles = makeStyles(() => ({
     marginTop:"10px"
   },
   description:{
-    marginTop:'-58px',
+    marginTop:'-48px',
     paddingBottm:'50px'
   },
   list:{
@@ -100,19 +100,23 @@ const WeatherDay=({match})=> {
 const idDate = match.params.id
 
   const classes = useStyles();
-  const [value, setValue] = React.useState(idDate);
+  const [value, setValue] = React.useState(Number(idDate));
+  
   const handleChange = (newValue) => {
     setValue(newValue);
   };
 
-  const weatherReducer= useSelector((state)=>state.weatherReducer)
-  const {weatherInfo} = weatherReducer
+  const weatherHourReducer = useSelector((state)=>state.weatherHourReducer)
+  const {hours} = weatherHourReducer
+  
 
 
-  const hours = new Date().getHours()
+
+  //date time now
+  const hoursNow = new Date().getHours()
 
  const ListItem =({icon,text,data,symbol,deg})=>{
-   if(weatherInfo){
+   if(hours){
     return(
       <Grid container direction='row' className={classes.list} >
       <Grid item xs={2} >{icon}</Grid>
@@ -130,12 +134,12 @@ const idDate = match.params.id
   }
 
 
-  if(weatherInfo){
+  if(hours){
     return (
         <div className={classes.root} >
            <AppBar position="fixed" style={{color:'white',backgroundColor: 'rgba(355, 255,255, 0.1)'}}>
             <Tabs
-            value={1}
+              value={value}
               onChange={handleChange}
               indicatorColor="primary"
               textColor="inherit"
@@ -143,42 +147,46 @@ const idDate = match.params.id
               scrollButtons="auto"
               aria-label="scrollable auto tabs example"
             >     
-            {weatherInfo.data.map((w)=>(
+            {hours.daily.map((w,index)=>(
+              
           <Tab
-            label={w.datetime}
-            {...a11yProps(w.datetime)}
-            key={w.datetime}
-            aria-controls={w.datetime}
-            onClick={(e)=>setValue(w.datetime)}/>))}
+            label={new Date(w.dt*1000).toString().slice(0,10)}
+            {...a11yProps(index)}
+            key={index}
+            aria-controls={(index)}
+            onClick={(e)=>setValue(index)}/>))}
+
                  </Tabs>
             </AppBar>
                  
-        {weatherInfo.data.map((w)=>(
-            <TabPanel key={w.datetime} value={value} index={w.datetime}style={{backgroundImage:`url(${hours > 6 && hours < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
+        {hours.daily.map((w,index)=>(
+              
+            <TabPanel key={(w.dt)} value={value} index={index}style={{backgroundImage:`url(${hoursNow > 6 && hoursNow < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
                 <Link to='/weather'>
                   <h4 style={{color:'white',marginTop:'40px'}}><FaArrowLeft style={{marginRight:'20px'}}/>Weather Page</h4>
+
                 </Link>
                 <Grid style={{color:'white'}} container direction='column' alignContent='center'>
                 <Card className={classes.card}  >
                 <Grid container direction='column' alignContent='center' style={{marginTop:'20px'}}>
-                {w.datetime}
-                <Grid item className={classes.temp}>{w.temp}&#8451;</Grid>
-                <Grid item className={classes.iconWeather}>{IconsDisplay(w.weather.description)}</Grid>
-                <Grid item className={classes.description}>{w.weather.description}</Grid>
+                {new Date(w.dt*1000).toString().slice(0,10)}
+                <Grid item className={classes.temp}>{w.temp.day.toString().slice(0,2)}&#8451;</Grid>
+                <Grid item className={classes.iconWeather}><IconsDisplay icons={w.weather[0].description}/></Grid>
+                <Grid item className={classes.description}>{w.weather[0].description}</Grid>
                 </Grid>
 
                 <div className={classes.list}>
-                <ListItem text='Feels Like(Min)' icon={FaTemperatureLow()} data={`${w.app_min_temp}`} symbol={'o'} deg={'C'}/>
+                <ListItem text='Feels Like(Min)' icon={FaTemperatureLow()} data={`${w.temp.min}`} symbol={'o'} deg={'C'}/>
                 <Divider className={classes.divider}/>
-                <ListItem text='Feels Like(Max)' icon={FaTemperatureHigh()} data={`${w.app_max_temp}`}symbol={'o'} deg={'C'}/>
+                <ListItem text='Feels Like(Max)' icon={FaTemperatureHigh()} data={`${w.temp.max}`}symbol={'o'} deg={'C'}/>
                 <Divider className={classes.divider}/>
-                <ListItem text='Wind Gust Speed' icon={FaWind()}data={`${Number(w.wind_gust_spd.toString().slice(0,1))*3.6}km/h ${w.wind_cdir}`}/>
+                <ListItem text='Wind Gust Speed' icon={FaWind()}data={`${Number(w.wind_gust.toString().slice(0,1))*3.6}km/h ${w.wind_deg}`}/>
                 <Divider className={classes.divider}/>
                 <ListItem text='Chance Of Rain' icon={FaCloudRain()} data={`${w.pop}%`}/>
                 <Divider className={classes.divider}/>
-                <ListItem text='UV Index'  icon={FaSun()}data={w.uv.toString().slice(0,3)}/>
+                <ListItem text='UV Index'  icon={FaSun()}data={w.uvi.toString().slice(0,3)}/>
                 <Divider className={classes.divider}/>
-                <ListItem text='Humidity' icon={WiHumidity()} data={`${w.rh}%`}/>
+                <ListItem text='Humidity' icon={WiHumidity()} data={`${w.humidity}%`}/>
                 <Divider className={classes.divider}/>
                 <ListItem text='Cloud Coverage' icon={FaCloud()} data={`${w.clouds}%`}/>
                 <Divider className={classes.divider}/>

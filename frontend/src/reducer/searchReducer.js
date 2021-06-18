@@ -29,6 +29,11 @@ import {
     GET_WEATHER_HOUR_SUCCESS,
     GET_WEATHER_HOUR_FAIL,
 
+    //WEATHER  FORCAST GET
+    GET_WEATHER_FORCAST_REQUEST,
+    GET_WEATHER_FORCAST_SUCCESS,
+    GET_WEATHER_FORCAST_FAIL,    
+
     //GET COMIC LIST
     GET_MARVEL_REQUEST,
     GET_MARVEL_SUCCESS,
@@ -77,6 +82,23 @@ export const weatherReducer = (state={},action)=>{
             return state
     }
 }
+
+export const weatherForcastReducer = (state={},action)=>{
+    switch(action.type){
+        case GET_WEATHER_FORCAST_REQUEST:
+            return{loading:true}
+        case GET_WEATHER_FORCAST_SUCCESS:
+            return {loading:false,weatherInfo:action.payload}
+        case GET_WEATHER_FORCAST_FAIL:
+            return {loading:false,weatherError:action.payload}
+        default:
+            return state
+    }
+}
+
+
+
+
 export const weatherHourReducer =(state={},action)=>{
     switch(action.type){
         case GET_WEATHER_HOUR_REQUEST:

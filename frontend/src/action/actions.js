@@ -139,7 +139,7 @@ export const weatherGet=(city)=>async(dispatch)=>{
 export const weatherHourGet=(city)=>async(dispatch)=>{
     try{
         dispatch({type:GET_WEATHER_HOUR_REQUEST})
-        const {data} = await axios.get(`https://api.weatherbit.io/v2.0/forecast/hourly?city=${city}&key=7507d40292714bf6a919dcf4bfeae9cb&hours=24`,{
+        const {data} = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&daily&appid=ab4fbe0e0db015a4f2de3acffd96daa2`,{
             params:{
                 units:'M',
             }

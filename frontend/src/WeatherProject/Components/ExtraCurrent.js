@@ -48,7 +48,7 @@ const ExtraCurrent = (weather) => {
                     <Grid container direction="row">
                         <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Feels Like(Min) </div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.main.temp_min.toString().slice(0,2)}&#8451;</Grid>
+                        <Grid item xs={3} className={classes.data}>{(currentData.main.temp_min-273.15).toString().slice(0,4)}&#8451;</Grid>
                     </Grid>
 
                     <Divider className={classes.divider}/>
@@ -56,7 +56,7 @@ const ExtraCurrent = (weather) => {
                     <Grid container direction="row">
                     <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Feels Like (Max)</div></Grid>
-                        <Grid item xs={3} className={classes.data}>{currentData.main.temp_max.toString().slice(0,2)}&#8451;</Grid>
+                        <Grid item xs={3} className={classes.data}>{(currentData.main.temp_max-273.15).toString().slice(0,4)}&#8451;</Grid>
                     </Grid>
 
                     <Divider className={classes.divider}/>
@@ -64,7 +64,7 @@ const ExtraCurrent = (weather) => {
                     <Grid container direction="row">
                     <Grid item xs={2}></Grid>
                         <Grid item xs={5}><div className={classes.text}>Wind Gust Speed</div></Grid>
-                        <Grid item xs={3} className={classes.data}>{Number(currentData.wind.gust)*3.6}km/h {currentData.wind.deg}&deg;</Grid>
+                        <Grid item xs={3} className={classes.data}>{Number(currentData.wind.gust.toString().slice(0,2))*3.6}km/h {currentData.wind.deg}&deg;</Grid>
                     </Grid>
 
                     <Divider className={classes.divider}/>

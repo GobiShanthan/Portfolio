@@ -56,7 +56,7 @@ const ForecastCard = () => {
                             <div>{w.weather[0].description}</div>
                         </Grid>
                         <Grid item xs={2}>
-                            <div>{w.temp.day.toString().slice(0,2)}&#8451;</div>
+                            <div>{(w.temp.day-273.15).toString().slice(0,4)}&#8451;</div>
                         </Grid>
                     </ListItem>
                     </Grid>

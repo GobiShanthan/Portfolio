@@ -123,7 +123,7 @@ export const eraseHistory =()=>{
 export const weatherGet=(city)=>async(dispatch)=>{
     try{
         dispatch({type:GET_WEATHER_REQUEST})
-        const {data} = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ab4fbe0e0db015a4f2de3acffd96daa2`)
+        const {data} = await axios.get(`api/portfolio/openweather/${city}`)
 
         dispatch({type:GET_WEATHER_SUCCESS,payload:data})
     }catch(error){
@@ -132,14 +132,10 @@ export const weatherGet=(city)=>async(dispatch)=>{
 }
 
 //GET WEATHERBIT 24 HOUR API
-export const weatherHourGet=(city)=>async(dispatch)=>{
+export const weatherHourGet=(coords)=>async(dispatch)=>{
     try{
         dispatch({type:GET_WEATHER_HOUR_REQUEST})
-        const {data} = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&daily&appid=ab4fbe0e0db015a4f2de3acffd96daa2`,{
-            params:{
-                units:'M',
-            }
-        })
+        const {data} = await axios.get(`api/portfolio/openwforcast/${coords.lat},${coords.lon}`)
         dispatch({type:GET_WEATHER_HOUR_SUCCESS,payload:data})
     }catch(error){
         dispatch({type:GET_WEATHER_HOUR_FAIL,payload:error})
@@ -148,7 +144,7 @@ export const weatherHourGet=(city)=>async(dispatch)=>{
 
 
 //GET MARVEL PUBLIC COMICS API
-export const marvelGet =(search)=>async(dispatch,getState)=>{
+export const marvelGet =(search)=>async(dispatch)=>{
     dispatch({type:GET_MARVEL_REQUEST})
     try{
     const PUBLIC_KEY = 'be95bbc73ce4e1d24214e14b81b80d64'; // your public key

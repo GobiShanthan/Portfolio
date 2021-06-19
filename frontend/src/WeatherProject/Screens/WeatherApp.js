@@ -69,6 +69,10 @@ const WeatherMain = () => {
     const [weather,setWeather] = useState()
     const weatherReducer = useSelector((state)=>state.weatherReducer)
     const {weatherInfo} = weatherReducer
+    const weatherHourReducer = useSelector((state)=>state.weatherHourReducer)
+    const {hours} = weatherHourReducer
+
+
 
     const [city,setCity] = useState('markham')
     const classes = useStyles()
@@ -78,36 +82,42 @@ const WeatherMain = () => {
     useEffect(()=>{
         if(!weatherInfo){
             dispatch(weatherGet(city))
-            dispatch(weatherHourGet(city))
         }
         setWeather(weatherInfo)
-    },[weatherInfo,dispatch,city])
+        if(weather && !hours){
+            dispatch(weatherHourGet(weather.coord))
+        }
+        if(weather && hours){
+            if(weather.coord.lat !== hours.lat || weather.coord.lon !== hours.lon){
+                dispatch(weatherHourGet(weather.coord))
+            }
+        }
+    },[weatherInfo,dispatch,city,weather,hours])
 
 
         const newDate = new Date()
         const date =  newDate.toLocaleDateString()
-        const hours = new Date().getHours()
+        const hoursNow = new Date().getHours()
         
     const changeWeatherLocation =()=>{
         dispatch(weatherGet(city))
-        dispatch(weatherHourGet(city))
     }
 
         if(weather){
             const address = weather.name
             return (
                 <Grid container direction='column' alignContent='center'>
-                    <Paper className={classes.paper} style={{backgroundImage:`url(${hours > 6 && hours < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
+                    <Paper className={classes.paper} style={{backgroundImage:`url(${hoursNow > 6 && hoursNow < 20?dayTime:nightTime})`,height:'100%',minHeight:'100vh',backgroundSize:'100% 99.99%', backgroundAttachment: 'fixed'}}>
                     <Grid item xs={12} style={{marginTop:'80px'}}>
                         <div>{date}</div>
                         <h2>{address}</h2>
                         <p>{weather.main.description}</p>
                         <p>{weather.name}</p>
-                        <div className={classes.temp}>{weather.main.temp.toString().slice(0,2)}&#8451;</div>
+                        <div className={classes.temp}>{(weather.main.temp-273.15).toString().slice(0,4)}&#8451;</div>
                         <Grid container direction='column' alignContent='center'>
                         <div className={classes.arrow}>
-                        <HiArrowNarrowDown className={classes.dirDown}/>{weather.main.temp_min.toString().slice(0,2)}&#8451;
-                            <HiArrowNarrowUp className={classes.dirUp}/>{weather.main.temp_max.toString().slice(0,2)}&#8451;
+                        <HiArrowNarrowDown className={classes.dirDown}/>{(weather.main.temp_min-273.15).toString().slice(0,4)}&#8451;
+                            <HiArrowNarrowUp className={classes.dirUp}/>{(weather.main.temp_max-273.15).toString().slice(0,4)}&#8451;
 
                         </div>
                         </Grid>
@@ -116,8 +126,8 @@ const WeatherMain = () => {
         
                     <form onSubmit={changeWeatherLocation}>
                     <TextField
-                        className={classes.search}
-                        InputProps={{disableUnderline: true,min: 0, style: {color:'white',paddingLeft:'30%',paddingRight:'30%'}}} 
+                        variant="standard"
+                        InputProps={{disableUnderline: true, style: {color:'white',paddingLeft:'10%',paddingRight:'10%',borderRadius:'25%'}}} 
                         onChange={(e)=>setCity(e.target.value)} 
                     />
                     <div>

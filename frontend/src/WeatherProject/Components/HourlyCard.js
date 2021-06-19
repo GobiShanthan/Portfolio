@@ -54,8 +54,11 @@ const useStyles = makeStyles((theme) => ({
 
 const HourlyCard=()=> {
 
+
+//forcast open api state
 const weatherHourReducer = useSelector((state)=>state.weatherHourReducer)
 const {hours} = weatherHourReducer
+
 
 
 
@@ -73,7 +76,7 @@ const {hours} = weatherHourReducer
               <Card className={classes.card} key={h.dt}>
                     <div className={classes.date} >{new Date(h.dt*1000).toLocaleTimeString("en-US").slice(0,4)+new Date(h.dt*1000).toLocaleTimeString("en-US").slice(7,11)}</div>
                     <div className={classes.icon}><IconsDisplay icons={h.weather[0].description}/> </div>
-                    <div className={classes.temp}>{h.temp.toString().slice(0,2)}&#8451;</div>
+                    <div className={classes.temp}>{(h.temp-273.15).toString().slice(0,4)}&#8451;</div>
                 </Card>
             </GridListTile>}
             

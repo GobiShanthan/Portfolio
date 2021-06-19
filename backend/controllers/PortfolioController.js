@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler'
 import Portfolio from '../models/PortfolioModel.js'
-
+import fetch from 'node-fetch'
 
 
 //@desc post a comment for contact
@@ -31,5 +31,26 @@ const getAllComments = asyncHandler(async(req,res)=>{
 
 
 
+//Fetch from OpenWeather api
+const fetchOpenApi = asyncHandler(async(req,res)=>{
+    const city = req.params.id
+    const openApiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.OPEN_WEATHER_API_KEY}`
+    const fetchedData = await fetch(openApiUrl)
+    const fetchedJson = await fetchedData.json()
+    res.json(fetchedJson)
+})
 
-export {postComment,getAllComments}
+
+//Fetch 7 day and 48 hours forcast from open api
+const fetchOpenWeatherForcast =asyncHandler(async(req,res)=>{
+    const data = req.params.id
+    const lat = data.split(',')[0]
+    const lon = data.split(',')[1]
+    const forcastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=${process.env.OPEN_WEATHER_API_KEY}`
+    const fetchedData = await fetch(forcastUrl)
+    const fetchedJson = await fetchedData.json()
+    res.json(fetchedJson)
+})
+
+
+export {postComment,getAllComments,fetchOpenApi,fetchOpenWeatherForcast}

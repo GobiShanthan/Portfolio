@@ -30,7 +30,6 @@ const getAllComments = asyncHandler(async(req,res)=>{
 })
 
 
-
 //Fetch from OpenWeather api
 const fetchOpenApi = asyncHandler(async(req,res)=>{
     const city = req.params.id
@@ -53,4 +52,45 @@ const fetchOpenWeatherForcast =asyncHandler(async(req,res)=>{
 })
 
 
-export {postComment,getAllComments,fetchOpenApi,fetchOpenWeatherForcast}
+//Fetch Unsplash Api
+const fetchUnsplashApi  = asyncHandler(async(req,res)=>{
+    const searchR = req.params.id
+
+
+    var url = new URL('https://api.unsplash.com/search/photos?page=1&')
+
+    var params = {query:searchR,per_page:20} // or:
+    url.search = new URLSearchParams(params).toString();
+
+    const fetchedData = await fetch(url, {
+        headers: { 
+            'Authorization': process.env.UNSPLASH_KEY,
+            sameSite:true,
+            httpOnly:true,    
+     }
+
+     
+    })
+    const fetchedJson = await fetchedData.json()
+    res.json(fetchedJson)
+
+})
+
+//Fetch Youtube api
+const fetchYoutubeApi  = asyncHandler(async(req,res)=>{
+    const searchR = req.params.id
+    const KEY = process.env.YOUTUBE_KEY
+    var url = new URL(`https://www.googleapis.com/youtube/v3/search`)
+
+    var params = {part: "snippet",maxResults: 20,key: KEY,q:searchR} // or:
+    url.search = new URLSearchParams(params).toString();
+
+    const fetchedData = await fetch(url)
+    const fetchedJson = await fetchedData.json()
+    res.json(fetchedJson)
+
+})
+
+
+
+export {postComment,getAllComments,fetchOpenApi,fetchOpenWeatherForcast,fetchUnsplashApi,fetchYoutubeApi}

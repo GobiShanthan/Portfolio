@@ -72,9 +72,8 @@ import {
 
 
 
-import unsplash from '../api/unsplash'
+
 import wikiSearch from '../api/wikiSearch'
-import youtube from '../api/youtube'
 import axios from 'axios'
 import md5 from 'js-md5'
 
@@ -216,7 +215,7 @@ export const getYoutube =() =>async(dispatch,getState)=>{
     const {searchReducer:{searchR}} = getState()
     dispatch({type:YOUTUBE_SEARCH_REQUEST})
     try{
-        const {data} = await youtube.get('/search',{params:{q:searchR}})
+        const {data} = await axios.get(`/api/portfolio/youtube/${searchR}`)
         dispatch({type:YOUTUBE_SEARCH_SUCCESS,payload:data})
     }catch{
         dispatch({type:YOUTUBE_SEARCH_FAIL,payload:'An error occured trying to fetch data from Youtube Api'})
@@ -265,9 +264,7 @@ export const getImage=()=>async(dispatch,getState)=>{
     const {searchReducer:{searchR}} = getState()
     dispatch({type:IMAGE_SEARCH_REQUEST})
     try{
-        const {data} = await unsplash.get("search/photos",{
-            params:{query : `${searchR}`},
-        })
+        const {data} = await axios.get(`/api/portfolio/unsplash/${searchR}`)
         dispatch({type:IMAGE_SEARCH_SUCCESS,payload:data})
     }catch{
         dispatch({type:IMAGE_SEARCH_FAIL,payload:'An error has occured trying to fetch data from Unsplash Api'})

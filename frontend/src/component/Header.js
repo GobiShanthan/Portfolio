@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -51,6 +51,19 @@ const useStyles = makeStyles((theme) => ({
       color:'#FFFFFF',
     }
   },
+  HomeIcon3:{
+    color:'white',
+    fontSize:'25px',
+    marginTop:'40px',
+    marginLeft:'8px',
+    marginBottom:'-10px',
+    cursor:'pointer',
+    textDecoration:'none',
+    '&:hover': {
+      fontSize: "30px",
+      color:'ffffff',
+    }
+  },
 WeatherFont:{
   fontSize:'9px',
   color:'white',
@@ -65,6 +78,10 @@ headerSpace:{
 },
 link:{
   marginLeft:"20px"
+},
+gobisearch:{
+  fontSize:'20px',
+  marginTop:'-15px'
 }
 
   
@@ -72,24 +89,7 @@ link:{
 }));
 
 const Header=({location})=>{
-  const stageCanvasRef = useRef(null);
-  const classes = useStyles();
-  const [width,setWidth] = useState('')
-
-
- //find width of screen
-
-
- useEffect( () => {
-     if(stageCanvasRef.current && width !== stageCanvasRef.current.clientWidth){
-         setWidth(stageCanvasRef.current.clientWidth)
-     }
- }, [stageCanvasRef,width]);
-
-
-
-
-
+const classes = useStyles();
 
 if(location.pathname.slice(0,10) ==='/geekgrade'){
   return(
@@ -141,20 +141,36 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
       </AppBar>
     </div>
   )
+}if(location.pathname.slice(0,11)==='/searchpage'){
+  return(
+    <div className={classes.root}  id='mainnav'>
+    <AppBar position="static"  className='portfolioHeader'  >
+      <Toolbar variant='dense'>
+      <Grid container direction='row' >
+          <Grid item xs={4} style={{marginBottom:'-9px',marginTop:"4px"}}><Link to='/' className={classes.HomeIcon3}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
+              <Grid item container direction='column' alignContent='center' >
+              <Grid item xs={12}>
+                <h3 className={classes.gobisearch}>GOBISEARCH</h3>
+              </Grid>
+            </Grid>
+
+          </Grid>
+      </Toolbar>
+    </AppBar>
+  </div>
+  )
 }else{
   return (
     <div className={classes.root}  id='mainnav'>
-      <AppBar position="static" ref = {stageCanvasRef} className='portfolioHeader' >
+      <AppBar position="static"  className='portfolioHeader' >
         <Toolbar variant='dense'>
           <div style={{display:'flex',flexGrow:'1'}}>
           <h3 style={{color:'white'}}><Link to='/' className={classes.HomeIcon2}><FaHome /><div style={{fontSize:'10px',marginTop:'-8px',marginLeft:'-12px'}}>G-HOME</div></Link></h3>
-          {width<650?null:
           <div className='links'>
             <div className={classes.link}> <ScrollLink to='portfolio' smooth={true} duration={2000}><h3>Portfolio</h3></ScrollLink></div>
             <div className={classes.link}> <ScrollLink to='about' smooth={true} duration={2000}><h3>About me</h3></ScrollLink></div>
             <div className={classes.link}> <ScrollLink to='contact' smooth={true} duration={2000}><h3>Contact me</h3></ScrollLink></div>
           </div>
-            }
             </div>
             <div className='iconMenu'>
               <IconMenu edge="end" className={classes.menuButton} color="inherit" aria-label="menu"/>

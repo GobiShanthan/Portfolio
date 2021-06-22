@@ -4,10 +4,6 @@ import ImageList from '../components/YoutubeComponents/ImageList'
 
 
 
-
-
-
-
 const ImageSearch =() =>{
     const [images,setImages] = useState('')
     const imageReducer = useSelector((state)=>state.imageReducer)

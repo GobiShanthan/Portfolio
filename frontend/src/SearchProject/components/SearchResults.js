@@ -24,7 +24,7 @@ const SearchResult =({resultScreen}) =>{
     )
     else{
         return(
-            <h5 style={{color:'white'}}>Try the search</h5>
+            <h4 style={{color:'white'}}> Try submitting your own search request</h4>
         )
     }
 }

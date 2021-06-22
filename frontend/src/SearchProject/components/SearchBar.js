@@ -22,9 +22,6 @@ const submitHandler=(e)=>{
     return(
             <form className='searchbarfull' onSubmit={submitHandler} >
                 <div  style={{color:'white'}}>
-                    <div className="gsearch">
-                        <label>Gobi Search</label>
-                    </div>
                     <div >
                         <input 
                             className='input' 

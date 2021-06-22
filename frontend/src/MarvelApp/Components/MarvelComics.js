@@ -37,18 +37,18 @@ const MarvelComics = () => {
         const comicsInfo = marvelInfo.data.results
         return (
             <div >
-                <Grid container direction='column' alignContent='center'>
+                <Grid container direction='column'>
                 <h1>Comics</h1>
                 </Grid>
                 <div className={classes.comicList}>
                 {comicsInfo.map((comic)=>(
                     <div key={comic.id} elevation={22} className={classes.comic}>
                         <h5 style={{color:'white'}}>{comic.title}</h5>
-                        <Grid container direction='row' >
+    
                         <Link to={`/comic/${comic.id}`} >
-                        <img className={classes.image} src={`${comic.thumbnail.path}.jpg`} alt='comic.thumbnail.path' />
+                        <img className={classes.image} src={`${comic.thumbnail.path.slice(0,4)+'s'+comic.thumbnail.path.slice(4)}.jpg`} alt='comic.thumbnail.path' />
                         </Link>   
-                        </Grid>
+
                       
                     </div>
                 ))}

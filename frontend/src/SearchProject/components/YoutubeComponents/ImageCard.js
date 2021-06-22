@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 
 
 const ImageCard =({image}) =>{
-    const [spans,setSpans] = useState()
+    const [spans,setSpans] = useState(24)
     const ref = React.createRef()
 
 

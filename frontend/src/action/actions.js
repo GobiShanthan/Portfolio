@@ -186,8 +186,8 @@ export const marvelCharGet=(search)=>async(dispatch)=>{
 export const marvelComicGet =(id)=>async(dispatch)=>{
     try{
         dispatch({type:GET_COMIC_BY_ID_REQUEST})
-        const PUBLIC_KEY = 'be95bbc73ce4e1d24214e14b81b80d64'; // your public key
-        const PRIVATE_KEY = 'e2066198ffed2b6b695ae0ad1b2c77158f46ded3'; // your private key
+        const PUBLIC_KEY = 'be95bbc73ce4e1d24214e14b81b80d64'; // public key
+        const PRIVATE_KEY = 'e2066198ffed2b6b695ae0ad1b2c77158f46ded3'; // private key
         const ts = Number(new Date());
         const hash = md5.create();
         hash.update(ts + PRIVATE_KEY + PUBLIC_KEY);

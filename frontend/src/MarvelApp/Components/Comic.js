@@ -65,11 +65,13 @@ const Comic = ({match}) => {
 
     if(comicInfo){
         const comic = comicInfo.data.results[0]
+    
         return (
             <div style={{backgroundColor:'black'}} className={classes.root}>
                 <Grid container direction='row'>
                 <Grid item xs={12} md={6}>
-                    <img src={`${comic.images[0].path}.${comic.images[0].extension}`} alt={comic.title} className={classes.image}/>
+                    <img src={`${comic.images[0].path.slice(0,4)+'s'+comic.images[0].path.slice(4)}.${comic.images[0].extension}`} alt={comic.title} className={classes.image}/>
+
                 </Grid>
                 <Grid item xs={12} md={6} container direction='column'>
                     <h1 className={classes.title}>{comic.title}</h1>

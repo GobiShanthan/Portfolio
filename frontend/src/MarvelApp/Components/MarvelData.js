@@ -66,7 +66,7 @@ if(marvelCharInfo && marvelInfo){
                         <h1 className={classes.charName}>{marvelData.name}</h1>
 
                     <Grid item xs={12}>
-                        <img className={classes.charImg} src={marvelData.thumbnail.path +'.'+ marvelData.thumbnail.extension} alt=''/>
+                        <img className={classes.charImg} src={marvelData.thumbnail.path.slice(0,4)+'s'+marvelData.thumbnail.path.slice(4)+'.'+ marvelData.thumbnail.extension} alt=''/>
                     </Grid>
                     <Grid item xs={12}>
                         <p className={classes.description}>{marvelData.description}</p>

@@ -11,7 +11,7 @@ import './component.css'
 import {getAllProductsAction} from '../../action/productAction'
 import {UPDATE_PRODUCT_RESET} from '../../constant/productConstant'
 import './component.css'
-
+import Rating from './Rating'
 
 
 
@@ -95,6 +95,7 @@ if(products){
       <div style={{marginTop:'-20px'}}>
       {`$${addDecimals(product.price)}`}
       </div>
+      <Rating rating={product.rating}/>
 
       <Link to={`/geekgrade/product/${product._id}`} style={{textDecoration:'none'}}>
         <Button type='button' variant='contained' color='secondary' size='large' style={{marginLeft:'20%',marginRight:'20%',marginBottom:'5%'}}>Add To Cart</Button>        

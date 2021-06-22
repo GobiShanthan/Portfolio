@@ -37,14 +37,12 @@ const useStyles = makeStyles({
         color:'white'
     },
     geekGradeOustide:{
-        height:'20px',
-
-        backgroundColor:'#3A6EA5'
+        backgroundColor:'#3A6EA5',
+        height:'100%',
     },
     geekGradeInside:{
         fontSize:'14px',
         textAlign:'center',
-        height:'100%',
         color:'white'
     },
 })
@@ -84,7 +82,8 @@ const Footer = ({history}) =>{
             <h6 className={classes.marvelApiInside}>{marvelInfo? marvelInfo.attributionText:"© Gobi Shanthan"}</h6>
         </div>
         )
-    }else{
+    }
+    else{
         return(
             <div className={classes.gobShanthanOustide} >
             <h6 className={classes.gobiShanthanInside}>Copyright &copy; Gobi Shanthan</h6>

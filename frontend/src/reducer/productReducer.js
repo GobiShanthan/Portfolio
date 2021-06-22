@@ -90,7 +90,7 @@ export const allProductsReducer = (state={},action)=>{
             return {loading:false,allProductsInfo:priceHighToLow.sort((a,b)=>b.price - a.price)}
         case SET_BY_AVG_CUSTOMER_REIVEW:
             let avgCustRemove = action.payload
-            return {loading:false,allProductsInfo:avgCustRemove.sort((a,b)=>a.reviews.length - b.reviews.length)}
+            return {loading:false,allProductsInfo:avgCustRemove.sort((a,b)=>b.rating - a.rating)}
         case SET_BY_NEW_ARRIVAL:
             let newArrival = action.payload
             return {loading:false,allProductsInfo:newArrival.sort((a,b)=>a.createdAt - b.createdAt)}

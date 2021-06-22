@@ -60,7 +60,7 @@ const ProductPage =({match,history})=>{
         return(
             <div className='productpage'>
                 <Grid container direction='column' alignContent='center'>
-                <Paper className={classes.root} elevation={20} style={{width:'90%',maxWidth:'800px',marginBottom:'40px'}} >
+                <Paper className={classes.root} elevation={20} style={{width:'90%',maxWidth:'800px',height:"100%"}} >
                         <Grid container direction ='row' style={{marginTop:'8%'}}>
                             <Grid item container direction='row' xs={12} md={8}>
                                 <Grid item xs={12} md={8}>

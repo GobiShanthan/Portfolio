@@ -15,6 +15,9 @@ const useStyles = makeStyles({
         borderRadius:'2%'
     },
     image:{
+        display:"block",
+        marginLeft:'auto',
+        marginRight:'auto',
         width:'40%',
         maxWidth:'350px',
         height:'150px'
@@ -48,12 +51,12 @@ const CarouselItem = ()=>{
                 <Grid container direction='column' alignContent='center' key={item._id}>
                 <Paper key={item._id} className={classes.root} style={{maxWidth:'800px'}}>
                     <Grid item style={{paddingTop:"5px"}}><h1>Top Rated Products</h1></Grid>
-                <Grid container direction='column' alignContent='center'>
+                <Grid item xs={12} container direction='column' alignContent='center'>
                 <img className={classes.image}  src={item.image} alt={item.name}/>
                 <div className={classes.subHeading}>
                 <h2>{item.brand +" "+item.name}</h2>
                 <Rating rating={item.rating}/>
-                <p>{item.description}</p>
+                <p style={{margin:'20px'}}>{item.description}</p>
 
                 </div>
                 </Grid>

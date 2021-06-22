@@ -12,8 +12,7 @@ import {
   SET_BY_NAME,
   SET_BY_PRICE_LOW_TO_HIGH,
   SET_BY_PRICE_HIGH_TO_LOW,
-  SET_BY_AVG_CUSTOMER_REIVEW,
-  SET_BY_NEW_ARRIVAL} 
+  SET_BY_AVG_CUSTOMER_REIVEW} 
   from '../../constant/productConstant'
 
 
@@ -62,8 +61,6 @@ const SortMenu =() =>{
           <MenuItem onClick={()=>handleClose(SET_BY_PRICE_LOW_TO_HIGH)} >Price: Low to High</MenuItem>
           <MenuItem onClick={()=>handleClose(SET_BY_PRICE_HIGH_TO_LOW)} >Price: High to Low</MenuItem>
           <MenuItem onClick={()=>handleClose(SET_BY_AVG_CUSTOMER_REIVEW)} >Avg.Customer Review</MenuItem>
-          <MenuItem onClick={()=>handleClose(SET_BY_NEW_ARRIVAL)} >Newest Arrivals</MenuItem>
-  
         </Menu>
       </div>
     );

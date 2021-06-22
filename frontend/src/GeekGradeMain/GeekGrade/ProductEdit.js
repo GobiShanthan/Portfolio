@@ -71,7 +71,7 @@ const ProductEdit = ({match,history}) =>{
     return(
         <div className="productpage" style={{paddingBottom:'10%',paddingTop:'5%'}}> 
             <Grid container justify='center' style={{textAlign:'center',marginTop:'1%'}}>
-            <Paper  elevation={20} style={{width:'400px',marginBottom:'20px'}} >
+            <Paper  elevation={20} style={{width:'40%', minWidth:'320px',marginBottom:'20px'}} >
               
               <form className='userupdateform' onSubmit={updateProductHandler} >
                 <Grid item xs={12}><img src={image} alt={name} style={{width:"80%", margin:'20px'}}/></Grid>
@@ -137,7 +137,7 @@ const ProductEdit = ({match,history}) =>{
               />
               </Grid>
               <Grid>     
-                <Button variant="contained" color="secondary" style={{marginBottom:'10px',marginTop:'40px'}} type='submit'>Update</Button>
+                <Button variant="contained" color="secondary" style={{marginBottom:'40px',marginTop:'40px'}} type='submit'>Update</Button>
               </Grid>
               </form>
             </Paper>

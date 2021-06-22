@@ -76,7 +76,7 @@ const Footer = ({history}) =>{
             <h6 className={classes.geekGradeInside}>Copyright &copy; GeekGrade</h6>
         </div>
         )
-    }else if(urlLocation === '/weather'){
+    }else if(urlLocation.slice(0,8)==='/weather'){
         return null
     }else if(urlLocation.slice(0,6) === '/comic' || urlLocation === '/marvel'){
         return(

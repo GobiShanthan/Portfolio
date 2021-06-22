@@ -16,7 +16,7 @@ import {FaCloud, FaCloudRain, FaSun, FaTemperatureHigh,FaTemperatureLow,FaWind,F
 import {WiHumidity} from 'react-icons/wi'
 import {Link} from 'react-router-dom'
 import WeatherLoader from '../Components/WeatherLoader'
-
+import WeatherFooter from '../Components/WeatherFooter'
 
 
 function TabPanel(props) {
@@ -193,7 +193,7 @@ const idDate = match.params.id
                 </div>
 
               </Card>
-
+              <WeatherFooter/>
                 </Grid>
           </TabPanel>
     ))}

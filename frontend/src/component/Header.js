@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   HomeIcon:{
     color:'white',
     fontSize:'25px',
-    marginTop:'40px',
+    marginTop:'30px',
     marginLeft:'8px',
     marginBottom:'-10px',
     cursor:'pointer',
@@ -120,6 +120,7 @@ if(location.pathname === '/weather'){
 
 if(location.pathname.slice(0,11) ==='/weatherday'){
   return null
+  
 }
 
 if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel'){
@@ -147,7 +148,7 @@ if(location.pathname.slice(0,6) === '/comic' || location.pathname === '/marvel')
     <AppBar position="static"  className='portfolioHeader'  >
       <Toolbar variant='dense'>
       <Grid container direction='row' >
-          <Grid item xs={4} style={{marginBottom:'-9px',marginTop:"4px"}}><Link to='/' className={classes.HomeIcon3}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
+          <Grid item xs={4} style={{marginBottom:'-15px',marginTop:"10px"}}><Link to='/' className={classes.HomeIcon3}><FaHome /><div style={{fontSize:'15px',marginTop:'-10px',marginLeft:'-12px'}}>G-HOME</div></Link></Grid>
               <Grid item container direction='column' alignContent='center' >
               <Grid item xs={12}>
                 <h3 className={classes.gobisearch}>GOBISEARCH</h3>

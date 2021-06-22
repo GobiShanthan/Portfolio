@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/core'
 const useStyles = makeStyles({
     weatherOustide:{
         height:'100%',
+        
     },
     weatherInside:{
         fontSize:'14px',

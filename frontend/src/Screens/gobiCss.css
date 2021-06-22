@@ -257,3 +257,503 @@
       }
     }
     
+    @media screen and (min-device-width: 630px) and (max-device-height: 380px){
+      .contactMe{
+        height: 100Vh;
+        text-align:'center';
+        
+        }
+        
+        .aboutMe{
+        height:100%;
+        background-color: black;
+        }
+        .aboutMeMain{
+          text-align: center;
+        }
+        .aboutMeSec{
+          display: flex;
+        }
+    
+        .aboutTitle{
+          margin-top: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        
+        .aboutMeDescription{
+          font-size: 12px;
+          color: white;
+          margin:5%;
+          margin-top: 10%;
+          text-align: center;
+          width: 30%;
+        }
+        .gobiPic{
+          margin-top:1%;
+          margin-bottom: 5%;
+          margin:10%;
+        }
+        .aboutMePic{
+          width: 100%;
+          max-width: 200px;
+        }
+  
+        .contactFull{
+          height: 100%;
+          min-height: 100vh;
+          text-align: center;
+  
+      } 
+        .contactMain{
+          display: flex;
+            text-align: center;
+        }
+    
+        .contactPic img{
+            width:100%;
+            max-width: 1000px;
+            margin:1%;
+        }
+        
+        .contactTitle{
+            font-size: 30px;
+        }
+        .contactForm{
+          width: 100%;
+          margin-top: -30px;
+        }
+    
+        input[type=text], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+    
+          input[type=email], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+
+          }
+          input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          .alertBox{
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 3px solid rgb(73, 224, 13);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+          }
+          
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+      
+      .fontIcons{
+        display: absolute;
+        width: 30px;
+        font-size: 50px;
+        color:green;
+        margin-top: -40px;
+      }
+      .fontIcons:hover{
+        font-size: 40px;
+      }
+    }
+
+
+    @media screen and (min-device-width: 700px) and (max-device-height: 400px){
+      .contactMe{
+        height: 100Vh;
+        text-align:'center';
+        
+        }
+        
+        .aboutMe{
+        height:100%;
+        background-color: black;
+        }
+        .aboutMeMain{
+          text-align: center;
+        }
+        .aboutMeSec{
+          display: flex;
+        }
+    
+        .aboutTitle{
+          margin-top: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        
+        .aboutMeDescription{
+          font-size: 12px;
+          color: white;
+          margin:5%;
+          margin-top: 10%;
+          text-align: center;
+          width: 30%;
+        }
+        .gobiPic{
+          margin-bottom: 5%;
+          margin:10%;
+          margin-top:4%;
+        }
+        .aboutMePic{
+          width: 100%;
+          max-width: 200px;
+        }
+  
+        .contactFull{
+          height: 100%;
+          min-height: 100vh;
+          text-align: center;
+  
+      } 
+        .contactMain{
+          display: flex;
+            text-align: center;
+        }
+    
+        .contactPic img{
+            width:100%;
+            max-width: 1000px;
+            margin:1%;
+        }
+        
+        .contactTitle{
+            font-size: 30px;
+        }
+        .contactForm{
+          width: 100%;
+          margin-top: -30px;
+        }
+    
+        input[type=text], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+    
+          input[type=email], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+
+          }
+          input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          .alertBox{
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 3px solid rgb(73, 224, 13);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+          }
+          
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+      
+      .fontIcons{
+        display: absolute;
+        width: 20px;
+        font-size: 50px;
+        color:green;
+        margin-top: -50px;
+      }
+      .fontIcons:hover{
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (min-device-width: 800px) and (max-device-height: 460px){
+      .contactMe{
+        height: 100Vh;
+        text-align:'center';
+        
+        }
+        
+        .aboutMe{
+        height:100%;
+        background-color: black;
+        }
+        .aboutMeMain{
+          text-align: center;
+        }
+        .aboutMeSec{
+          display: flex;
+        }
+    
+        .aboutTitle{
+          margin-top: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        
+        .aboutMeDescription{
+          font-size: 12px;
+          color: white;
+          margin:5%;
+          margin-top: 10%;
+          text-align: center;
+          width: 30%;
+        }
+        .gobiPic{
+          margin-bottom: 5%;
+          margin:10%;
+          margin-top:4%;
+        }
+        .aboutMePic{
+          width: 100%;
+          max-width: 200px;
+        }
+  
+        .contactFull{
+          height: 100%;
+          min-height: 100vh;
+          text-align: center;
+  
+      } 
+        .contactMain{
+          display: flex;
+            text-align: center;
+        }
+    
+        .contactPic img{
+            width:100%;
+            max-width: 1000px;
+            margin:1%;
+        }
+        
+        .contactTitle{
+            font-size: 30px;
+        }
+        .contactForm{
+          width: 100%;
+          margin-top: -30px;
+        }
+    
+        input[type=text], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+    
+          input[type=email], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+
+          }
+          input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          .alertBox{
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 3px solid rgb(73, 224, 13);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+          }
+          
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+      
+      .fontIcons{
+        display: absolute;
+        width: 20px;
+        font-size: 50px;
+        color:green;
+        margin-top: -50px;
+      }
+      .fontIcons:hover{
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (min-device-width: 870px) and (max-device-height: 460px){
+      .contactMe{
+        height: 100Vh;
+        text-align:'center';
+        
+        }
+        
+        .aboutMe{
+        height:100%;
+        background-color: black;
+        }
+        .aboutMeMain{
+          text-align: center;
+        }
+        .aboutMeSec{
+          display: flex;
+        }
+    
+        .aboutTitle{
+          margin-top: 40px;
+          font-size: 30px;
+          color: white;
+        }
+        
+        .aboutMeDescription{
+          font-size: 12px;
+          color: white;
+          margin:5%;
+          margin-top: 10%;
+          text-align: center;
+          width: 30%;
+        }
+        .gobiPic{
+          margin-bottom: 5%;
+          margin:10%;
+          margin-top:4%;
+        }
+        .aboutMePic{
+          width: 100%;
+          max-width: 200px;
+        }
+  
+        .contactFull{
+          height: 100%;
+          min-height: 100vh;
+          text-align: center;
+  
+      } 
+        .contactMain{
+          display: flex;
+            text-align: center;
+        }
+    
+        .contactPic img{
+            width:100%;
+            max-width: 1000px;
+            margin:1%;
+        }
+        
+        .contactTitle{
+            font-size: 30px;
+        }
+        .contactForm{
+          width: 100%;
+          margin-top: 20px;
+        }
+    
+        input[type=text], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            resize: vertical;
+          }
+    
+          input[type=email], select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+
+          }
+          input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          .alertBox{
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border: 3px solid rgb(73, 224, 13);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            margin-bottom: 16px;
+          }
+          
+          input[type=submit]:hover {
+            background-color: #45a049;
+          }
+      
+      .fontIcons{
+        display: absolute;
+        width: 20px;
+        font-size: 50px;
+        color:green;
+        margin-top: -90px;
+      }
+      .fontIcons:hover{
+        font-size: 30px;
+      }
+    }

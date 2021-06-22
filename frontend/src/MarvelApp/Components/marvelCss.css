@@ -903,3 +903,218 @@ font-size: 30px;
     
     }
     
+
+
+
+
+@media screen and (min-device-width: 630px) and (max-device-height: 480px){
+  .characters{
+    display: flexbox;
+    direction: column;
+    
+}
+
+
+.spider-man img{
+display: none;
+  }
+
+.spidermantext{
+    color:white;
+    opacity: 0;
+    position: relative;
+    margin-top: 12px;
+    animation-name: charanimation;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    font-size: 30px;
+}
+
+
+
+  .deadpool img{
+    display: none;
+  }
+
+  .deadpoolText{
+    color:white;
+    position: relative;
+    margin-top: -38px;
+    opacity: 0;
+    animation-name: charanimation;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    font-size: 30px;
+  }
+
+
+  .sue img{
+    display: none;
+  }
+
+  .sueText{
+    color:white;
+    position: relative;
+    margin-top: -40px;
+    opacity: 0;
+    animation-name: charanimation;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    font-size: 30px;
+  }
+ 
+  .hulk img{
+    display: none;
+  }
+
+  .hulkText{
+    color:white;
+    position: relative;
+    margin-top: -35px;
+    opacity: 0;
+    animation-name: charanimation;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 6s;
+    font-size: 30px;
+  }
+
+
+  .scarlet img{
+    display: none;
+  }
+
+.scarletText{
+    color:white;
+    position: relative;
+    margin-top: -30px;
+    opacity: 0;
+    animation-name: charanimation;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 8s;
+    font-size: 30px;
+}
+
+
+
+.ironman img{
+  display: none;
+}
+
+.ironmanText{
+  color:white;
+  position: relative;
+  margin-top: -30px;
+  opacity: 0;
+  animation-name: charanimation;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-delay: 10s;
+  font-size: 30px;
+}
+
+.storm img{
+  display: none;
+}
+
+.stormText{
+color:white;
+position: relative;
+margin-top: -30px;
+opacity: 0;
+animation-name: charanimation;
+animation-fill-mode: forwards;
+animation-duration: 3s;
+animation-delay: 12s;
+font-size: 30px;
+}
+
+
+.wolverine img{
+  display: none;
+}
+
+.wolverineText{
+color:white;
+position: relative;
+margin-top: -30px;
+opacity: 0;
+animation-name: charanimation;
+animation-fill-mode: forwards;
+animation-duration: 3s;
+animation-delay: 14s;
+font-size: 30px;
+}
+
+
+
+
+.ending{
+    color:white;
+    position: relative;
+    margin-top: -25px;
+    opacity: 0;
+    animation-name: endingText;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 16s;
+    font-size: 20px;
+}
+
+.ending2{
+    color:white;
+    position: relative;
+    opacity: 0;
+    animation-name: endingText;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-delay: 16s;
+
+}
+
+.marvelVerticle{
+    margin: 2%;
+}
+
+.marvelVerticle img{
+  display: none;
+}
+
+
+.unlabeledMarvel img{
+    display: none;
+}
+
+
+
+@keyframes endingText {
+    0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+  }
+
+
+ 
+
+  @keyframes charanimation {
+    0% {
+      opacity: 0;
+
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+  }
+
+ 
+  }
+

@@ -33,7 +33,7 @@ const [comment,setComment] = useState('')
             <div className='contactTitle'>Contact Me</div>
             <div  className='contactMain'>
             <div className='contactPic'>
-                <img src={contactPic} alt='contact-svg' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-out" data-aos-duration="16000"/>
+                <img src={contactPic} alt='contact-svg' data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-out" data-aos-duration="16000"/>
             </div>
             <div className='contactForm'>
             <form  onSubmit={contactSubmit}>

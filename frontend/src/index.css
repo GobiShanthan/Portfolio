@@ -2201,8 +2201,8 @@
 }
 
 
-/* Extra large devices (for most phones length) and up */
-@media screen and (min-device-width: 700px) and (max-device-height: 370px) { 
+/* Extra large devices (for most phones landscape) and up */
+@media screen and (min-device-width: 630px) and (max-device-height: 370px) { 
   /* STYLES HERE */
   .pMain{
     grid-area: pMain;
@@ -2226,7 +2226,8 @@
           "pProjects"
     }
     .portfolioCard{
-      width: 350px;
+      width: 325px;
+      height: 350px;
     }
     .pCards{
       display:grid;
@@ -2279,12 +2280,13 @@
     position: relative;
     max-width: 1500px;
     width: 40vh;
+    top:-40px
   }
   
   .html img{
       position: absolute;
       opacity: 0;
-      width: 6.5vw;
+      width: 6vw;
       max-width: 248px;
       animation-fill-mode: forwards;
       animation-name: html;
@@ -2613,7 +2615,7 @@
 }
 
 
-/* Extra large devices (for longer phones length) and up */
+/* Extra large devices (for longer phones landscape) and up */
 @media screen and (min-device-width: 700px) and (max-device-height: 450px) { 
   /* STYLES HERE */
   .pMain{
@@ -2696,7 +2698,7 @@
   .html img{
       position: absolute;
       opacity: 0;
-      width: 6.5vw;
+      width: 5vw;
       max-width: 248px;
       animation-fill-mode: forwards;
       animation-name: html;
@@ -2719,7 +2721,7 @@
   .css3 img{
         position: absolute;
         opacity: 0;
-        width: 4vw;
+        width: 3vw;
         max-width: 248px;
         animation-fill-mode: forwards;
         animation-name: css3;
@@ -2742,7 +2744,7 @@
   .js img{
           position: absolute;
           opacity: 0;
-          width: 5.5vw;
+          width: 4vw;
           max-width: 210px;
           animation-name: js;
           animation-fill-mode: forwards;
@@ -2767,7 +2769,7 @@
   .react img{
         position: absolute;
         opacity: 0;
-        width: 5vw;
+        width: 4vw;
         max-width: 200px;
         animation-name: react;
         animation-fill-mode: forwards;
@@ -2791,7 +2793,7 @@
   .redux img{
     position: absolute;
     opacity: 0;
-    width: 6vw;
+    width: 4vw;
     max-width: 270px;
     animation-fill-mode: forwards;
     animation-name: redux;
@@ -2815,7 +2817,7 @@
   .jwt img{
     position: absolute;
     opacity: 0;
-    width: 6vw;
+    width: 4vw;
     max-width: 290px;
     animation-name: jwt;
     animation-fill-mode: forwards;
@@ -2840,7 +2842,7 @@
   .nodejs img{
     position: absolute;
     opacity: 0;
-    width: 6vw;
+    width: 4vw;
     max-width: 280px;
     animation-name: nodejs;
     animation-fill-mode: forwards;
@@ -2887,7 +2889,7 @@
   .mongoose img{
     position: absolute;
     opacity: 0;
-    width: 7vw;
+    width: 5vw;
     max-width: 340px;
     animation-name: mongoose;
     animation-fill-mode: forwards;
@@ -2911,7 +2913,7 @@
   .express img{
     position: absolute;
     opacity: 0;
-    width: 10vw;
+    width: 8vw;
     max-width: 470px;
     animation-name: express;
     animation-fill-mode: forwards;
@@ -2935,7 +2937,7 @@
   .material img{
     position: absolute;
     opacity: 0;
-    width: 5vw;
+    width: 4vw;
     max-width: 230px;
     animation-name: material;
     animation-fill-mode: forwards;
@@ -2958,7 +2960,7 @@
   .reactRouter img{
     position: absolute;
     opacity: 0;
-    width:8vw;
+    width:6vw;
     max-width: 380px;
     animation-name: reactRouter;
     animation-fill-mode: forwards;
@@ -2982,7 +2984,7 @@
   .axiosPic img{
     position: absolute;
     opacity: 0;
-    width: 9vw;
+    width: 7vw;
     max-width: 360px;
     animation-name: axiosPic;
     animation-fill-mode: forwards;
@@ -3003,7 +3005,7 @@
   .bootstrap img{
     position: absolute;
     opacity: 0;
-    width: 6vw;
+    width: 4vw;
     max-width: 270px;
     animation-name: bootstrap;
     animation-fill-mode: forwards;
@@ -3023,6 +3025,7 @@
       }
     }
 }
+
 
 
 
@@ -3109,7 +3112,7 @@
   .html img{
     position: absolute;
     opacity:0;
-    width: 8.5vh;
+    width: 5.5vh;
     max-width: 248px;
     animation-fill-mode: forwards;
     animation-name: html;
@@ -3132,7 +3135,7 @@
 .css3 img{
       position: absolute;
       opacity:0;
-      width: 5vh;
+      width: 3.5vh;
       max-width: 248px;
       animation-fill-mode: forwards;
       animation-name: css3;
@@ -3155,7 +3158,7 @@
 .js img{
         position: absolute;
         opacity:0;
-        width: 7.5vh;
+        width: 5vh;
         max-width: 210px;
         animation-name: js;
         animation-fill-mode: forwards;
@@ -3180,7 +3183,7 @@
 .react img{
       position: absolute;
       opacity:0;
-      width: 7vh;
+      width: 5vh;
       max-width: 200px;
       animation-name: react;
       animation-fill-mode: forwards;
@@ -3204,7 +3207,7 @@
 .redux img{
   position: absolute;
   opacity:0;
-  width: 8vh;
+  width: 6vh;
   max-width: 270px;
   animation-fill-mode: forwards;
   animation-name: redux;
@@ -3228,7 +3231,7 @@
 .jwt img{
   position: absolute;
   opacity: 0;
-  width: 8vh;
+  width: 5vh;
   max-width: 290px;
   animation-name: jwt;
   animation-fill-mode: forwards;
@@ -3253,7 +3256,7 @@
 .nodejs img{
   position: absolute;
   opacity: 0;
-  width: 8vh;
+  width: 5vh;
   max-width: 280px;
   animation-name: nodejs;
   animation-fill-mode: forwards;
@@ -3277,7 +3280,7 @@
 .mongoDb img{
   position: absolute;
   opacity: 0;
-  width: 6vh;
+  width: 4vh;
   max-width: 180px;
   animation-name: mongoDb;
   animation-fill-mode: forwards;
@@ -3300,7 +3303,7 @@
 .mongoose img{
   position: absolute;
   opacity: 0;
-  width: 9vh;
+  width: 6vh;
   max-width: 340px;
   animation-name: mongoose;
   animation-fill-mode: forwards;
@@ -3324,7 +3327,7 @@
 .express img{
   position: absolute;
   opacity: 0;
-  width: 12vh;
+  width: 9vh;
   max-width: 470px;
   animation-name: express;
   animation-fill-mode: forwards;
@@ -3348,7 +3351,7 @@
 .material img{
   position: absolute;
   opacity: 0;
-  width: 7vh;
+  width: 5vh;
   max-width: 230px;
   animation-name: material;
   animation-fill-mode: forwards;
@@ -3371,7 +3374,7 @@
 .reactRouter img{
   position: absolute;
   opacity: 0;
-  width: 12vh;
+  width: 9vh;
   max-width: 380px;
   animation-name: reactRouter;
   animation-fill-mode: forwards;
@@ -3395,7 +3398,7 @@
 .axiosPic img{
   position: absolute;
   opacity: 0;
-  width: 11vh;
+  width: 7vh;
   max-width: 360px;
   animation-name: axiosPic;
   animation-fill-mode: forwards;
@@ -3416,7 +3419,7 @@
 .bootstrap img{
   position: absolute;
   opacity: 0;
-  width: 8vh;
+  width: 5vh;
   max-width: 270px;
   animation-name: bootstrap;
   animation-fill-mode: forwards;
@@ -3432,11 +3435,424 @@
     }
     100% {             
       opacity: 1;
-      transform: translatex(24vw) translatey(-65vh);
+      transform: translatex(24vw) translatey(-66vh);
     }
   }
   
 }
+
+/* Extra large devices (for longer phones landscape) and up */
+@media screen and (min-device-width: 800px) and (max-device-height: 460px){
+  /* STYLES HERE */
+   .pMain{
+     grid-area: pMain;
+     height:100vh;
+     text-align: center;
+     padding-top: -11vh;
+     }
+     
+     .pProjects{
+     grid-area: pProjects;
+     min-height: 100vh;
+     text-align: center;
+     }
+     
+     .home{
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+         grid-template-areas: 
+           "pMain"
+           "pProjects"
+     }
+     .portfolioCard{
+       width: 350px;
+     }
+     .pCards{
+       display:grid;
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+       grid-template-columns: repeat(auto-fit,350px);
+       gap: 3rem;
+       justify-content: center;
+     }
+   .Main{
+     margin: 0;
+     display: grid;
+     height: 100vh;
+     grid-template-columns: 1fr;
+     grid-template-rows: 10vh 78vh ;
+     grid-template-areas: 
+       "title"
+       "animation"
+ 
+   }
+   
+   .title{
+     grid-area: title;
+     text-align: center;
+     margin-top: 5vh;
+     margin-left: 4vw;
+     margin-right: 4vw;
+   }
+   .intro{
+     position: static;
+     margin: 10px;
+     font-size: 6vh;
+   }
+   
+   .projectTitle{
+     font-size: 4vw;
+   }
+   .intro2{
+     position: static;
+     margin-top: 10px;
+     font-size:4vh;
+   }
+   
+   .animation{
+     grid-area: animation;
+   }
+   
+   .software img{
+     position: relative;
+     max-width: 1500px;
+     width: 40vh;
+     bottom:38px
+   }
+   
+   .html img{
+       position: absolute;
+       opacity: 0;
+       width: 5vw;
+       max-width: 248px;
+       animation-fill-mode: forwards;
+       animation-name: html;
+       animation-duration: 3s;
+       bottom:0vh;
+ 
+     }
+   
+     @keyframes html {
+       0% {
+         opacity: 0;
+         transform: translatex(0px) translatey(0px)
+       }
+       100% {
+         opacity: 1;
+         transform: translatex(-42vw) translatey(-52vh);
+       }
+     }
+   
+   .css3 img{
+         position: absolute;
+         opacity: 0;
+         width: 3vw;
+         max-width: 248px;
+         animation-fill-mode: forwards;
+         animation-name: css3;
+         animation-duration: 4s;
+         animation-delay: 1s;
+         bottom:0vh;
+   }
+         
+     @keyframes css3 {
+         0% {
+           opacity: 0;
+           transform: translatex(0px) translatey(0px)
+         }
+         100% {
+           opacity: 1;
+           transform: translatex(-32vw) translatey(-52.5vh);
+         }
+     }
+   
+   .js img{
+           position: absolute;
+           opacity: 0;
+           width: 4vw;
+           max-width: 210px;
+           animation-name: js;
+           animation-fill-mode: forwards;
+           animation-duration: 3s;
+           animation-delay: 2s;
+           bottom:0vh;
+     
+   }
+           
+     @keyframes js {
+           0% {
+             opacity: 0;
+             transform: translatex(0px) translatey(0px)
+           }
+           100% {
+             opacity: 1;
+             transform: translatex(-24vw) translatey(-52.5vh);
+           }
+     }
+       
+   
+   .react img{
+         position: absolute;
+         opacity: 0;
+         width: 4vw;
+         max-width: 200px;
+         animation-name: react;
+         animation-fill-mode: forwards;
+         animation-duration: 5s;
+         animation-delay: 1.2s;
+         bottom:0vh;
+     
+   }
+           
+     @keyframes react {
+             0% {
+             opacity: 0;
+             ransform: translatex(0px) translatey(0px)
+           }
+           100% {
+             opacity: 1;
+             transform: translatex(-15vw) translatey(-52.5vh);
+           }
+     }
+   
+   .redux img{
+     position: absolute;
+     opacity: 0;
+     width: 4vw;
+     max-width: 270px;
+     animation-fill-mode: forwards;
+     animation-name: redux;
+     animation-duration: 5s;
+     animation-delay: 1.9s;
+     bottom:0vh;
+     
+   }
+           
+     @keyframes redux {
+             0% {
+               opacity: 0;
+               transform: translatex(0px) translatey(0px)
+           }
+           100% {
+             opacity: 1;
+             transform: translatex(-7vw) translatey(-52.5vh);
+           }
+     }
+   
+   .jwt img{
+     position: absolute;
+     opacity: 0;
+     width: 4vw;
+     max-width: 290px;
+     animation-name: jwt;
+     animation-fill-mode: forwards;
+     animation-duration: .5s;
+     animation-delay: 1.6s;
+     bottom:0vh;
+       
+   }
+             
+     @keyframes jwt {
+               0% {
+               opacity: 0;
+               transform: translatex(0px) translatey(0px)
+             }
+             100% {
+               opacity: 1;
+               transform: translatex(13vw) translatey(-40vh);
+   
+             }
+     }
+             
+   .nodejs img{
+     position: absolute;
+     opacity: 0;
+     width: 4vw;
+     max-width: 280px;
+     animation-name: nodejs;
+     animation-fill-mode: forwards;
+     animation-duration: 1s;
+     animation-delay: 1s;
+     bottom:0vh;
+         
+   }
+               
+     @keyframes nodejs {
+       0% {
+         opacity: 0;
+         transform: translatex(0px) translatey(0px)
+       }
+       100% {
+         opacity: 1;
+         transform: translatex(-26vw) translatey(-39vh);
+       }
+     }
+   
+   .mongoDb img{
+     position: absolute;
+     opacity: 0;
+     width: 4vw;
+     max-width: 180px;
+     animation-name: mongoDb;
+     animation-fill-mode: forwards;
+     animation-duration: 5s;
+     animation-delay: 2.1s;
+     bottom:0vh;
+   }
+                 
+     @keyframes mongoDb {
+        0% {
+           opacity: 0;
+           transform: translatex(0px) translatey(0px)
+       }
+         100% {
+           opacity: 1;
+           transform: translatex(-5vw) translatey(-39vh);
+       }
+     }
+   
+   .mongoose img{
+     position: absolute;
+     opacity: 0;
+     width: 5vw;
+     max-width: 340px;
+     animation-name: mongoose;
+     animation-fill-mode: forwards;
+     animation-duration: 5s;
+     animation-delay: 2.3s;
+     bottom:0vh;
+             
+   }
+                   
+     @keyframes mongoose {
+       0% {
+         opacity: 0;
+         transform: translatex(0px) translatey(0px)
+       }
+       100% {
+         opacity: 1;
+         transform: translatex(2vw) translatey(-39vh);
+       }
+     }
+   
+   .express img{
+     position: absolute;
+     opacity: 0;
+     width: 8vw;
+     max-width: 470px;
+     animation-name: express;
+     animation-fill-mode: forwards;
+     animation-duration: 5s;
+     animation-delay: 2.3s;
+     bottom:0vh;          
+   }
+                     
+     @keyframes express {
+       0% {
+         opacity: 0;
+         transform: translatex(0px) translatey(0px)
+       }
+       100% {
+         opacity: 1;
+         transform: translatex(-18vw) translatey(-39vh);
+       }
+     }
+   
+ 
+   .material img{
+     position: absolute;
+     opacity: 0;
+     width: 4vw;
+     max-width: 230px;
+     animation-name: material;
+     animation-fill-mode: forwards;
+     animation-duration: 3s;
+     animation-delay: 2s;
+     bottom:0vh; 
+   }
+                           
+     @keyframes material{
+       0% {
+         opacity: 0;
+         transform: translatex(0px) translatey(0px)
+       }
+       100% {
+         opacity: 1;
+         transform: translatex(13vw) translatey(-52vh);
+       }
+     }
+ 
+   .reactRouter img{
+     position: absolute;
+     opacity: 0;
+     width:6vw;
+     max-width: 380px;
+     animation-name: reactRouter;
+     animation-fill-mode: forwards;
+     animation-duration: 5s;
+     animation-delay: 1.2s;
+     bottom:0vh;                  
+   }
+                             
+     @keyframes reactRouter {
+       0% {
+           opacity: 0;
+           transform: translatex(0px) translatey(0px)
+       }
+       100% {
+           opacity: 1;
+           transform: translatex(2vw) translatey(-52.5vh);
+       }
+     }     
+                             
+                             
+   .axiosPic img{
+     position: absolute;
+     opacity: 0;
+     width: 7vw;
+     max-width: 360px;
+     animation-name: axiosPic;
+     animation-fill-mode: forwards;
+     animation-duration: 3s;
+     bottom:0vh;                      
+   }
+                               
+     @keyframes axiosPic {
+       0% {
+           opacity: 0;
+           transform: translatex(0px) translatey(0px)
+       }
+       100% {
+           opacity: 1;
+           transform: translatex(30vw) translatey(-53vh);
+       }
+     }
+   .bootstrap img{
+     position: absolute;
+     opacity: 0;
+     width: 4vw;
+     max-width: 270px;
+     animation-name: bootstrap;
+     animation-fill-mode: forwards;
+     animation-duration: 4s;
+     animation-delay: 1s;
+     bottom:0vh;
+   }
+                                 
+     @keyframes bootstrap {
+       0% {                                    
+         opacity: 0;
+         transform: translatex(-2px) translatey(0px)
+       }
+       100% {             
+         opacity: 1;
+         transform: translatex(21vw) translatey(-52vh);
+       }
+     }
+ }
+
 
 
 /* Extra large devices (for tablets ,ipad pro 900px) and up */

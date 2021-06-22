@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
-import {Input,Button,makeStyles,Grid} from '@material-ui/core'
+import {Button,makeStyles,Grid} from '@material-ui/core'
 import {marvelGet} from '../../action/actions'
 import {marvelCharGet} from '../../action/actions'
 
@@ -22,10 +22,14 @@ const marvelSubmitHandler=(e)=>{
             searchBox:{
                 display:'block',
                 margin:'-5% auto 5% auto',
+                textAlign:'center',
                 minWidth:'200px',
+                height:'3vh',
+                minHeight:'20px',
                 width:'20vw',
                 background:'white',
                 borderRadius:'25px',
+                fontSize:"20px"
             },
             button:{
                 display:'block',
@@ -58,7 +62,7 @@ const marvelSubmitHandler=(e)=>{
                 <Grid item container direction='row'>
                     <Grid item xs={12} ><h2 className={classes.title}>Character Search</h2></Grid>
                 <Grid item xs={12}>
-                    <Input value={search} onChange={(e)=>setSearch(e.target.value)} disableUnderline className={classes.searchBox}/>
+                    <input value={search} onChange={(e)=>setSearch(e.target.value)} className={classes.searchBox}/>
                 </Grid>
                 <Grid item xs={12} >
                     <Button variant="outlined"   className={classes.button} type='submit'>Search</Button>

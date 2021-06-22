@@ -1,8 +1,9 @@
 import React,{useEffect} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import {marvelComicGet} from '../../action/actions'
-import {makeStyles,Grid,Paper} from '@material-ui/core'
-
+import {makeStyles,Grid} from '@material-ui/core'
+import googlePic from '../marvelPics/googleplay.png'
+import appstorePic from '../marvelPics/appstore.png'
 
 
 const Comic = ({match}) => {
@@ -39,15 +40,16 @@ const Comic = ({match}) => {
         creator:{
             marginTop:"5%"
         },
-        buyBox:{
-            backgroundColor:'grey',
-            width:'70%',
-            height:"100%",
-            minHeight:"20vh",
-            display:'block',
-            marginLeft:'auto',
-            marginRight:'auto',
-            marginTop:'2vh'
+        app:{
+            margin:"20px",
+            border:'solid white 2px',
+            paddingTop:'15px'
+        },
+        appLogo:{
+            width:'30%',
+            '&:hover': {
+                width: "40%",
+              }
         }
     })
 
@@ -125,14 +127,12 @@ const Comic = ({match}) => {
                         </div>
                     </div>
                 </Grid>
-                <Grid  item xs={12} >
-                    <Paper className={classes.buyBox}>
-                       <div>Download the Marvel Comics app today!</div>
-                        <div>Read online on your iPhone, Ipad or Android Device</div>
-                        <div><a href="http://apps.apple.com/us/app/marvel-comics/id350027738">Download App</a></div>
-                        <div><a href="http://play.google.com/store/apps/details?id=com.marvel.comics&hl=en_US">Download android app</a></div>
-                        <div>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android and Google Play are trademarks of Google, Inc.</div>
-                    </Paper>
+                <Grid  item xs={12} className={classes.app} >
+                       <div style={{fontSize:'20px'}}>Download the Marvel Comics app today!</div>
+                        <div style={{fontSize:'12px'}}>Read online on your iPhone, Ipad or Android Device</div>
+                        <div style={{marginTop:'10px'}}><a href="http://play.google.com/store/apps/details?id=com.marvel.comics&hl=en_US"><img src={googlePic} className={classes.appLogo}  alt='googlePlayStore'/></a></div>
+                        <div><a href="http://apps.apple.com/us/app/marvel-comics/id350027738"><img src={appstorePic} className={classes.appLogo} alt='appleAppStoreLink'/></a></div>
+                        <div style={{fontSize:'8px',margin:"10px"}}>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android and Google Play are trademarks of Google, Inc.</div>
                 </Grid>
 
                     </Grid>

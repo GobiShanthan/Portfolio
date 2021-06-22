@@ -1,4 +1,5 @@
 import React from 'react'
+import {useSelector} from 'react-redux'
 import {makeStyles} from '@material-ui/core'
 
 
@@ -51,9 +52,15 @@ const useStyles = makeStyles({
 
 
 const Footer = ({history}) =>{
-
+    //url pathname
     const urlLocation =history.location.pathname
+
+    //material ui make styles
     const classes = useStyles()
+
+    //marvelInfo
+    const marvelReducer = useSelector((state)=>state.marvelReducer)
+    const {marvelInfo} = marvelReducer
 
 
 
@@ -74,7 +81,7 @@ const Footer = ({history}) =>{
     }else if(urlLocation.slice(0,6) === '/comic' || urlLocation === '/marvel'){
         return(
             <div className={classes.marvelApiOustide}>
-            <h6 className={classes.marvelApiInside}>Copyright &copy; Marvel Api</h6>
+            <h6 className={classes.marvelApiInside}>{marvelInfo? marvelInfo.attributionText:"© Gobi Shanthan"}</h6>
         </div>
         )
     }else{

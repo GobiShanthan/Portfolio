@@ -10,7 +10,6 @@ import '../index.css'
 const Home =()=>{
     return(
         <div className='home'>
-
             <div className='pMain'><PortfolioMain/></div>
             <div className='pProjects'><PortfolioProjects/></div>
             <div className='aboutMe'><AboutMe/></div>

@@ -1,14 +1,43 @@
+
+#Gobi Portfolio
+- 4 Projects 
+- Formik for contact information
+- React and redux
+
+
+Project 1
+#Gobi Search
+- React with Redux
+- Nodejs, Express
+- Node fetch fetch backend with dotenv for securty
+- Material ui 
+- axios to fetch from backend
+- async api requests to Unsplash Api, Youtube Api, Wikepedia Api
+
+Project 2
+# Marvel App
+- React with Redux
+- Material ui 
+- axios to fetch from marvel Api with md5 to hask key 
+- async api requests to Marvel Api 
+
+
+Project 3
+#Weather App
+- React with Redux
+- Material ui 
+- axios to fetch from backend 
+- node-fetch  async api request to api from OpenWeatherApi 
+
+Project 4
 # GeekGrade Custom Computer Build
 
 > eCommerce platform built with the MERN stack & Redux.
-
-
+> 
 ## Features
 - Full featured shopping cart
 - Product reviews and ratings
 - Top products carousel
-- Product pagination
-- Product search feature
 - User profile with orders
 - Admin product management
 - Admin user management
@@ -16,7 +45,6 @@
 - Mark orders as delivered option
 - Checkout process (shipping, payment method, etc)
 - PayPal / credit card integration
-- Database seeder (products & users)
 
 
 
@@ -30,11 +58,6 @@ JWT_SECRET = 'abc123'
 PAYPAL_CLIENT_ID = your paypal client id
 
 ```
-
-### Seed Database
-
-You can use the following commands to seed the database with some sample users and products as well as destroy all data
-
 
 
 ## License
